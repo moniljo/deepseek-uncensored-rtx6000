@@ -1,0 +1,318 @@
+{
+  "schema": "portable-native-source-overlays-v1",
+  "normalization": "CRLF to LF only; no other source text change",
+  "strata_reference_stage_manifest_sha256": "e5cc8dc7b3887852008b4efdd884694e05a7bdc2b51134a2ab583609996edf1e",
+  "strata_parent_commit": "dfa3f4025c9f1bc4af8cee201b20a2d223061813",
+  "ggml_parent_commit": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "strata": {
+    "CMakeLists.txt": {
+      "sha256": "dee9dfc4a4e939f35418042332df7af565cf239f81c8d87f6c71f2178019a8cb",
+      "reference_raw_sha256": "689170d955ccd1f8f7978afb4b14b956c79a459a36f0c81892c9f5c82f2a9425",
+      "base_file_existed": true
+    },
+    "third_party/xolotl-indexer/NOTICE.md": {
+      "sha256": "c1312fa128b6d02453ac76633e56893d723d070028714046ef0540809ca00a16",
+      "reference_raw_sha256": "c1312fa128b6d02453ac76633e56893d723d070028714046ef0540809ca00a16",
+      "base_file_existed": false
+    },
+    "src/dsv41/dq_vector_store.cuh": {
+      "sha256": "98159b54d170ad8fdf12d126b13030821cb047abb92dbc123b0745b60cfb65e9",
+      "reference_raw_sha256": "98159b54d170ad8fdf12d126b13030821cb047abb92dbc123b0745b60cfb65e9",
+      "base_file_existed": false
+    },
+    "src/dsv41/ds4_attn_g32_pairs.cuh": {
+      "sha256": "bf24bfbc606526dbc8a747f84f4c584d295c0228ec45f8ac360bb6bd54507e80",
+      "reference_raw_sha256": "37b617cf68f7eac9b7412fe954b67b4413df77fb4b5322baccc27e6bf68d28e4",
+      "base_file_existed": false
+    },
+    "src/dsv41/ds4_gguf.cu": {
+      "sha256": "e6513bdc13700af727fc9b04203279b57b3766c407cfd2067192b8db2f75a081",
+      "reference_raw_sha256": "e6513bdc13700af727fc9b04203279b57b3766c407cfd2067192b8db2f75a081",
+      "base_file_existed": true
+    },
+    "src/dsv41/ds4_index_native.cuh": {
+      "sha256": "416fce1d025ded2b00ebd52c6c94c7a6ead8de5bf6f8fdaf498cc37c302b18b1",
+      "reference_raw_sha256": "416fce1d025ded2b00ebd52c6c94c7a6ead8de5bf6f8fdaf498cc37c302b18b1",
+      "base_file_existed": false
+    },
+    "src/dsv41/ds4_index_native_impl.cuh": {
+      "sha256": "f7ab90392120ef6b206602845b806a957c1ac8399938d6f54039b17cf9db607d",
+      "reference_raw_sha256": "f7ab90392120ef6b206602845b806a957c1ac8399938d6f54039b17cf9db607d",
+      "base_file_existed": false
+    },
+    "src/dsv41/ds4_iq.cu": {
+      "sha256": "41bf06bcb9715f43ec67ede3a3f7ca252a29991d0d8c41dca7ff8d7f935641f6",
+      "reference_raw_sha256": "f2d058a79dd84a7220b1666cefc93c95264672edaf6ce0e0bccd2d0227f03178",
+      "base_file_existed": true
+    },
+    "src/dsv41/ds4_iq.cuh": {
+      "sha256": "6c3413727b58e6141143afd275617dd8421753a11d77942be7841ce5f050266c",
+      "reference_raw_sha256": "51e80932bf3127561225216d477a99880816d6864967fe66f297f951a836be44",
+      "base_file_existed": true
+    },
+    "src/dsv41/ds4_kernels.cu": {
+      "sha256": "caac310af05750501df1fd0ab1eebd9a44834972a236cdadc67732fd98a4f5f6",
+      "reference_raw_sha256": "6c271bbb7ada6cd867eecda9e759a4ab5c00ee9934e2020e14fa437b64a3f3dd",
+      "base_file_existed": true
+    },
+    "src/dsv41/ds4_kernels.cuh": {
+      "sha256": "b7dec377aa7132cdfd5bcadea0818aad2851256aa9896c1ebbc87fae35a70fda",
+      "reference_raw_sha256": "b7dec377aa7132cdfd5bcadea0818aad2851256aa9896c1ebbc87fae35a70fda",
+      "base_file_existed": true
+    },
+    "src/dsv41/ds4_main.cpp": {
+      "sha256": "87aecb8776597837cca3611645f05be89bc26eb32be91a114deb4103f32d06d5",
+      "reference_raw_sha256": "e9adc4f9100d6af5f48ff1afcfcbf3eae19192f0de63f9c2d50db0e8525db9dd",
+      "base_file_existed": true
+    },
+    "src/dsv41/ds4_model.cu": {
+      "sha256": "f2cb419f04d98a2fdd9073cee2251c7fb0bf53a5ef8a98e98aaa097b821e16b1",
+      "reference_raw_sha256": "6426684edc128b92ba9e83196579e78e7056fdaa67de69a6f6b408e6f989a472",
+      "base_file_existed": true
+    },
+    "src/dsv41/ds4_model.hpp": {
+      "sha256": "5d151f3dfba82ab332ed9dc350f0483aa741259a7987446fff80b0f246fe8787",
+      "reference_raw_sha256": "27e6316ec50ca45088b4617d266b402be5fa0259ee1f4a7f165144b9baa42024",
+      "base_file_existed": true
+    },
+    "src/dsv41/ds4_router_batch8.cuh": {
+      "sha256": "587ef81c6f58b2e74975fbbeeaff02f3357e5fdba3ce4136c7aeb767aa14e12b",
+      "reference_raw_sha256": "587ef81c6f58b2e74975fbbeeaff02f3357e5fdba3ce4136c7aeb767aa14e12b",
+      "base_file_existed": false
+    },
+    "src/dsv41/ds4_store.hpp": {
+      "sha256": "46960aaeef1647dc317f8251598e23d1c5346342b3263225860b5928fe480959",
+      "reference_raw_sha256": "71bd26e8d9cd82b6d39d16a6db1716a353129e7e1a69720dac5d3ca7331b1a9a",
+      "base_file_existed": true
+    },
+    "src/dsv41/ds4_topk_multi_impl.cuh": {
+      "sha256": "6c498937504905149a338efcbc9f0265e2190da73546a418558210243c5ba873",
+      "reference_raw_sha256": "6c498937504905149a338efcbc9f0265e2190da73546a418558210243c5ba873",
+      "base_file_existed": false
+    },
+    "src/dsv41/gpu_misses_direct.inc": {
+      "sha256": "f02025df7163e8f8de5fb118fddfa503745f57b68b93eca2e4a02241a23eb8ba",
+      "reference_raw_sha256": "f02025df7163e8f8de5fb118fddfa503745f57b68b93eca2e4a02241a23eb8ba",
+      "base_file_existed": false
+    },
+    "src/dsv41/gpu_misses_dispatch.inc": {
+      "sha256": "c9fc4ac9f26a284ddd816735c977121310a49a924b8b4cf94fef040d7a0b8b64",
+      "reference_raw_sha256": "c9fc4ac9f26a284ddd816735c977121310a49a924b8b4cf94fef040d7a0b8b64",
+      "base_file_existed": false
+    },
+    "src/dsv41/gpu_misses_ownership.inc": {
+      "sha256": "cf3ee0dd0a92cce5d3ec3f1ce4fc470d0135bd3b6ae3ff99f059f9c23ff6fb9a",
+      "reference_raw_sha256": "cf3ee0dd0a92cce5d3ec3f1ce4fc470d0135bd3b6ae3ff99f059f9c23ff6fb9a",
+      "base_file_existed": false
+    },
+    "src/dsv41/gpu_misses_prepare.inc": {
+      "sha256": "4b43d1079ab685007810bcca4a6f4bb1c2428c7259c91c3990837a501c0f7752",
+      "reference_raw_sha256": "4b43d1079ab685007810bcca4a6f4bb1c2428c7259c91c3990837a501c0f7752",
+      "base_file_existed": false
+    },
+    "src/dsv41/epoch-support/epoch_policy.hpp": {
+      "sha256": "8b7bf098bdb77812300f31242dffc1eec9e43d9747868b830b152430d684baf9",
+      "reference_raw_sha256": "8b7bf098bdb77812300f31242dffc1eec9e43d9747868b830b152430d684baf9",
+      "base_file_existed": false
+    },
+    "src/dsv41/epoch-support/expert_pool_shrink.hpp": {
+      "sha256": "db0b4b75c32a6a82031475161fc4e60bc3485390a906813353f23c7851f78319",
+      "reference_raw_sha256": "db0b4b75c32a6a82031475161fc4e60bc3485390a906813353f23c7851f78319",
+      "base_file_existed": false
+    },
+    "src/dsv41/epoch-support/pool_probe_protocol.hpp": {
+      "sha256": "9e17aa9011c4a4c2efdaba35acfee50d15f6d190a8a72ab57676d4b042272478",
+      "reference_raw_sha256": "9e17aa9011c4a4c2efdaba35acfee50d15f6d190a8a72ab57676d4b042272478",
+      "base_file_existed": false
+    },
+    "src/dsv41/epoch-support/probe_protocol.hpp": {
+      "sha256": "61bdc9caefc63ff03e500d3400fcc17f803845be0f813660095d74d99f847838",
+      "reference_raw_sha256": "61bdc9caefc63ff03e500d3400fcc17f803845be0f813660095d74d99f847838",
+      "base_file_existed": false
+    },
+    "src/dsv41/epoch-support/workspace_probe_protocol.hpp": {
+      "sha256": "5789e5839f6a848d5e2837d62946376c22a05c19fa8ff64c24e2314f35fb36dd",
+      "reference_raw_sha256": "5789e5839f6a848d5e2837d62946376c22a05c19fa8ff64c24e2314f35fb36dd",
+      "base_file_existed": false
+    },
+    "src/dsv41/epoch-support/workspace_regrow_layout.hpp": {
+      "sha256": "380c3d621a0b022d74c0f7f0790dbb9d035056b723163e3466e261e2ed209574",
+      "reference_raw_sha256": "380c3d621a0b022d74c0f7f0790dbb9d035056b723163e3466e261e2ed209574",
+      "base_file_existed": false
+    },
+    "src/dsv41/epoch-support/workspace_regrow_transaction.hpp": {
+      "sha256": "db7adeb796579b65d19232cd0b9d192a5168ca049863f026f54c914d5c826626",
+      "reference_raw_sha256": "db7adeb796579b65d19232cd0b9d192a5168ca049863f026f54c914d5c826626",
+      "base_file_existed": false
+    },
+    "src/dsv41/gpu-miss-support/direct_policy.hpp": {
+      "sha256": "21d2e95f7f17377fd3a404d030dd955160a8f9517f208e1ebc643590edea8492",
+      "reference_raw_sha256": "21d2e95f7f17377fd3a404d030dd955160a8f9517f208e1ebc643590edea8492",
+      "base_file_existed": false
+    },
+    "src/dsv41/gpu-miss-support/policy.hpp": {
+      "sha256": "18dfb4c15360e22fd26a212fb0728ce2a8c21687be826558477cedb0719ae6ec",
+      "reference_raw_sha256": "18dfb4c15360e22fd26a212fb0728ce2a8c21687be826558477cedb0719ae6ec",
+      "base_file_existed": false
+    },
+    "src/dsv41/interactive-support/repeat_min_policy.hpp": {
+      "sha256": "7101470c3fa0d0a94ef53d7ab999148e98be1777c6e2ef9720be9d7929d22f83",
+      "reference_raw_sha256": "7101470c3fa0d0a94ef53d7ab999148e98be1777c6e2ef9720be9d7929d22f83",
+      "base_file_existed": false
+    },
+    "src/dsv41/phase-support/cold_f16_plan.hpp": {
+      "sha256": "27924a745d745cfa73b7ed823a72d4cc72487fc70acc33c6ab300034f5d6335f",
+      "reference_raw_sha256": "27924a745d745cfa73b7ed823a72d4cc72487fc70acc33c6ab300034f5d6335f",
+      "base_file_existed": false
+    },
+    "src/dsv41/phase-support/expert_grow_transaction.hpp": {
+      "sha256": "6a52a59147c3dd8bc165bd2ce4cf4681211060b8c461da657479dd9780f9c1a4",
+      "reference_raw_sha256": "6a52a59147c3dd8bc165bd2ce4cf4681211060b8c461da657479dd9780f9c1a4",
+      "base_file_existed": false
+    },
+    "src/dsv41/phase-support/prefill_reserve_policy.hpp": {
+      "sha256": "46dfb68dec2d2bcb5f62998ee905bffa9a456fafcee9d749e70bb2aebb98b12f",
+      "reference_raw_sha256": "46dfb68dec2d2bcb5f62998ee905bffa9a456fafcee9d749e70bb2aebb98b12f",
+      "base_file_existed": false
+    },
+    "src/dsv41/phase-support/registered_copy_transaction.hpp": {
+      "sha256": "da1de9abf645b6f6cb6fe1a28812fd25613f4a172453b8d213d85c71608b135f",
+      "reference_raw_sha256": "da1de9abf645b6f6cb6fe1a28812fd25613f4a172453b8d213d85c71608b135f",
+      "base_file_existed": false
+    },
+    "src/dsv41/provenance/LICENSE.Project-Maya": {
+      "sha256": "574cffb7c57769a9271043ac0c2b07c5e7e7621cfb81081b901d8981e791d121",
+      "reference_raw_sha256": "574cffb7c57769a9271043ac0c2b07c5e7e7621cfb81081b901d8981e791d121",
+      "base_file_existed": false
+    },
+    "src/dsv41/provenance/LICENSE.Strata": {
+      "sha256": "949b9b0aada7476006469e58ee4ffb0e0f68c2d9137e90a356757b61a09d37f0",
+      "reference_raw_sha256": "949b9b0aada7476006469e58ee4ffb0e0f68c2d9137e90a356757b61a09d37f0",
+      "base_file_existed": false
+    },
+    "src/dsv41/provenance/NOTICE.md.Project-Maya": {
+      "sha256": "de9203f9978b44f9058d465870dceefd9f1ecf9b09c8d76cd2217eb83cc94ec2",
+      "reference_raw_sha256": "aae3ef39cce4152602ed8071213bf9f5fcb252b7479397380bcddf078a9eb55b",
+      "base_file_existed": false
+    },
+    "src/dsv41/ram-domain-support/copied_ram_domains.hpp": {
+      "sha256": "e35459095c1b02e0f5ede6341bf31178c3da68d4038dd11503bd5da522549cac",
+      "reference_raw_sha256": "e35459095c1b02e0f5ede6341bf31178c3da68d4038dd11503bd5da522549cac",
+      "base_file_existed": false
+    },
+    "src/dsv41/shrink-support/chunk_shrink_transaction.hpp": {
+      "sha256": "6e9bec333d9f0d0dba4313c9b654bdd6d729c330037de3ea7ffe99c292c9e771",
+      "reference_raw_sha256": "6e9bec333d9f0d0dba4313c9b654bdd6d729c330037de3ea7ffe99c292c9e771",
+      "base_file_existed": false
+    },
+    "src/dsv41/gpu_misses_recovery.inc": {
+      "sha256": "75ce25ec8805c77c059b49d269f84f59185a98805fede27ff276e13570dac735",
+      "reference_raw_sha256": "75ce25ec8805c77c059b49d269f84f59185a98805fede27ff276e13570dac735",
+      "base_file_existed": false
+    },
+    "src/dsv41/gpu-miss-support/recovery_policy.hpp": {
+      "sha256": "1608d833ee21ffb1c1fe1e9693ae4a5dd9f88f22aebd552ca94181b6e9a6dcd6",
+      "reference_raw_sha256": "1608d833ee21ffb1c1fe1e9693ae4a5dd9f88f22aebd552ca94181b6e9a6dcd6",
+      "base_file_existed": false
+    },
+    "src/dsv41/registration_core.inc": {
+      "sha256": "2e6d890a9081e5167deb6d22011649e5cd1b00e35de206fd96694b181392ec68",
+      "reference_raw_sha256": "a6ce5c93c4f486c43f1999548ffdc04a725537caf103d5f71a251c15f4c324f6",
+      "base_file_existed": false
+    },
+    "tests/dsv41/gpu_miss_recovery_policy.cpp": {
+      "sha256": "bf051f178d4ce2fcb1f874ad9f421cc67238b9f452e65b324c715b775f315826",
+      "reference_raw_sha256": "bf051f178d4ce2fcb1f874ad9f421cc67238b9f452e65b324c715b775f315826",
+      "base_file_existed": false
+    },
+    "tests/dsv41/index_native_test.cpp": {
+      "sha256": "395cc45352b447df3179df3082856823db9a1e4cb5b50b8917f200715f40959b",
+      "reference_raw_sha256": "395cc45352b447df3179df3082856823db9a1e4cb5b50b8917f200715f40959b",
+      "base_file_existed": false
+    }
+  },
+  "ggml": {
+    "ggml/include/ggml.h": {
+      "sha256": "755e3320c7eef7fcb63ab544d6c59a51ec76df9e80e5ca5d512791e6bdfc2a6e",
+      "reference_raw_sha256": "bfc11fb3b200764ba21d736e03aafdc4eac1d14da5ac0fc852cca6ae4cd01496",
+      "base_file_existed": true
+    },
+    "ggml/src/ggml.c": {
+      "sha256": "dff247044723126f4a4e7a3a42cee740aca14b1acb6a5e80a2d156183579667e",
+      "reference_raw_sha256": "303000daeac4965c357988209098312079bc110f9da44433845aa3d7d63e2392",
+      "base_file_existed": true
+    },
+    "ggml/src/ggml-backend-meta.cpp": {
+      "sha256": "405ad61ea4a635989849b767c422b2584233b4f6f142591376cc21162715b1e0",
+      "reference_raw_sha256": "a3a5f5f727fc899393a39f30a50a187511e4ffc3afc6880ab2a47711495c4e90",
+      "base_file_existed": true
+    },
+    "ggml/src/ggml-cpu/ggml-cpu.c": {
+      "sha256": "49ce5635ec5351d09256b80eaf75fbc835fb05379114168fbe843138ca2c08b1",
+      "reference_raw_sha256": "8eb043207bc5aafa834b9799e471ae365d4fa077377bb69b2b99ef40a5043cc0",
+      "base_file_existed": true
+    },
+    "ggml/src/ggml-cpu/ggml-cpu.cpp": {
+      "sha256": "3b0d940b3bcc9b333e2426500a79e7484dde123461bfe5d75343c179eb247ab6",
+      "reference_raw_sha256": "39f9474321e20e03efd712fea151610fcc1953efa4ca09b240fa7187bc4d09b5",
+      "base_file_existed": true
+    },
+    "ggml/src/ggml-cpu/ops.cpp": {
+      "sha256": "03ac8bcca0a54020a31efc83f8d461a4bee5c941fb903dec43e4dcc160bf23d8",
+      "reference_raw_sha256": "8657d774e8622488b17a1f80cfcd614df407b2731df319efb748797e7602d4fb",
+      "base_file_existed": true
+    },
+    "ggml/src/ggml-cpu/ops.h": {
+      "sha256": "bf831094f648bc606be0e372f3e9d777748e9964191bbbf72c5614e28253a51b",
+      "reference_raw_sha256": "ae6fa276c8f01d157c38eeec8c99578f917fdb4e2c3c6196d9204394140a8782",
+      "base_file_existed": true
+    },
+    "ggml/include/ggml-cuda-op-profile.h": {
+      "sha256": "a5b898301ac8db40786d0e2069c1fe9e5494e974ad63a7f0cae46bc3dd4f29d8",
+      "reference_raw_sha256": "a5b898301ac8db40786d0e2069c1fe9e5494e974ad63a7f0cae46bc3dd4f29d8",
+      "base_file_existed": false
+    },
+    "ggml/include/ggml-cuda.h": {
+      "sha256": "69272d24acfeab0933ea9da2987f7b0682614f08c0c607ed7e0ecb00c5ab70c3",
+      "reference_raw_sha256": "c21728751e7f829f09f4b7454f828383a4abf26c49c9d69d5eab0fbc1e35be95",
+      "base_file_existed": true
+    },
+    "ggml/include/ggml-indexed-attn22.h": {
+      "sha256": "1e4c6f3914fcc7511ca3babc7d7dcd470803f3fb5a9df760e447c6469ccd78d3",
+      "reference_raw_sha256": "1e4c6f3914fcc7511ca3babc7d7dcd470803f3fb5a9df760e447c6469ccd78d3",
+      "base_file_existed": false
+    },
+    "ggml/include/ggml-indexer-compact20.h": {
+      "sha256": "a6edc42c1b2798d438f5cd3ee58518676fe82d9c8a49872f89441ab3f9ad1c22",
+      "reference_raw_sha256": "a6edc42c1b2798d438f5cd3ee58518676fe82d9c8a49872f89441ab3f9ad1c22",
+      "base_file_existed": false
+    },
+    "ggml/include/ggml-indexer-decode26.h": {
+      "sha256": "ebb3a3218adb6848b2f428e203489671ef7861658f00d9d7c3f9b4a638c08206",
+      "reference_raw_sha256": "ebb3a3218adb6848b2f428e203489671ef7861658f00d9d7c3f9b4a638c08206",
+      "base_file_existed": false
+    },
+    "ggml/include/ggml-indexer-decode27.h": {
+      "sha256": "d43968bb6d4e4068a3d24d234e75004b9c128c97e81af80f7743546493937652",
+      "reference_raw_sha256": "d43968bb6d4e4068a3d24d234e75004b9c128c97e81af80f7743546493937652",
+      "base_file_existed": false
+    },
+    "ggml/include/ggml-indexer-main22.h": {
+      "sha256": "5459963a13e0892807c9f54ce06880c544151e49955b1f907d3cd62402f265fa",
+      "reference_raw_sha256": "5459963a13e0892807c9f54ce06880c544151e49955b1f907d3cd62402f265fa",
+      "base_file_existed": false
+    },
+    "ggml/include/ggml-lightning-indexer-candidates.h": {
+      "sha256": "f89fb5a2ef9455d1b7a0dc98e531b94011544026d8ae893f15c28e4bb530f8d3",
+      "reference_raw_sha256": "cdade4a2d18310a8aba20460992e8405a357d6262768bbd1b0747b505503bf34",
+      "base_file_existed": false
+    }
+  },
+  "licenses": {
+    "LICENSE.Strata": "949b9b0aada7476006469e58ee4ffb0e0f68c2d9137e90a356757b61a09d37f0",
+    "LICENSE.GGML": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+  },
+  "no_weights_binaries_or_build_products": true,
+  "closure_revision": 3,
+  "closure_fix": "Include retained custom CMake test source and all modified/new GGML public headers; complete transitive quoted includes from every modified CPU/base source; engine math unchanged."
+}

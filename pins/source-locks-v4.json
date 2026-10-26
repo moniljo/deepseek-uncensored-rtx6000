@@ -1,0 +1,43 @@
+{
+  "schema": "portable-native-source-locks-v1",
+  "strata": {
+    "url": "https://github.com/Niko1221/Strata.git",
+    "commit": "dfa3f4025c9f1bc4af8cee201b20a2d223061813",
+    "destination": "strata"
+  },
+  "llama_cpp": {
+    "url": "https://github.com/ggml-org/llama.cpp.git",
+    "commit": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "destination": "llama.cpp"
+  },
+  "overlay_manifest": "source-overlays.json",
+  "overlay_manifest_sha256": "9e949460c896c350945c381d161ad7adf7c0e44f1ad293db95da3df14ca028d2",
+  "native_target": "strata-dsv41",
+  "build_id": "dfa3f4025-orca-gpu-miss-recovery6b-portable1",
+  "toolchain": {
+    "OS": "Windows x64",
+    "MSVC_toolset": "14.44 / compiler19.44",
+    "CUDA": "13.2",
+    "CUDA_architecture": "120a",
+    "CMake_generator": "Ninja",
+    "build_type": "Release",
+    "portable_CPU": "AVX2/FMA/F16C, BMI2 disabled by DSV41 CMake",
+    "debug_info_env": "_CL_=/Z7"
+  },
+  "required_CMake_flags": {
+    "STRATA_ENABLE_CUDA": "ON",
+    "STRATA_BUILD_DSV41": "ON",
+    "STRATA_NATIVE_EXPERTS": "ON",
+    "STRATA_Q6K_EXPERTS": "ON",
+    "STRATA_PORTABLE": "ON",
+    "STRATA_BUILD_TESTS": "OFF",
+    "STRATA_MMQ_KQUANTS": "OFF",
+    "STRATA_MMQ_TQ_OVERLAY": "OFF"
+  },
+  "fresh_full_source_build_required": true,
+  "old_objects_libraries_not_accepted": true,
+  "default_source_copy_work_directory": ".work/source",
+  "no_model_download_or_inference": true,
+  "closure_revision": 4,
+  "native_change": "Recovery-only headroom correction; all native/GGML source freshly rebuilt"
+}

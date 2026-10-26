@@ -1,0 +1,133 @@
+{
+  "schema": "independent-V6b-setup-stop-twice-readback-v1",
+  "created_UTC": "2026-10-26T20:21:15.748836+00:00",
+  "passed": true,
+  "source_report": "gpu-misses-stop-v6b-fresh-setup-twice-01/REPORT.json",
+  "source_report_sha256": "de11f71f06877e8ecff31579b3e99e768a7dd0905fadbbc43f26fd464d8af2c2",
+  "source_ENGINE_sha256": "b9631caa6a29e17d972e2efada34dccdd52086443408fa16595286bb8d496554",
+  "source_cleanup_sha256": "3b55f6c3a61068d74d494717cb7ef322144d4c926057bebc2c6e9c2c8e079814",
+  "mode": "setup-stop-twice",
+  "metrics": [
+    {
+      "label": "BEFORE",
+      "emitted_IDs": 501,
+      "ID_intervals": 500,
+      "generation_seconds": 14.56175069999881,
+      "actual_ID_intervals_s": 34.33653070300406,
+      "native_ID_intervals_s": 34.338300940869445,
+      "TTFT_seconds": 3.5139506999985315,
+      "natural_EOS": true,
+      "actual_final_ID": 1,
+      "code_vectors_passed": 11,
+      "prompt_tokens": 168,
+      "reused_tokens": 0,
+      "direct_bytes": 350056488960,
+      "retained_ranges": 40,
+      "bounce_bytes": 0
+    },
+    {
+      "label": "FIRST1",
+      "emitted_IDs": 473,
+      "ID_intervals": 472,
+      "generation_seconds": 10.412796299991896,
+      "actual_ID_intervals_s": 45.328842167052414,
+      "native_ID_intervals_s": 45.32969671359698,
+      "TTFT_seconds": 15.416693600011058,
+      "natural_EOS": true,
+      "actual_final_ID": 1,
+      "code_vectors_passed": 11,
+      "prompt_tokens": 168,
+      "reused_tokens": 0,
+      "direct_bytes": 203378964480,
+      "retained_ranges": 40,
+      "bounce_bytes": 0
+    },
+    {
+      "label": "FIRST2",
+      "emitted_IDs": 553,
+      "ID_intervals": 552,
+      "generation_seconds": 12.949938800011296,
+      "actual_ID_intervals_s": 42.625684068832705,
+      "native_ID_intervals_s": 42.626140944261685,
+      "TTFT_seconds": 12.518169399991166,
+      "natural_EOS": true,
+      "actual_final_ID": 1,
+      "code_vectors_passed": 11,
+      "prompt_tokens": 168,
+      "reused_tokens": 0,
+      "direct_bytes": 250645800960,
+      "retained_ranges": 40,
+      "bounce_bytes": 0
+    }
+  ],
+  "first_output_IDs_equal_BEFORE": [
+    false,
+    false
+  ],
+  "actual_rate_ratios_to_BEFORE": [
+    1.3201345983124222,
+    1.2414091696545055
+  ],
+  "recoveries": [
+    {
+      "attempt": 1,
+      "epoch": 2,
+      "issued_unchanged": 811,
+      "normal_anchor_bytes": 83131176960,
+      "pool_after_bytes": 82591211520,
+      "known_cap_bytes": 82594306048,
+      "normal_anchor_restore_percent": 99.35046578221812,
+      "reserve_bytes": 536870912,
+      "elapsed_ms": 7094.674,
+      "compact_ms": 3380.924,
+      "registration_ms": 3676.136,
+      "retained_ranges": 40,
+      "retained_bytes": 184926136320
+    },
+    {
+      "attempt": 2,
+      "epoch": 4,
+      "issued_unchanged": 1402,
+      "normal_anchor_bytes": 83131176960,
+      "pool_after_bytes": 82591211520,
+      "known_cap_bytes": 82594306048,
+      "normal_anchor_restore_percent": 99.35046578221812,
+      "reserve_bytes": 536870912,
+      "elapsed_ms": 6192.481,
+      "compact_ms": 3256.4,
+      "registration_ms": 2881.968,
+      "retained_ranges": 40,
+      "retained_bytes": 184926136320
+    }
+  ],
+  "two_actual_setup_cancels_zero_IDs": true,
+  "no_new_retention_from_cancelled_phase": true,
+  "no_512MiB_ratchet_observed_across_two_recoveries": true,
+  "all_10_answer_records_40_live_ranges_and_zero_bounce": true,
+  "all_GPU_miss_fallback_counters_zero": true,
+  "quality": {
+    "graded_rows": 9,
+    "all_FIRST_joint_passed": true,
+    "BEFORE_and_both_FIRST_code_vectors": 11,
+    "all_graded_natural_EOS": true,
+    "recovery_seed": {
+      "tokens": 131072,
+      "reused": 0,
+      "emitted": 1,
+      "finish": "length"
+    },
+    "three_followups_exact_reuse": 131072
+  },
+  "physical_final_ranges_and_bytes_zero": true,
+  "native_exit": 0,
+  "exact_V3_owned_cleanup": true,
+  "protected_files_unchanged_reported": true,
+  "scope_limitations": [
+    "Read only one closed REPORT, its bounded ENGINE and CLEANUP; no model/GPU/API/process actions.",
+    "Protected files were not rehashed during the concurrent loaded timing run; their unchanged result is the closed controller attestation.",
+    "First outputs differ in length and token IDs; rates are observed ID intervals, not a claim of identical generated text.",
+    "Recovery/registration cost remains included in FIRST TTFT.",
+    "Only two setup cancellations and the 131072-token recovery are admitted here; other Stop modes and full-1M throughput remain separate pending gates.",
+    "No deployment/default or universal performance claim."
+  ]
+}

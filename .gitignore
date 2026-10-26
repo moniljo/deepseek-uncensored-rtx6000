@@ -1,0 +1,16 @@
+.work/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+*.gguf
+*.safetensors
+*.bin
+*.dll
+*.exe
+*.obj
+*.lib
+*.pdb
+*.log
+*.part

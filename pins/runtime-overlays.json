@@ -1,0 +1,17 @@
+{
+  "schema": "API-runtime-overlay-v1",
+  "base_commit": "dfa3f4025c9f1bc4af8cee201b20a2d223061813",
+  "files": {
+    "serve/server.py": "422635751a08b34f418e5311a88106a032b4c824f0bf839d0b798f5a361cb04b",
+    "serve/web/app.css": "1ca416f996e24fff8e2f36d4d3417678d2ba3cca308598b476d4a52744529d18",
+    "serve/web/app.js": "bfab7a4c34604ed6c7551ee53f82792813644b8c4c71094c067c318d1659f798",
+    "serve/web/index.html": "0bd140f967cc72ff2268804f19cf8e14be7d7dc29c16fa0ebd92d067b1989f27"
+  },
+  "same_model_weights": true,
+  "bounded_shutdown_grace": {
+    "quit_seconds": 60,
+    "terminate_seconds": 5,
+    "kill_seconds": 20,
+    "change": "Grace20->60 only; exits immediately when native finishes; no inference or native math change"
+  }
+}

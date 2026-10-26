@@ -1,0 +1,32 @@
+{
+  "tools/pack_gguf_trunk.py": {
+    "original_sha256": "6784a50c4252f0d3af36cf04f5d212524dbf0800dac2d3ea633290d044a18fdf",
+    "published_lf_sha256": "6784a50c4252f0d3af36cf04f5d212524dbf0800dac2d3ea633290d044a18fdf",
+    "algorithm_changed": false
+  },
+  "tools/pack_gguf_dspark.py": {
+    "original_sha256": "b6f86f5343a2f89a62ab07d87d4355a1b615a7f7d7396760cb5f59b5a9d81281",
+    "published_lf_sha256": "6784a50c4252f0d3af36cf04f5d212524dbf0800dac2d3ea633290d044a18fdf",
+    "algorithm_changed": false
+  },
+  "tools/lossless_q6_codec.cpp": {
+    "original_sha256": "4e7b3e8d7c9537ab02d3a532f512131b25e6bfd7e5c9f15abf17da72f37b923e",
+    "published_lf_sha256": "4e7b3e8d7c9537ab02d3a532f512131b25e6bfd7e5c9f15abf17da72f37b923e",
+    "algorithm_changed": false
+  },
+  "LICENSE": {
+    "original_sha256": "d287f56f89f7ca62ded62124d5741c4e858bce5ee30d45f39bb4469ea63f5188",
+    "published_lf_sha256": "949b9b0aada7476006469e58ee4ffb0e0f68c2d9137e90a356757b61a09d37f0",
+    "algorithm_changed": false
+  },
+  "tools/q6compat.py": {
+    "original_sha256": "c9221e136f1e9bb1195d733ee72b41139342f7337bb18e3bfa22f21d59862839",
+    "published_sha256": "e8aeedffb2557404fb54627c92b2e72a3f9869770ec28f71bab96875b89edad0",
+    "changes": "Only default input/output/pack-tool/optional-codec paths; all encoder/independentdecoder/audit/packbuild bodies unchanged."
+  },
+  "tools/add_dspark.py": {
+    "original_sha256": "b3bd41c665fa3c49e0c132e926619cdcd0aaf555250ddd1150fb32a9c18ac685",
+    "published_sha256": "0d70ba018a4d4bd644f2fe5fd0f834c46ec787ad48facef03dd637a2d8238658",
+    "changes": "Only default workspace/input/output/pack-tool paths; all metadata merge, geometry/tokenizer/Engram/index/bounds/original-readonly checks unchanged."
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "schema": "independent-V6b-early-initial-Stop-readback-v1",
+  "created_UTC": "2026-10-26T21:03:30.346584+00:00",
+  "passed": true,
+  "results": [
+    {
+      "mode": "early-rearm-stop",
+      "trial_id": "gpu-misses-stop-v6b-fresh-early-01",
+      "passed": true,
+      "report_sha256": "3be73be0a714b6ca10c856af5db169e86a220e6256fd180bd75279a3f3d415c4",
+      "shutdown_sha256": "fa4e1eac0e036a3cf9e3eed7613384614fc09555e3a984320db289d9ab9bd934",
+      "metrics": [
+        {
+          "label": "BEFORE",
+          "emitted_IDs": 501,
+          "actual_ID_intervals_s": 34.38483724407522,
+          "TTFT_seconds": 3.553386200015666,
+          "generation_seconds": 14.541293199989013,
+          "code_vectors": 11,
+          "natural_EOS": true,
+          "final_ID": 1
+        },
+        {
+          "label": "FIRST",
+          "emitted_IDs": 420,
+          "actual_ID_intervals_s": 46.04926790297812,
+          "TTFT_seconds": 17.645043099997565,
+          "generation_seconds": 9.098950299987337,
+          "code_vectors": 11,
+          "natural_EOS": true,
+          "final_ID": 1
+        }
+      ],
+      "BEFORE_same_process": true,
+      "BEFORE_reference_sha256": null,
+      "quality_FIRST_grades": 7,
+      "actual_cancel_IDs": 0,
+      "recovery_ms": 8760.707,
+      "pool_after_bytes": 82591211520,
+      "normal_anchor_bytes": 83131176960,
+      "pool_percent_of_normal": 99.35046578221812,
+      "checked_reserve_shrink": {
+        "attempt": 1,
+        "epoch": 2,
+        "pool_before_bytes": 83131176960,
+        "pool_after_bytes": 63341107200,
+        "target_cap_bytes": 82594306048,
+        "reserve_bytes": 536870912,
+        "shrink_completed": 1,
+        "stopped": 0
+      },
+      "unknown_initial_target_checked": false,
+      "all_answer_records_40_ranges_zero_bounce": true,
+      "three_suffixes_reuse_tokens": 131072,
+      "physical_exit_zero": true,
+      "native_exit": 0,
+      "exact_V3_cleanup": true,
+      "shutdown_seconds": 16.810900000011316,
+      "shutdown_escalation": false,
+      "exceeded_old20": false
+    },
+    {
+      "mode": "initial-prefill-stop",
+      "trial_id": "gpu-misses-stop-v6b-fresh-initial-01",
+      "passed": true,
+      "report_sha256": "2691b1bbeca9f53cac5a26617e17e1bc2c5f0626cc5315fdecf5395951f1a510",
+      "shutdown_sha256": "f73b8714affe9ebe7fb1617c5e3ec7ae71a710841c65bf43f9a12cc569d0dce6",
+      "metrics": [
+        {
+          "label": "BEFORE",
+          "emitted_IDs": 501,
+          "actual_ID_intervals_s": 34.33653070300406,
+          "TTFT_seconds": 3.5139506999985315,
+          "generation_seconds": 14.56175069999881,
+          "code_vectors": 11,
+          "natural_EOS": true,
+          "final_ID": 1
+        },
+        {
+          "label": "FIRST",
+          "emitted_IDs": 434,
+          "actual_ID_intervals_s": 34.31937412998312,
+          "TTFT_seconds": 13.198334899992915,
+          "generation_seconds": 12.616780200012727,
+          "code_vectors": 11,
+          "natural_EOS": true,
+          "final_ID": 1
+        }
+      ],
+      "BEFORE_same_process": false,
+      "BEFORE_reference_sha256": "de11f71f06877e8ecff31579b3e99e768a7dd0905fadbbc43f26fd464d8af2c2",
+      "quality_FIRST_grades": 4,
+      "actual_cancel_IDs": 0,
+      "recovery_ms": 6942.788,
+      "pool_after_bytes": 82603284480,
+      "normal_anchor_bytes": 0,
+      "pool_percent_of_normal": null,
+      "checked_reserve_shrink": {
+        "attempt": 1,
+        "epoch": 1,
+        "pool_before_bytes": 63341107200,
+        "pool_after_bytes": 63341107200,
+        "target_cap_bytes": 0,
+        "reserve_bytes": 536870912,
+        "shrink_completed": 1,
+        "stopped": 0
+      },
+      "unknown_initial_target_checked": true,
+      "all_answer_records_40_ranges_zero_bounce": true,
+      "three_suffixes_reuse_tokens": 131072,
+      "physical_exit_zero": true,
+      "native_exit": 0,
+      "exact_V3_cleanup": true,
+      "shutdown_seconds": 18.13651630000095,
+      "shutdown_escalation": false,
+      "exceeded_old20": false
+    }
+  ],
+  "scope": [
+    "Closed REPORT/ENGINE/SHUTDOWN/CLEANUP and prior reference only; no GPU/API/model/process action.",
+    "No bulk protected hashes during concurrent qualification; completed controller attestations retained.",
+    "Initial BEFORE is explicitly a separate control process/state.",
+    "Matching-task outputs differ in length; no token-identity or universal speed claim.",
+    "Both closes below20s; no causal explanation of earlier untraced failure.",
+    "Fulltwofresh1M/publicadapter/API/default gates remain separate."
+  ]
+}

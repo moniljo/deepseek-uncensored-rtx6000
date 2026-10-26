@@ -1,0 +1,4 @@
+# Manifests hash the exact tested bytes. Preserve those bytes on every checkout,
+# including the existing newline forms of scripts, licenses and JSON metadata.
+# Native source overlays are already LF; Git must not silently rewrite any pins.
+* -text

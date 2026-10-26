@@ -1,0 +1,85 @@
+{
+  "schema": "retained-public-source-benchmark-corpus-v1",
+  "snapshot": "retained-public-archive.txt.gz",
+  "gzip_sha256": "a36ec3a5729a168fd4d678a73041dbd3c9a35cfb956a74f5a341d801d3203c32",
+  "gzip_bytes": 706946,
+  "gzip_settings": {
+    "mtime": 0,
+    "original_filename": "",
+    "compression_level": 9,
+    "OS_byte": 255
+  },
+  "uncompressed_sha256": "9fc1859dbb3fd21cd4c9b0a8498a0a3bf5e0429fd10502ac92bf79a2959c40ad",
+  "uncompressed_bytes": 3434689,
+  "unicode_characters": 3434687,
+  "encoding": "UTF-8",
+  "line_endings": "LF",
+  "labelled_source_sections": 208,
+  "origin_version": "Exact original distribution/runtime version not established. Includes a Debian-specific distutils customization; not asserted to be stock CPython3.12.",
+  "purpose": "Frozen public-source benchmark corpus. Read as text only; never import/execute this annotated and truncated concatenation.",
+  "benchmark_changes": [
+    "Instruction preamble and section labels",
+    "Five synthetic AUDIT RECORD comments inserted in source text",
+    "Final encodings/iso8859_3.py section truncated",
+    "END OF ARCHIVE footer"
+  ],
+  "audit_records": [
+    {
+      "label": "ORCHID",
+      "value": "642913",
+      "literal": "\n# AUDIT RECORD ORCHID = 642913\n",
+      "actual_Unicode_offset_with_literal_newline": 41915,
+      "actual_UTF8_byte_offset_with_literal_newline": 41915,
+      "legacy_retained_character_position": 41781
+    },
+    {
+      "label": "CEDAR",
+      "value": "185726",
+      "literal": "\n# AUDIT RECORD CEDAR = 185726\n",
+      "actual_Unicode_offset_with_literal_newline": 886245,
+      "actual_UTF8_byte_offset_with_literal_newline": 886245,
+      "legacy_retained_character_position": 886111
+    },
+    {
+      "label": "MAPLE",
+      "value": "937452",
+      "literal": "\n# AUDIT RECORD MAPLE = 937452\n",
+      "actual_Unicode_offset_with_literal_newline": 1978002,
+      "actual_UTF8_byte_offset_with_literal_newline": 1978002,
+      "legacy_retained_character_position": 1977868
+    },
+    {
+      "label": "IRIS",
+      "value": "406831",
+      "literal": "\n# AUDIT RECORD IRIS = 406831\n",
+      "actual_Unicode_offset_with_literal_newline": 2803506,
+      "actual_UTF8_byte_offset_with_literal_newline": 2803508,
+      "legacy_retained_character_position": 2803372
+    },
+    {
+      "label": "SPRUCE",
+      "value": "728194",
+      "literal": "\n# AUDIT RECORD SPRUCE = 728194\n",
+      "actual_Unicode_offset_with_literal_newline": 3407584,
+      "actual_UTF8_byte_offset_with_literal_newline": 3407586,
+      "legacy_retained_character_position": 3407450
+    }
+  ],
+  "legacy_offset_note": "Legacy character-position metadata differs from actual offsets; original metadata is retained without asserting equality. Exact frozen archive bytes and hashes remain unchanged.",
+  "section_hash_scope": "Exact captured section bodies include any audit insertion and framing newlines, not verified clean upstream files. The _pydecimal-labelled section also contains generated build configuration.",
+  "licenses": [
+    "PYTHON-LICENSE.txt",
+    "CORPUS-NOTICE.md"
+  ],
+  "license_file_sha256": "62bec384df47b0328307db41455ff6ea2559e5546b394ac69148561b21703120",
+  "inventory_sha256": "0751e43ab41b18bbc3fc1fa51408bd35117134099d5a35381bf8323e9700c1da",
+  "public_provenance_references": [
+    "https://docs.python.org/3/license.html",
+    "https://sources.debian.org/src/python3.11/3.11.2-6%2Bdeb12u8/debian/copyright/",
+    "https://sources.debian.org/src/python3.13/3.13.5-2%2Bdeb13u4/debian/patches/distutils-install-layout.diff/"
+  ],
+  "private_personal_path_or_service_hostname_matches": 0,
+  "configured_secret_matches": 0,
+  "private_key_pattern_matches": 0,
+  "million_token_ID_vectors_or_request_payloads_included": false
+}

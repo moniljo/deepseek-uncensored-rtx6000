@@ -1,0 +1,120 @@
+{
+  "schema": "independent-portable-active-prefill-cancel02-v1",
+  "audit_passed": true,
+  "raw_report_sha256": "33651997202a122d3e605262cd0cb96327f7450ddac0d3197e0632337ec4ca24",
+  "raw_report_passed": true,
+  "raw_finished": true,
+  "raw_status": "actual-Stop-FIRST-direct-recovery-speed-and-NON_TARGET-reuse-passed",
+  "raw_REPORT_unchanged": true,
+  "engine_log_sha256": "118f365f3c235496cd25b4bf19e448fe97a5d09e83da7a1411a0ee81f462b867",
+  "shutdown_trace_sha256": "4f8cfca57fb48be2e164b9788d6a2eb26e99de4e5225be7b4857cabd350fcce8",
+  "mode": "active-prefill-stop",
+  "selected_public_mode_only": true,
+  "no_public_five_mode_or_full13_claim": true,
+  "observed_STOP": {
+    "sent": true,
+    "prompt_progress": [
+      62486,
+      999764
+    ],
+    "generated_IDs": 0,
+    "finish": "cancel",
+    "reused_tokens": 0,
+    "DONE_drained": true,
+    "one_stdout_consumer": true,
+    "cancelled_phase_published_no_new_retention": true,
+    "old_owner_physically_retired": true
+  },
+  "FIRST_quality": {
+    "passed": 7,
+    "total": 7,
+    "all_7_natural_EOS": true,
+    "code_cases_with_11_vectors_passed": 3,
+    "FIRST_after_Stop_corrected_code_11_of_11": true,
+    "8_output_ID_counts_hashes_and_native_DONE_counts_recomputed": true
+  },
+  "matched_short": {
+    "input_tokens": 168,
+    "same_input_hash": true,
+    "reused_tokens_before_and_after": 0,
+    "before_emitted_IDs": 645,
+    "FIRST_emitted_IDs": 499,
+    "before_ID_intervals_s": 36.43738534349627,
+    "FIRST_ID_intervals_s": 42.265465262577536,
+    "FIRST_over_before": 1.1599478081135568,
+    "declared_minimum_ratio": 0.95,
+    "before_TTFT_seconds": 3.524805399996694,
+    "FIRST_TTFT_seconds": 14.425203999999212,
+    "output_sequences_differ": true,
+    "not_an_identical_output_latency_comparison": true
+  },
+  "recovery": {
+    "epoch": 2,
+    "attempt": 1,
+    "issued_unchanged": 946,
+    "native_recovery_seconds": 5.361098,
+    "compact_wall_seconds": 3.121297,
+    "registration_wall_seconds": 2.195354,
+    "included_in_FIRST_TTFT": true,
+    "geometry_before": {
+      "C": 65280,
+      "A": 4096,
+      "AI": 128
+    },
+    "geometry_after": {
+      "C": 1024,
+      "A": 1024,
+      "AI": 128
+    },
+    "normal_anchor_bytes": 83215687680,
+    "pool_after_bytes": 82675722240,
+    "pool_restore_percent": 99.35112542471992,
+    "fixed_reserve_bytes": 536870912,
+    "state_and_stream_guards_source_bound_and_native_markers_verified": true
+  },
+  "direct": {
+    "all_8_answer_records_ranges": 40,
+    "retained_bytes": 184926136320,
+    "all_8_bounce_bytes": 0,
+    "all_8_fallbacks": 0,
+    "live_pin_history_kinds": [
+      "retained",
+      "retired",
+      "retained",
+      "retired",
+      "retained",
+      "retired"
+    ],
+    "same_fingerprint_across_rotation": true,
+    "actual_epoch_and_exit_markers_ranges_after_zero": true,
+    "final_physical_zero": true
+  },
+  "subsequent_131K": {
+    "seed_tokens": 131072,
+    "seed_reused": 0,
+    "generation": 2,
+    "attempt": 2,
+    "positive_native_work_verified": true,
+    "graded_suffixes": 3,
+    "each_reused_tokens": 131072,
+    "all_natural_EOS": true
+  },
+  "normal_cleanup": {
+    "native_exit": 0,
+    "exact_V3": true,
+    "separately_held_identity_signaled": true,
+    "Job_empty_before_final_cleanup": true,
+    "no_live_escalation": true,
+    "native_QUIT_wait_seconds": 18.161112600006163,
+    "engine_close_seconds": 18.16132800001651
+  },
+  "protected_files_unchanged_completed_report_attestation": true,
+  "protected_sources_not_bulk_rehashed_during_separate_API_timing": true,
+  "initial_profile_SHA_prefix": "66b2",
+  "context_tokens": 1048576,
+  "prior_failed_attempt01_remains_failed": true,
+  "API_and_default_validation": "Subsequent API05 and managed default verification passed in separate receipts; see api05-qualified.json and default-deployment-verified.json.",
+  "auditor_GPU_API_model_process_compiler_or_tokenization_actions": 0,
+  "scope": "Closed selected portable cancellation/recovery mode; real native cancellation and immediate first response. Does not replace five-mode private evidence or raw Q02 failure, and does not claim universal speed or token identity.",
+  "current_status_cross_reference_updated_UTC": "2026-10-26T23:10:55.651073+00:00"
+}

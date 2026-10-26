@@ -1,0 +1,73 @@
+{
+  "schema": "sanitized-API04-format-failure-and-declared05-client-preset-v1",
+  "history_audit_passed": true,
+  "API04_qualification_passed": false,
+  "created_UTC": "2026-10-26T22:55:06.262095+00:00",
+  "attempt04": {
+    "REPORT_sha256": "7f5a56d745264fe5058acd383a73c2042d66f48080980f8df43d6456a0e440f1",
+    "API_sha256": "d89889f108a18b14183e546d8dbb963e7e72f70034848293a24b2fd367be088c",
+    "SHUTDOWN_sha256": "6e4c9f76656d10c437c59105c8bdbb76bfb697d29232a99826d09460e6390c81",
+    "raw_passed": false,
+    "finished": true,
+    "command_exit": 1,
+    "read_only_checks_passed": 6,
+    "FIRST_long_HTTP": 200,
+    "FIRST_long_input_uncached_tokens": 999771,
+    "completion_tokens": 11,
+    "answer_sha256": "c4147c9cb2c5938384df1aa7464842eb8a6d39f6fc9f0e03bd234db3b3fb22fe",
+    "answer_characters": 24,
+    "expected_answer_sha256": "93280b15904343560264c3cc4b564ccab82097833751482d454e11af71e16050",
+    "exact_only_integer_match": false,
+    "correct_numeric_sum_with_extra_expression_format": true,
+    "raw_response_body_not_exported": true,
+    "raw_private_capture_never_publish": true,
+    "DONE_count": 1,
+    "finish_reasons": [
+      "stop"
+    ],
+    "usage_count": 1,
+    "usage_numbers": {
+      "prompt_tokens": 999771,
+      "completion_tokens": 11,
+      "cached_tokens": 0,
+      "total_tokens": 999782
+    },
+    "existing_usage_assertion_values_independently_satisfied": true,
+    "original_API_row_failed_before_later_usage_assertions_completed": true,
+    "error_reason": "Complete natural SSE stop, exact answer and DONE required",
+    "launch_HMAC_and_DLL_binding_passed": true,
+    "independent_native_returncode": 0,
+    "owned_Job_empty_before_finish": true,
+    "V3_cleanup_passed": true,
+    "live_escalation": false,
+    "source_config_pins_and_payload_stats_unchanged": true,
+    "shutdown_seconds": 20.54881619999651,
+    "old_request": {
+      "reasoning_effort": "none",
+      "FIRST_long_max_tokens": 256
+    },
+    "not_regraded_or_relabelled": true
+  },
+  "attempt03_failed_predicate_remains_unknown": true,
+  "declared_attempt05_client_change": {
+    "status": "Subsequently passed as a separate declared-mode attempt; see api05-qualified.json.04 remains failed.",
+    "preset_flag": "--long-thinking-preset high-budget256",
+    "same_public_synthetic_prompt_and_expected_integer": true,
+    "reasoning_effort": "high",
+    "actual_DeepSeek_effort_level": 75,
+    "effort75_is_not_a_token_budget": true,
+    "separate_reasoning_budget_tokens": 256,
+    "max_tokens": 1024,
+    "FIRST_long_only": true,
+    "default_script_none_long256_preserved": true,
+    "natural_arithmetic_SSE_and_tools_default_none128_unchanged": true,
+    "disconnect_generation_none512_unchanged": true,
+    "global_config_reasoning_budget32768_unchanged": true,
+    "all_exact_answer_stop_DONE_usage_and_auth_assertions_unchanged": true,
+    "new_public_checker_sha256": "077ad65bf9042d9f9054a0e678de43e08a49503cbe343c631059d4855d25f2f8",
+    "new_private_controller_sha256": "a32ce20fde7ae3df7ef726a6d174d95ea2bf0053973bd8e339014698a093e821",
+    "actual_renderer_source_proof_sha256": "867163478f1b699165a380ae7d8bf6b3ee24c4949ece141cd121a0d447d3c4c5",
+    "source_peer_sha256": "655209d0a6fba731afcf5e95688e7dce846b7922cda85770fb6a1b2fec9a0845"
+  },
+  "scope": "04 is a strict formatting failure with correct arithmetic and observed protocol/ownership/normal-exit components. It is not passed by accepting an equation.05 is a newly declared client thinking mode, not a regrade of04 or a model/config/weight change. No default/publication claim. Subsequent managed default verification is recorded separately in default-deployment-verified.json."
+}

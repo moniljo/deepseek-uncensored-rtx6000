@@ -1,0 +1,51 @@
+{
+  "schema": "sanitized-selected-default-promotion-and-managed-API02-v1",
+  "audit_passed": true,
+  "promotion_applied": true,
+  "managed_default_verification_passed": true,
+  "created_UTC": "2026-10-26T23:10:55.632496+00:00",
+  "promotion_receipt_sha256": "d1d28e2c3e74ad23976ef9d2d01b6d3bd907da65e1b30a2305115c131e89a743",
+  "managed_REPORT_sha256": "d098c3570668218fd17724895d397043cf9b27689f50950fba349d951db75f1d",
+  "LOCAL_API_sha256": "03841a22173eb9d8881a66c8989fa6fdd5f3fa276599b370cac319e8b2a28493",
+  "PUBLIC_API_sha256": "e5d746a85fc4b3ef9439ae1c62465d3e4ca0ea1db8db13cfda9e406594926bdd",
+  "independent_peer_sha256": "162b5a4b9815af468598f81a27358d1c9f7b2d4b6bfe74a3ccd6edfde1158f0c",
+  "selected_native_EXE_sha256": "7bc19cda219953d887878ed408058eb1ad78f154c1200b675bc9d1ab89bd1545",
+  "context_tokens": 1048576,
+  "preserved": {
+    "exact_model_weights": true,
+    "CPU16_DSpark_on3_other_native_args": true,
+    "original_bind_and_unapproved_configuration_fields": true,
+    "original_learned_profile_namespace": true,
+    "API_key": true,
+    "tunnel_configuration": true
+  },
+  "managed_checks": {
+    "local_passed": 15,
+    "local_total": 15,
+    "local_API_inference_attempts": 6,
+    "public_passed": 14,
+    "public_total": 14,
+    "public_API_inference_attempts": 6,
+    "auth_models_metrics_health_context_natural_SSE_tools_disconnect_recovery": true,
+    "actual_tool_execution": false,
+    "fresh_public_samples_matching_same_local_service": 3,
+    "individual_connector_selection_proven": false,
+    "kernel_native_identity_proven_by_managed_verifier": false,
+    "identity_scope": "Selected executable/configuration hashes, managed frontend record and authenticated API instance/model/context. Separate owned API05 carries creation-handle/native-exit and near1M proof.",
+    "second_managed_near1M_request_performed": false
+  },
+  "separate_near1M_fresh_install_API05_REPORT_sha256": "1aa1b021d3d1bab246de9f95b6d2af17a9157190bdadf0a3bd5587b0dc2aeab9",
+  "retained_postverifier01": {
+    "REPORT_sha256": "8dd310948a19d74e5166fae2e583b290d5d56eb4689068438bf858e2bce78b06",
+    "passed": false,
+    "finished": true,
+    "failed_before_HTTP": true,
+    "cause": "Verifier assumed loopback bind and confused manager storage tag with public API model ID; preserved configuration and application were not changed to satisfy it.",
+    "not_an_application_or_endpoint_failure_result": true,
+    "not_relabelled_by_later_pass": true
+  },
+  "current_status": "Tested selected V6b is the verified default on the measured machine. Remote Git publication is a separate action and is not attested by this runtime receipt.",
+  "all_prior_API_failures_and_Q02_raw25_of26_unchanged": true,
+  "reviewer_API_model_process_config_tunnel_or_runtime_actions": 0,
+  "privacy": "No keys, paths, process identities, hostnames, raw API content or learned profile values exported."
+}

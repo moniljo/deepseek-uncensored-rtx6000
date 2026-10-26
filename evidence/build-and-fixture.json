@@ -1,0 +1,63 @@
+{
+  "schema": "public-source-build-and-bounded-fixture-evidence-v1",
+  "build_receipt_sha256": "f3a3109b1ea980f8e57beb84a55feab9f031c69446478c5b78af27787593191c",
+  "native_build": {
+    "schema": "fresh-portable-native-build-v1",
+    "compiled": true,
+    "exe_sha256": "7bc19cda219953d887878ed408058eb1ad78f154c1200b675bc9d1ab89bd1545",
+    "upstream_Strata_commit": "dfa3f4025c9f1bc4af8cee201b20a2d223061813",
+    "upstream_llama_commit": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "source_locks_sha256": "04ceafe5297fa2115950e6cd46f1af0430882e4dad20ae25418d35ccea8489a2",
+    "source_overlay_manifest_sha256": "9e949460c896c350945c381d161ad7adf7c0e44f1ad293db95da3df14ca028d2",
+    "source_manifest_sha256": "53cf46cb2181043e3fbd76361490538346e3a9f67bab3562d86ccb390bfad7f5",
+    "source_checkout_verified_before_build": true,
+    "source_checkout_verified_after_build": true,
+    "source_overlay_verified_before_after": true,
+    "CUDA_architecture": "120a",
+    "CUDA_version_output": "nvcc: NVIDIA (R) Cuda compiler driver\r\nCopyright (c) 2005-2026 NVIDIA Corporation\r\nBuilt on Mon_Mar__2_21:54:11_Pacific_Standard_Time_2026\r\nCuda compilation tools, release 13.2, V13.2.51\r\nBuild cuda_13.2.r13.2/compiler.37434383_0",
+    "old_objects_or_libraries_copied": false,
+    "all_native_GGML_objects_and_four_custom_static_libraries_rebuilt_from_source": true,
+    "external_prebuilt_CUDA_toolkit_libraries": true,
+    "qualification_not_inferred_from_compilation": true,
+    "host_compiler_version_line": "Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35228 for x64"
+  },
+  "CPU_policy_checks": 230,
+  "CPU_scope": "Actual policy and registration-transaction headers; no CUDA/model/physical allocation. Repeated from fresh LF recipe checkout with assertions enabled.",
+  "CUDA_fixture": {
+    "passed": true,
+    "native_exit": 0,
+    "actual_numeric_cases": 133,
+    "actual_guard_checks": 96,
+    "inherited_numeric_rows_matching_earlier_hashes": 132,
+    "actual_run_receipt_sha256": "a4b4ffc8b8d719abaa99f800c2e1e708b15548a60fe07335745a5e9e41ef2098",
+    "numeric_sha256": "247b0b41ebf65c06dea7c1922c6f1529aed850d7b4adb952447260f092c64215",
+    "loaded_model_lifecycle_tested": false,
+    "performance_claim": false
+  },
+  "packing": {
+    "full_original_files_verified": 8,
+    "existing_lossless_sidecars_verified": 9,
+    "fresh_metadata_generated": true,
+    "sidecar_full_conversion_repeated_in_recipe_attempt": false,
+    "earlier_full_audited_values": 40768634880,
+    "earlier_different_F32_bits": 0,
+    "actual_compiled_codec_sample_values": 1048576
+  },
+  "vendor_runtime_byte_parity": [
+    {
+      "name": "cublas64_13.dll",
+      "retained_sha256": "b181c4ffb454840a49f802169d8826617841875607a2e2ba14ef9650e348c456",
+      "toolkit_sha256": "b181c4ffb454840a49f802169d8826617841875607a2e2ba14ef9650e348c456",
+      "identical": true,
+      "bytes": 51571824
+    },
+    {
+      "name": "cublasLt64_13.dll",
+      "retained_sha256": "182baf9b1846630c2462cccdae744367b8ff4d2965651deb41a2beefb53f1de5",
+      "toolkit_sha256": "182baf9b1846630c2462cccdae744367b8ff4d2965651deb41a2beefb53f1de5",
+      "identical": true,
+      "bytes": 453003888
+    }
+  ],
+  "not_a_full_1m_or_API_qualification": true
+}

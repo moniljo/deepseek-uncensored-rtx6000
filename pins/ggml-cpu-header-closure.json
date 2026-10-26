@@ -1,0 +1,585 @@
+{
+  "schema": "GGML-modified-CPU-transitive-quoted-include-closure-v3",
+  "base_commit": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "roots": [
+    "ggml/include/ggml.h",
+    "ggml/src/ggml.c",
+    "ggml/src/ggml-backend-meta.cpp",
+    "ggml/src/ggml-cpu/ggml-cpu.c",
+    "ggml/src/ggml-cpu/ggml-cpu.cpp",
+    "ggml/src/ggml-cpu/ops.cpp",
+    "ggml/src/ggml-cpu/ops.h"
+  ],
+  "include_search": [
+    "ggml/include",
+    "ggml/src",
+    "ggml/src/ggml-cpu"
+  ],
+  "visited": [
+    "ggml/include/ggml-alloc.h",
+    "ggml/include/ggml-backend.h",
+    "ggml/include/ggml-cpp.h",
+    "ggml/include/ggml-cpu.h",
+    "ggml/include/ggml-lightning-indexer-candidates.h",
+    "ggml/include/ggml.h",
+    "ggml/include/gguf.h",
+    "ggml/src/ggml-backend-impl.h",
+    "ggml/src/ggml-backend-meta.cpp",
+    "ggml/src/ggml-common.h",
+    "ggml/src/ggml-cpu/amx/amx.h",
+    "ggml/src/ggml-cpu/binary-ops.h",
+    "ggml/src/ggml-cpu/common.h",
+    "ggml/src/ggml-cpu/ggml-cpu-impl.h",
+    "ggml/src/ggml-cpu/ggml-cpu.c",
+    "ggml/src/ggml-cpu/ggml-cpu.cpp",
+    "ggml/src/ggml-cpu/hbm.h",
+    "ggml/src/ggml-cpu/iqp.h",
+    "ggml/src/ggml-cpu/kleidiai/kleidiai.h",
+    "ggml/src/ggml-cpu/llamafile/sgemm.h",
+    "ggml/src/ggml-cpu/ops.cpp",
+    "ggml/src/ggml-cpu/ops.h",
+    "ggml/src/ggml-cpu/quants.h",
+    "ggml/src/ggml-cpu/repack.h",
+    "ggml/src/ggml-cpu/simd-gemm.h",
+    "ggml/src/ggml-cpu/simd-mappings.h",
+    "ggml/src/ggml-cpu/spacemit/ime.h",
+    "ggml/src/ggml-cpu/traits.h",
+    "ggml/src/ggml-cpu/unary-ops.h",
+    "ggml/src/ggml-cpu/vec.h",
+    "ggml/src/ggml-impl.h",
+    "ggml/src/ggml-quants.h",
+    "ggml/src/ggml-threading.h",
+    "ggml/src/ggml.c"
+  ],
+  "quoted_edges": [
+    {
+      "from": "ggml/src/ggml-cpu/ops.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ops.cpp",
+      "include": "ops.h",
+      "to": "ggml/src/ggml-cpu/ops.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ops.cpp",
+      "include": "ggml-cpu.h",
+      "to": "ggml/include/ggml-cpu.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ops.cpp",
+      "include": "ggml-impl.h",
+      "to": "ggml/src/ggml-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ops.cpp",
+      "include": "binary-ops.h",
+      "to": "ggml/src/ggml-cpu/binary-ops.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ops.cpp",
+      "include": "simd-gemm.h",
+      "to": "ggml/src/ggml-cpu/simd-gemm.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ops.cpp",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ops.cpp",
+      "include": "unary-ops.h",
+      "to": "ggml/src/ggml-cpu/unary-ops.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ops.cpp",
+      "include": "vec.h",
+      "to": "ggml/src/ggml-cpu/vec.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/vec.h",
+      "include": "ggml-impl.h",
+      "to": "ggml/src/ggml-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/vec.h",
+      "include": "simd-mappings.h",
+      "to": "ggml/src/ggml-cpu/simd-mappings.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/vec.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/vec.h",
+      "include": "ggml-cpu.h",
+      "to": "ggml/include/ggml-cpu.h"
+    },
+    {
+      "from": "ggml/include/ggml-cpu.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/include/ggml-cpu.h",
+      "include": "ggml-backend.h",
+      "to": "ggml/include/ggml-backend.h"
+    },
+    {
+      "from": "ggml/include/ggml-backend.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/include/ggml-backend.h",
+      "include": "ggml-alloc.h",
+      "to": "ggml/include/ggml-alloc.h"
+    },
+    {
+      "from": "ggml/include/ggml-alloc.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/simd-mappings.h",
+      "include": "ggml-cpu-impl.h",
+      "to": "ggml/src/ggml-cpu/ggml-cpu-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu-impl.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu-impl.h",
+      "include": "ggml-impl.h",
+      "to": "ggml/src/ggml-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml-impl.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/src/ggml-impl.h",
+      "include": "gguf.h",
+      "to": "ggml/include/gguf.h"
+    },
+    {
+      "from": "ggml/include/gguf.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/unary-ops.h",
+      "include": "common.h",
+      "to": "ggml/src/ggml-cpu/common.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/common.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/common.h",
+      "include": "traits.h",
+      "to": "ggml/src/ggml-cpu/traits.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/common.h",
+      "include": "ggml-cpu-impl.h",
+      "to": "ggml/src/ggml-cpu/ggml-cpu-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/common.h",
+      "include": "ggml-impl.h",
+      "to": "ggml/src/ggml-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/common.h",
+      "include": "simd-mappings.h",
+      "to": "ggml/src/ggml-cpu/simd-mappings.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/traits.h",
+      "include": "ggml-backend-impl.h",
+      "to": "ggml/src/ggml-backend-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/traits.h",
+      "include": "ggml-cpu-impl.h",
+      "to": "ggml/src/ggml-cpu/ggml-cpu-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/traits.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/src/ggml-backend-impl.h",
+      "include": "ggml-backend.h",
+      "to": "ggml/include/ggml-backend.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/simd-gemm.h",
+      "include": "simd-mappings.h",
+      "to": "ggml/src/ggml-cpu/simd-mappings.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/binary-ops.h",
+      "include": "common.h",
+      "to": "ggml/src/ggml-cpu/common.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.cpp",
+      "include": "ggml-backend.h",
+      "to": "ggml/include/ggml-backend.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.cpp",
+      "include": "ggml-backend-impl.h",
+      "to": "ggml/src/ggml-backend-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.cpp",
+      "include": "ggml-cpu.h",
+      "to": "ggml/include/ggml-cpu.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.cpp",
+      "include": "repack.h",
+      "to": "ggml/src/ggml-cpu/repack.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.cpp",
+      "include": "traits.h",
+      "to": "ggml/src/ggml-cpu/traits.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.cpp",
+      "include": "ggml-impl.h",
+      "to": "ggml/src/ggml-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.cpp",
+      "include": "amx/amx.h",
+      "to": "ggml/src/ggml-cpu/amx/amx.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.cpp",
+      "include": "hbm.h",
+      "to": "ggml/src/ggml-cpu/hbm.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.cpp",
+      "include": "kleidiai/kleidiai.h",
+      "to": "ggml/src/ggml-cpu/kleidiai/kleidiai.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.cpp",
+      "include": "spacemit/ime.h",
+      "to": "ggml/src/ggml-cpu/spacemit/ime.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/spacemit/ime.h",
+      "include": "ggml-alloc.h",
+      "to": "ggml/include/ggml-alloc.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/kleidiai/kleidiai.h",
+      "include": "ggml-alloc.h",
+      "to": "ggml/include/ggml-alloc.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/hbm.h",
+      "include": "ggml-backend.h",
+      "to": "ggml/include/ggml-backend.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/hbm.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/amx/amx.h",
+      "include": "ggml-backend.h",
+      "to": "ggml/include/ggml-backend.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/amx/amx.h",
+      "include": "ggml-cpu-impl.h",
+      "to": "ggml/src/ggml-cpu/ggml-cpu-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/repack.h",
+      "include": "ggml-common.h",
+      "to": "ggml/src/ggml-common.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/repack.h",
+      "include": "traits.h",
+      "to": "ggml/src/ggml-cpu/traits.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/repack.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "include": "ggml-backend-impl.h",
+      "to": "ggml/src/ggml-backend-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "include": "ggml-backend.h",
+      "to": "ggml/include/ggml-backend.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "include": "traits.h",
+      "to": "ggml/src/ggml-cpu/traits.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "include": "iqp.h",
+      "to": "ggml/src/ggml-cpu/iqp.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "include": "ggml-cpu-impl.h",
+      "to": "ggml/src/ggml-cpu/ggml-cpu-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "include": "ggml-impl.h",
+      "to": "ggml/src/ggml-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "include": "quants.h",
+      "to": "ggml/src/ggml-cpu/quants.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "include": "ggml-threading.h",
+      "to": "ggml/src/ggml-threading.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "include": "unary-ops.h",
+      "to": "ggml/src/ggml-cpu/unary-ops.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "include": "binary-ops.h",
+      "to": "ggml/src/ggml-cpu/binary-ops.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "include": "vec.h",
+      "to": "ggml/src/ggml-cpu/vec.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "include": "ops.h",
+      "to": "ggml/src/ggml-cpu/ops.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "include": "common.h",
+      "to": "ggml/src/ggml-cpu/common.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "include": "llamafile/sgemm.h",
+      "to": "ggml/src/ggml-cpu/llamafile/sgemm.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "include": "spacemit/ime.h",
+      "to": "ggml/src/ggml-cpu/spacemit/ime.h"
+    },
+    {
+      "from": "ggml/src/ggml-threading.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/quants.h",
+      "include": "ggml-common.h",
+      "to": "ggml/src/ggml-common.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/quants.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/iqp.h",
+      "include": "ggml-cpu-impl.h",
+      "to": "ggml/src/ggml-cpu/ggml-cpu-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml-cpu/iqp.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/src/ggml-backend-meta.cpp",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/src/ggml-backend-meta.cpp",
+      "include": "ggml-impl.h",
+      "to": "ggml/src/ggml-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml-backend-meta.cpp",
+      "include": "ggml-backend.h",
+      "to": "ggml/include/ggml-backend.h"
+    },
+    {
+      "from": "ggml/src/ggml-backend-meta.cpp",
+      "include": "ggml-backend-impl.h",
+      "to": "ggml/src/ggml-backend-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml-backend-meta.cpp",
+      "include": "ggml-alloc.h",
+      "to": "ggml/include/ggml-alloc.h"
+    },
+    {
+      "from": "ggml/src/ggml-backend-meta.cpp",
+      "include": "ggml-cpp.h",
+      "to": "ggml/include/ggml-cpp.h"
+    },
+    {
+      "from": "ggml/include/ggml-cpp.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/include/ggml-cpp.h",
+      "include": "ggml-alloc.h",
+      "to": "ggml/include/ggml-alloc.h"
+    },
+    {
+      "from": "ggml/include/ggml-cpp.h",
+      "include": "ggml-backend.h",
+      "to": "ggml/include/ggml-backend.h"
+    },
+    {
+      "from": "ggml/include/ggml-cpp.h",
+      "include": "gguf.h",
+      "to": "ggml/include/gguf.h"
+    },
+    {
+      "from": "ggml/src/ggml.c",
+      "include": "ggml-backend.h",
+      "to": "ggml/include/ggml-backend.h"
+    },
+    {
+      "from": "ggml/src/ggml.c",
+      "include": "ggml-impl.h",
+      "to": "ggml/src/ggml-impl.h"
+    },
+    {
+      "from": "ggml/src/ggml.c",
+      "include": "ggml-threading.h",
+      "to": "ggml/src/ggml-threading.h"
+    },
+    {
+      "from": "ggml/src/ggml.c",
+      "include": "ggml-cpu.h",
+      "to": "ggml/include/ggml-cpu.h"
+    },
+    {
+      "from": "ggml/src/ggml.c",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/src/ggml.c",
+      "include": "ggml-lightning-indexer-candidates.h",
+      "to": "ggml/include/ggml-lightning-indexer-candidates.h"
+    },
+    {
+      "from": "ggml/src/ggml.c",
+      "include": "ggml-quants.h",
+      "to": "ggml/src/ggml-quants.h"
+    },
+    {
+      "from": "ggml/src/ggml-quants.h",
+      "include": "ggml-common.h",
+      "to": "ggml/src/ggml-common.h"
+    },
+    {
+      "from": "ggml/src/ggml-quants.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    },
+    {
+      "from": "ggml/include/ggml-lightning-indexer-candidates.h",
+      "include": "ggml.h",
+      "to": "ggml/include/ggml.h"
+    }
+  ],
+  "unresolved_quoted_includes": [
+    {
+      "from": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "include": "windows.h"
+    },
+    {
+      "from": "ggml/src/ggml.c",
+      "include": "ggml-version.h"
+    }
+  ],
+  "changed_or_new_transitively_required": [
+    "ggml/include/ggml-lightning-indexer-candidates.h",
+    "ggml/include/ggml.h",
+    "ggml/src/ggml-backend-meta.cpp",
+    "ggml/src/ggml-cpu/ggml-cpu.c",
+    "ggml/src/ggml-cpu/ggml-cpu.cpp",
+    "ggml/src/ggml-cpu/ops.cpp",
+    "ggml/src/ggml-cpu/ops.h",
+    "ggml/src/ggml.c"
+  ],
+  "all_changed_or_new_public_include_headers": [
+    "ggml/include/ggml-cuda-op-profile.h",
+    "ggml/include/ggml-cuda.h",
+    "ggml/include/ggml-indexed-attn22.h",
+    "ggml/include/ggml-indexer-compact20.h",
+    "ggml/include/ggml-indexer-decode26.h",
+    "ggml/include/ggml-indexer-decode27.h",
+    "ggml/include/ggml-indexer-main22.h",
+    "ggml/include/ggml-lightning-indexer-candidates.h",
+    "ggml/include/ggml.h"
+  ],
+  "required_overlay_union": [
+    "ggml/include/ggml-cuda-op-profile.h",
+    "ggml/include/ggml-cuda.h",
+    "ggml/include/ggml-indexed-attn22.h",
+    "ggml/include/ggml-indexer-compact20.h",
+    "ggml/include/ggml-indexer-decode26.h",
+    "ggml/include/ggml-indexer-decode27.h",
+    "ggml/include/ggml-indexer-main22.h",
+    "ggml/include/ggml-lightning-indexer-candidates.h",
+    "ggml/include/ggml.h",
+    "ggml/src/ggml-backend-meta.cpp",
+    "ggml/src/ggml-cpu/ggml-cpu.c",
+    "ggml/src/ggml-cpu/ggml-cpu.cpp",
+    "ggml/src/ggml-cpu/ops.cpp",
+    "ggml/src/ggml-cpu/ops.h",
+    "ggml/src/ggml.c"
+  ],
+  "no_compiler_model_GPU_or_weight_calls": true
+}

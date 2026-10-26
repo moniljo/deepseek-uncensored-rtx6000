@@ -1,0 +1,43 @@
+{
+  "schema": "portable-benchmark-oracle-source-provenance-v1",
+  "upstream_encoder_repository": "https://github.com/Indras-Mirror/Xolotl",
+  "upstream_encoder_commit": "c3324f8998040a9247d22137e9bfb3ff2c5da361",
+  "encoder_LF_equal_canonical": true,
+  "canonical_oracles_unchanged_except_line_endings": true,
+  "canonical_benchmark_primary_source_REPORT_sha256": "e6ccf0e2dc4b09424c77f23adc92d08740734ed00be840abb2175f5b5d8a1d17",
+  "files": {
+    "oracles/accuracy_cases.py": {
+      "canonical_raw_sha256": "7bb6b2f92b7f2ede0ca9390f4bed3195f4d48fde3639278f0480f38319709831",
+      "portable_LF_sha256": "7bb6b2f92b7f2ede0ca9390f4bed3195f4d48fde3639278f0480f38319709831",
+      "only_change": "CRLF-to-LF"
+    },
+    "oracles/accuracy_cases_v2.py": {
+      "canonical_raw_sha256": "c19a9aec4fcdd3fd734d4b5f0be90e31b4d2922204ed68627daf0edb37e04c78",
+      "portable_LF_sha256": "c19a9aec4fcdd3fd734d4b5f0be90e31b4d2922204ed68627daf0edb37e04c78",
+      "only_change": "CRLF-to-LF"
+    },
+    "oracles/code_worker.py": {
+      "canonical_raw_sha256": "79060ea64318c84aab4e909b5f56962bba5b2955e3fcd39ec44f8ac210bca675",
+      "portable_LF_sha256": "79060ea64318c84aab4e909b5f56962bba5b2955e3fcd39ec44f8ac210bca675",
+      "only_change": "CRLF-to-LF"
+    },
+    "oracles/code_worker_v2.py": {
+      "canonical_raw_sha256": "0f327af41c6e6f2cbf324a7bb61d117b8bb21c2437cadb9923c06061b2ccc4e1",
+      "portable_LF_sha256": "0f327af41c6e6f2cbf324a7bb61d117b8bb21c2437cadb9923c06061b2ccc4e1",
+      "only_change": "CRLF-to-LF"
+    },
+    "vendor/dsv41_encoding.py": {
+      "git_commit": "c3324f8998040a9247d22137e9bfb3ff2c5da361",
+      "git_path": "tools/v41/dsv41_encoding.py",
+      "portable_LF_sha256": "13231c592e958fb39e2af6001dae69d90e7a36b265702b9b390236fb387599e2"
+    },
+    "vendor/LICENSE.Xolotl": {
+      "git_commit": "c3324f8998040a9247d22137e9bfb3ff2c5da361",
+      "git_path": "LICENSE",
+      "portable_LF_sha256": "949b9b0aada7476006469e58ee4ffb0e0f68c2d9137e90a356757b61a09d37f0"
+    }
+  },
+  "oracle_authorship": "Locally authored frozen task/oracle fixtures distributed under the repository MIT license; unchanged prompts, bounded AST and vectors.",
+  "no_private_request_archive_or_million_token_IDs_in_repository": true,
+  "no_model_API_GPU_actions": true
+}

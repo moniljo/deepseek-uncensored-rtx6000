@@ -1,0 +1,211 @@
+{
+  "schema": "exact-mix256g-model-downloads-v1",
+  "model_weights_in_this_repository": false,
+  "files": [
+    {
+      "repository": "orcarouter/DeepSeek-V4.1-Flash-1017-abliterated-GGUF",
+      "revision": "43fac7992b3d6e750b2e4a52569c1f097c67cd8f",
+      "file": "Mix-256G/DeepSeek-V4.1-Flash-1017-abliterated-Mix-256G-00001-of-00007.gguf",
+      "destination": "models/Mix-256G/DeepSeek-V4.1-Flash-1017-abliterated-Mix-256G-00001-of-00007.gguf",
+      "bytes": 709084736,
+      "sha256": "2cb066de483877f75b3dc79936b1fccf34aeecc60461701e5c39c98d7f922e03",
+      "role": "exact uncensored Mix-256G trunk, including Engram tables"
+    },
+    {
+      "repository": "orcarouter/DeepSeek-V4.1-Flash-1017-abliterated-GGUF",
+      "revision": "43fac7992b3d6e750b2e4a52569c1f097c67cd8f",
+      "file": "Mix-256G/DeepSeek-V4.1-Flash-1017-abliterated-Mix-256G-00002-of-00007.gguf",
+      "destination": "models/Mix-256G/DeepSeek-V4.1-Flash-1017-abliterated-Mix-256G-00002-of-00007.gguf",
+      "bytes": 110595290592,
+      "sha256": "342b6ee30a33f02fcef1d261ec7e700907f8b114370ebe90c228339f686a8c1b",
+      "role": "exact uncensored Mix-256G trunk, including Engram tables"
+    },
+    {
+      "repository": "orcarouter/DeepSeek-V4.1-Flash-1017-abliterated-GGUF",
+      "revision": "43fac7992b3d6e750b2e4a52569c1f097c67cd8f",
+      "file": "Mix-256G/DeepSeek-V4.1-Flash-1017-abliterated-Mix-256G-00003-of-00007.gguf",
+      "destination": "models/Mix-256G/DeepSeek-V4.1-Flash-1017-abliterated-Mix-256G-00003-of-00007.gguf",
+      "bytes": 46798562592,
+      "sha256": "b2583b9da6c3598f43d22714f3216709ab3160c618ad94e36d491a3bb20b5d2b",
+      "role": "exact uncensored Mix-256G trunk, including Engram tables"
+    },
+    {
+      "repository": "orcarouter/DeepSeek-V4.1-Flash-1017-abliterated-GGUF",
+      "revision": "43fac7992b3d6e750b2e4a52569c1f097c67cd8f",
+      "file": "Mix-256G/DeepSeek-V4.1-Flash-1017-abliterated-Mix-256G-00004-of-00007.gguf",
+      "destination": "models/Mix-256G/DeepSeek-V4.1-Flash-1017-abliterated-Mix-256G-00004-of-00007.gguf",
+      "bytes": 47706985792,
+      "sha256": "de9c5f8f3462c7df3db7bb2b79301eeab9d7874f581a9fa574ae4fffe127c602",
+      "role": "exact uncensored Mix-256G trunk, including Engram tables"
+    },
+    {
+      "repository": "orcarouter/DeepSeek-V4.1-Flash-1017-abliterated-GGUF",
+      "revision": "43fac7992b3d6e750b2e4a52569c1f097c67cd8f",
+      "file": "Mix-256G/DeepSeek-V4.1-Flash-1017-abliterated-Mix-256G-00005-of-00007.gguf",
+      "destination": "models/Mix-256G/DeepSeek-V4.1-Flash-1017-abliterated-Mix-256G-00005-of-00007.gguf",
+      "bytes": 46565998336,
+      "sha256": "1202e0ae311beb38de1b0899ab3cbba485385299a62e8e136e01fa922f0aeb13",
+      "role": "exact uncensored Mix-256G trunk, including Engram tables"
+    },
+    {
+      "repository": "orcarouter/DeepSeek-V4.1-Flash-1017-abliterated-GGUF",
+      "revision": "43fac7992b3d6e750b2e4a52569c1f097c67cd8f",
+      "file": "Mix-256G/DeepSeek-V4.1-Flash-1017-abliterated-Mix-256G-00006-of-00007.gguf",
+      "destination": "models/Mix-256G/DeepSeek-V4.1-Flash-1017-abliterated-Mix-256G-00006-of-00007.gguf",
+      "bytes": 47857178816,
+      "sha256": "dc7ce9ee6910e8f46a201e54c96e47b6b3bc9380c88b6187be3c860a0d0b1074",
+      "role": "exact uncensored Mix-256G trunk, including Engram tables"
+    },
+    {
+      "repository": "orcarouter/DeepSeek-V4.1-Flash-1017-abliterated-GGUF",
+      "revision": "43fac7992b3d6e750b2e4a52569c1f097c67cd8f",
+      "file": "Mix-256G/DeepSeek-V4.1-Flash-1017-abliterated-Mix-256G-00007-of-00007.gguf",
+      "destination": "models/Mix-256G/DeepSeek-V4.1-Flash-1017-abliterated-Mix-256G-00007-of-00007.gguf",
+      "bytes": 46145195616,
+      "sha256": "ed00667671a8ca5c48da45e022b6482fc2d88a21848a98d26fba1d1f2848b429",
+      "role": "exact uncensored Mix-256G trunk, including Engram tables"
+    },
+    {
+      "repository": "unsloth/DeepSeek-V4.1-Flash-1017-GGUF",
+      "revision": "f924b94f19c1fea02c06a65c8475b0a45e2b88b1",
+      "file": "dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf",
+      "destination": "models/dspark/dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf",
+      "bytes": 7976914240,
+      "sha256": "6ba6ac1b331c540691a209e7fc97dec2a24e295acb1e755c84c7d24a4373927a",
+      "role": "separate DSpark Q8_0 drafter"
+    }
+  ],
+  "download_bytes": 354355210720,
+  "generated_lossless_compatibility_bytes": 33443020800,
+  "compatibility": "MXFP4 blocks converted only when every decoded F32 bit is exactly preserved; no lossy requantization",
+  "compatibility_audited_values": 40768634880,
+  "compatibility_different_f32_bits": 0,
+  "compatibility_files": [
+    {
+      "tensor": "blk.15.ffn_down_exps.weight",
+      "layer": 15,
+      "role": "down",
+      "source_offset": 30750938944,
+      "source_bytes": 2406481920,
+      "source_payload_sha256": "55232700b44089b9a2678ce97ff41bf0a4dfea2b20bfdcaa28b805125c91e460",
+      "converted_bytes": 3715891200,
+      "converted_sha256": "38c077d96eeede0361efbf38f7cb083502abf5995735d5004339349d4a383617",
+      "audited_values": 4529848320,
+      "different_f32_bits": 0,
+      "max_abs_error": 0.0,
+      "converted_file": "layer-15-down-q6_k.bin"
+    },
+    {
+      "tensor": "blk.20.ffn_down_exps.weight",
+      "layer": 20,
+      "role": "down",
+      "source_offset": 10717006592,
+      "source_bytes": 2406481920,
+      "source_payload_sha256": "dc8ba10a2143a8d7be53888da2879786a42ec3333e47ba7041937eea0f4c05a7",
+      "converted_bytes": 3715891200,
+      "converted_sha256": "cd4a239196bfe46801eb5a323b9afaa1734280370720c3d53580c77ab3c0a769",
+      "audited_values": 4529848320,
+      "different_f32_bits": 0,
+      "max_abs_error": 0.0,
+      "converted_file": "layer-20-down-q6_k.bin"
+    },
+    {
+      "tensor": "blk.23.ffn_down_exps.weight",
+      "layer": 23,
+      "role": "down",
+      "source_offset": 27891419904,
+      "source_bytes": 2406481920,
+      "source_payload_sha256": "c4d11092f6de5fbe1fa3cb6b27b77b486d5f2b55bc24a75da5cbac5a16697a67",
+      "converted_bytes": 3715891200,
+      "converted_sha256": "ee9eb7836ebcdbcc720177a660e207b445c4a253300cabc860074f3a722b98f5",
+      "audited_values": 4529848320,
+      "different_f32_bits": 0,
+      "max_abs_error": 0.0,
+      "converted_file": "layer-23-down-q6_k.bin"
+    },
+    {
+      "tensor": "blk.31.ffn_down_exps.weight",
+      "layer": 31,
+      "role": "down",
+      "source_offset": 39411517120,
+      "source_bytes": 2406481920,
+      "source_payload_sha256": "fafac5f64d7621654dbf813803fe74da10dcdcfd8c1bd007809fa429d9649f34",
+      "converted_bytes": 3715891200,
+      "converted_sha256": "0f245a1b24f7eed732008929aba5adf13bd691d8275fd05718b5de3a785a3e49",
+      "audited_values": 4529848320,
+      "different_f32_bits": 0,
+      "max_abs_error": 0.0,
+      "converted_file": "layer-31-down-q6_k.bin"
+    },
+    {
+      "tensor": "blk.33.ffn_down_exps.weight",
+      "layer": 33,
+      "role": "down",
+      "source_offset": 4964053344,
+      "source_bytes": 2406481920,
+      "source_payload_sha256": "e4bbaa67c8badc69e1343d07d578c831757787968a99865eb51aac983ca3a4e4",
+      "converted_bytes": 3715891200,
+      "converted_sha256": "c5b8065301e2e8c2ef20af28e67f1ccc1983a15ae768cca0bca06ce958a426bc",
+      "audited_values": 4529848320,
+      "different_f32_bits": 0,
+      "max_abs_error": 0.0,
+      "converted_file": "layer-33-down-q6_k.bin"
+    },
+    {
+      "tensor": "blk.34.ffn_gate_exps.weight",
+      "layer": 34,
+      "role": "gate",
+      "source_offset": 12949652320,
+      "source_bytes": 2406481920,
+      "source_payload_sha256": "b19ee34fb105d232cce0329e7a8b7e8a935113592dc1a45097280425882c543f",
+      "converted_bytes": 3715891200,
+      "converted_sha256": "1ca9753c61c76d7295bcdeba4846772b71099f39cd6c1cf0e4f7c0041f45e83b",
+      "audited_values": 4529848320,
+      "different_f32_bits": 0,
+      "max_abs_error": 0.0,
+      "converted_file": "layer-34-gate-q6_k.bin"
+    },
+    {
+      "tensor": "blk.34.ffn_up_exps.weight",
+      "layer": 34,
+      "role": "up",
+      "source_offset": 15373695840,
+      "source_bytes": 2406481920,
+      "source_payload_sha256": "8c21bbda3b453239ed695acd23f781e938128d7c472f15cf9b42c87c0ac6ec3c",
+      "converted_bytes": 3715891200,
+      "converted_sha256": "1dd1fb9ec370349cae36ed40feda42246467b8d8966eadc5fb024a23ade3c37b",
+      "audited_values": 4529848320,
+      "different_f32_bits": 0,
+      "max_abs_error": 0.0,
+      "converted_file": "layer-34-up-q6_k.bin"
+    },
+    {
+      "tensor": "blk.37.ffn_down_exps.weight",
+      "layer": 37,
+      "role": "down",
+      "source_offset": 28840237408,
+      "source_bytes": 2406481920,
+      "source_payload_sha256": "0ebb5e7c29f0888851c7408188608108182c5c3b4d9051d565dbd3169b4ec86e",
+      "converted_bytes": 3715891200,
+      "converted_sha256": "c994af9052f9c1ed2455ce73cb0e9fe74ae5728c0c77732c6fcd5f2f577e0c8d",
+      "audited_values": 4529848320,
+      "different_f32_bits": 0,
+      "max_abs_error": 0.0,
+      "converted_file": "layer-37-down-q6_k.bin"
+    },
+    {
+      "tensor": "blk.39.ffn_down_exps.weight",
+      "layer": 39,
+      "role": "down",
+      "source_offset": 40226844000,
+      "source_bytes": 2406481920,
+      "source_payload_sha256": "283a8888c2e4fdcacc531250a1d52398edf5510929fbf1b2cb11871e0eea2e13",
+      "converted_bytes": 3715891200,
+      "converted_sha256": "2935042bd8fbcc1587eadba7c7ff8492b0a4f5a8441f8e480093e87a726bd188",
+      "audited_values": 4529848320,
+      "different_f32_bits": 0,
+      "max_abs_error": 0.0,
+      "converted_file": "layer-39-down-q6_k.bin"
+    }
+  ]
+}

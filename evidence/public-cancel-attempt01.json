@@ -1,0 +1,60 @@
+{
+  "schema": "independent-public-cancel-attempt01-failure-and-source-fix-v1",
+  "audit_passed": true,
+  "raw_report_sha256": "87974569d986cfc7fe43f3f878ccd55e7235f81c5d89803930ff2eba1600d304",
+  "raw_report_passed": false,
+  "raw_status": "failed",
+  "raw_finished": true,
+  "mode": "active-prefill-stop",
+  "cancellation_exercised": false,
+  "STOP_written": false,
+  "BEFORE_first_grades_passed": 3,
+  "BEFORE_first_grades_total": 3,
+  "BEFORE_all_natural_EOS": true,
+  "long_request": {
+    "prompt_tokens": 999764,
+    "reused_tokens": 0,
+    "generated_IDs": 1,
+    "finish": "length",
+    "wall_seconds": 331.0780000000086,
+    "native_prompt_seconds": 330.9122,
+    "DONE_drained": true
+  },
+  "postcancel_recovery_exercised": false,
+  "native_exit": 0,
+  "exact_V3_owned_cleanup": true,
+  "physical_exit_zero": true,
+  "protected_files_unchanged": true,
+  "shutdown": {
+    "engine_close_seconds": 20.431730599986622,
+    "native_QUIT_wait_seconds": 20.431522200000472,
+    "configured_QUIT_wait_seconds": 60,
+    "natural_native_exit": 0,
+    "escalation": false,
+    "native_wait_exceeded_prior20_seconds": true,
+    "does_not_establish_older_untraced_failure_cause": true
+  },
+  "observer_cause": {
+    "binary_log_view_preserved_CRLF": true,
+    "private_text_view_normalized_newlines": true,
+    "strict_READY_matches_before_normalization": 0,
+    "strict_READY_matches_after_normalization": 1
+  },
+  "isolated_source_fix": {
+    "source_proof_sha256": "89664c6440cf3596fcd12db18b8b167fa3c7372f23a8e6cd4eedf05c3cecb73c",
+    "CPU_proof_sha256": "247943a53890ee0224f35cce3285ff7b14aa885b9a0e18c496976124dc7db9ab",
+    "independent_peer_sha256": "7547ec1c20159916d33cdf2253cfb503f9af86b401c3fd5388a235c2063f536b",
+    "application_receipt_sha256": "fee17248ca56381869659f1c2569a4252906fce1088b0134754677519a4c978a",
+    "MF04_sha256": "31260f3452d679bb0cfcea1978bfd499bd4d43264f9b6d300f2c3fef64a742bc",
+    "cancel_support_sha256": "937d518e08cc93fff1e2ee3e438d57789cdb21393f3423a97084dd9c336bc3eb",
+    "single_raw_fragment_inverse_exact_independently_checked": true,
+    "actual_interrupt_LF_and_CRLF_CPU_cases": 2,
+    "each_CPU_case_one_STOP_and_cancel0": true,
+    "native_regex_clock_grader_fullQ_blocks_and_source_provenance_unchanged": true,
+    "source_application_is_not_default_deployment": true
+  },
+  "fresh_actual_rerun": "Subsequent active02 passed; failed01 remains failed. See public-cancel-active02.json.",
+  "model_GPU_API_process_or_compiler_actions_by_this_audit": 0,
+  "scope": "Closed failed observer attempt and source/CPU correction only. No cancellation or postcancel performance admission; raw report remains failed. Q02 execution blocks unchanged; no retiming inferred.",
+  "current_status_cross_reference_updated_UTC": "2026-10-26T23:10:55.649430+00:00"
+}

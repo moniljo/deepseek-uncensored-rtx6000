@@ -1,0 +1,66 @@
+{
+  "schema": "independent-V6b-decode-Stop-and-shutdown-readback-v1",
+  "created_UTC": "2026-10-26T20:41:34.828779+00:00",
+  "passed": true,
+  "trial_id": "gpu-misses-stop-v6b-fresh-decode-02",
+  "report_sha256": "f2aef7ffcfbc9ad3f0695ec64b8708334498e69cc45d33c1c4130a7cda51e1e9",
+  "shutdown_trace_sha256": "cb508337fa22debb8dc5ace25a13e2cb64cad9f9a6d5733a0c3bfc8f31003b08",
+  "ENGINE_sha256": "6c25e7e595ec511e969b0cf525ff76d8ebf5cd182a0ff19e01ceb5424754308f",
+  "metrics": [
+    {
+      "label": "BEFORE",
+      "emitted_IDs": 227,
+      "actual_ID_intervals_s": 34.90980827040936,
+      "native_ID_intervals_s": 34.9099447001761,
+      "TTFT_seconds": 2.5349708999856375,
+      "generation_seconds": 6.473825300025055,
+      "prompt_tokens": 126,
+      "reused_tokens": 0,
+      "natural_EOS": true,
+      "actual_final_ID": 1,
+      "code_vectors_passed": 11,
+      "retained_ranges": 40,
+      "bounce_bytes": 0
+    },
+    {
+      "label": "FIRST",
+      "emitted_IDs": 287,
+      "actual_ID_intervals_s": 48.794139011985465,
+      "native_ID_intervals_s": 48.80046411630208,
+      "TTFT_seconds": 1.750415900023654,
+      "generation_seconds": 5.861359699978493,
+      "prompt_tokens": 126,
+      "reused_tokens": 0,
+      "natural_EOS": true,
+      "actual_final_ID": 1,
+      "code_vectors_passed": 11,
+      "retained_ranges": 40,
+      "bounce_bytes": 0
+    }
+  ],
+  "interrupted_actual_IDs": 18,
+  "actual_cancel": true,
+  "healthy_same_registration_context_preserved": true,
+  "no_re_registration_required": true,
+  "all_8_answer_records_40_ranges_zero_bounce": true,
+  "quality_FIRST_passed": 7,
+  "three_followups_reused_tokens": 131072,
+  "normal_native_exit": 0,
+  "physical_exit_zero": true,
+  "exact_V3_cleanup": true,
+  "shutdown": {
+    "actual_close_seconds": 16.68224029999692,
+    "first_actual_wait_seconds": 16.68204680000781,
+    "applied_quit_timeout_seconds": 60,
+    "terminate_or_kill_called": false,
+    "returncode_rewritten": false,
+    "exceeded_old_20_seconds": false,
+    "interpretation": "This traced close completed below20s. It does not establish the cause of the older untraced failed close.60s is additional headroom for variable huge-RAM teardown, not a demonstrated timeout cause or inference speedup."
+  },
+  "scope": [
+    "Closed-report/ENGINE/SHUTDOWN/CLEANUP read only; no API/model/GPU/process action.",
+    "Protected unchanged flag read from completed controller; no bulk protected-file rehash during concurrent timing.",
+    "Matching prompts were identical, outputs were not token-identical. Observed decode rates are actual emitted-ID intervals.",
+    "No universal cancellation-timing, full-1M quality/throughput or default eligibility is inferred."
+  ]
+}

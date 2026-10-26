@@ -1,0 +1,83 @@
+{
+  "schema": "independent-V6b-active-prefill-Stop-readback-v1",
+  "created_UTC": "2026-10-26T20:47:26.402312+00:00",
+  "passed": true,
+  "trial_id": "gpu-misses-stop-v6b-fresh-active-01",
+  "report_sha256": "0746725b66845771322f6d28388c0fe2576bd36683bd677d6aae45cbf87a16ec",
+  "shutdown_trace_sha256": "efd911c84d8ec1d3a0146f4d7475a0ec62805a9d34641b65bd8ab47172058c9f",
+  "ENGINE_sha256": "2a5ade4a240aebff54ecfbb2ab41a04cf356bde0caecd8045a2228b973cd2490",
+  "metrics": [
+    {
+      "label": "BEFORE",
+      "emitted_IDs": 542,
+      "actual_ID_intervals_s": 35.44794825244485,
+      "native_ID_intervals_s": 35.4498394600616,
+      "TTFT_seconds": 3.562984199990751,
+      "generation_seconds": 15.261814199999208,
+      "prompt_tokens": 168,
+      "reused_tokens": 0,
+      "natural_EOS": true,
+      "actual_final_ID": 1,
+      "code_vectors_passed": 11,
+      "direct_bytes": 357628170240,
+      "retained_ranges": 40,
+      "bounce_bytes": 0
+    },
+    {
+      "label": "FIRST",
+      "emitted_IDs": 434,
+      "actual_ID_intervals_s": 40.526954486792775,
+      "native_ID_intervals_s": 40.52713352426948,
+      "TTFT_seconds": 14.779496400005883,
+      "generation_seconds": 10.684247199998936,
+      "prompt_tokens": 168,
+      "reused_tokens": 0,
+      "natural_EOS": true,
+      "actual_final_ID": 1,
+      "code_vectors_passed": 11,
+      "direct_bytes": 230628648960,
+      "retained_ranges": 40,
+      "bounce_bytes": 0
+    }
+  ],
+  "actual_active_prompt_progress": [
+    62486,
+    999764
+  ],
+  "interrupted_emitted_IDs": 0,
+  "actual_cancel": true,
+  "active_generation1_positive_work_before_Stop": true,
+  "cancelled_new_phase_retired_to_zero_without_retention": true,
+  "recovery": {
+    "elapsed_ms": 5526.606,
+    "compact_ms": 3162.495,
+    "registration_ms": 2323.331,
+    "pool_after_bytes": 82518773760,
+    "normal_anchor_bytes": 83058739200,
+    "pool_restore_percent": 99.3498993059601,
+    "fixed_reserve_bytes": 536870912,
+    "ranges": 40,
+    "registered_bytes": 184926136320,
+    "token_checkpoint_sequence_unchanged_source_checked": true
+  },
+  "all_8_answer_records_40_ranges_zero_bounce": true,
+  "quality_FIRST_passed": 7,
+  "three_followups_reused_tokens": 131072,
+  "retry_generation": 2,
+  "retry_attempt": 2,
+  "normal_native_exit": 0,
+  "physical_exit_zero": true,
+  "exact_V3_cleanup": true,
+  "shutdown": {
+    "actual_close_seconds": 17.820668000000296,
+    "no_terminate_or_kill": true,
+    "exceeded_old20": false,
+    "interpretation": "This close also completed below20s.60s is headroom; the trace does not prove the cause of an earlier untraced failure."
+  },
+  "scope": [
+    "Read-only closed REPORT/ENGINE/SHUTDOWN/CLEANUP; no API/GPU/model/process action.",
+    "No bulk protected source/weight hashes during concurrent timing; completed controller unchanged attestation retained.",
+    "Matching input fixed; emitted sequences differ; reported rates use actual emitted-ID intervals.",
+    "No full1M quality/throughput or default-deployment admission inferred."
+  ]
+}
