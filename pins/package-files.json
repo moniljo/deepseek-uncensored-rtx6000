@@ -2,7 +2,7 @@
   "schema": "compact-source-recipe-package-v1",
   "passed": true,
   "file_count": 177,
-  "total_bytes": 5990964,
+  "total_bytes": 6020671,
   "max_file_bytes": 2097152,
   "budget_bytes": 12582912,
   "weights_binaries_credentials_and_private_state_included": false,
@@ -24,8 +24,8 @@
       "sha256": "949b9b0aada7476006469e58ee4ffb0e0f68c2d9137e90a356757b61a09d37f0"
     },
     "README.md": {
-      "bytes": 16032,
-      "sha256": "0d903b9ead3aab9013d06fc7d33219b10cc3054f1ddf6eed1eb562d27473beb9"
+      "bytes": 16227,
+      "sha256": "ad3aff6abb0957a99e5abcad54fb6be5df3a01e7277f8cb5771cdc6e4ad560c1"
     },
     "bench/ORACLE-PROVENANCE.json": {
       "bytes": 2318,
@@ -188,8 +188,8 @@
       "sha256": "fe54b3961d63d2c56fb4df03a4a4f94315890acab3ed796aae23dfef0aaaeaa7"
     },
     "docs/setup.md": {
-      "bytes": 23060,
-      "sha256": "57aa16b9a329847b73b75f15f5a7b2d41895c243155e3fe702bc194548f715cf"
+      "bytes": 23976,
+      "sha256": "cde464b39ca8ce0e78aa06086ef57291ef2348937e3fd2a48c761d9a51c808b6"
     },
     "evidence/api-attempt04-and05-preset.json": {
       "bytes": 3674,

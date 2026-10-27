@@ -70,6 +70,8 @@ API05 actually processed **999,797 uncached prompt tokens** and 64 completion to
 
 The [default-deployment verification](evidence/default-deployment-verified.json) passed 15 local and 14 public checks with the selected executable, 1M context and preserved model, CPU/DSpark settings, learned profile, key and tunnel configuration. Three fresh public samples matched the same local instance. It did **not** perform a second managed near-1M request, attest the native through a kernel handle, or prove each connector separately; the owned API05 run supplies the separate native/near-1M proof. The first post-deployment verifier failed before HTTP because of its own bind/model-tag assumptions and remains recorded. Runtime receipts do not attest a Git publication action.
 
+Optional remote access: Cloudflare Tunnel users should review the [connector security/update note](docs/setup.md#optional-cloudflare-tunnel-security). Local inference does not require a tunnel.
+
 ## Reproduce, inspect, and retain failures
 
 Follow [setup](docs/setup.md), [portable benchmark instructions](bench/README.md) and the [experiment history](docs/experiments.md). The latter includes earlier Opt1..18/epoch/cache/attention work, official 0.2.6 comparison, CPU/DSpark controls, all GPU-miss variants and preparation failures. The [sanitized catalog](evidence/experiment-catalog.json) indexes raw receipt hashes without distributing private logs or million-token requests.
