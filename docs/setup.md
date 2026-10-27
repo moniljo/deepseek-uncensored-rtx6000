@@ -1,6 +1,6 @@
 # Setup: exact Mix, custom Windows CUDA engine
 
-**The selected V6b default passed the declared cancellation, API05 and managed local/public checks on the measured machine.** Public Q02's raw 25/26 failure remains disclosed; its predeclared corrected-primary 24/24, paired decode and native cleanup passed. Commands below are a reproducible setup sequence, not evidence that the complete sequence has already been repeated on a second computer. Run them from the recipe checkout root. Files under `.work/` are local and must stay out of Git.
+**The custom v0.2.7 recipe is now selected after native nonregression, all five cancellation modes, owned near-1M API qualification and managed local/public verification passed.** The following V6b results describe the pre-update recipe, not this new candidate: Public Q02's raw 25/26 failure remains disclosed; its predeclared corrected-primary 24/24, paired decode and native cleanup passed. Commands below are a reproducible setup sequence, not evidence that the complete sequence has already been repeated on a second computer. Run them from the recipe checkout root. Files under `.work/` are local and must stay out of Git.
 
 ## 1. Prepare the machine and developer shell
 
@@ -21,7 +21,7 @@ if (-not $Cuda) { throw 'Set CUDA_PATH to the installed CUDA 13.2 toolkit.' }
 cl.exe /?
 ```
 
-The six direct Python pins are NumPy, Jinja2, requests, psutil, CMake, and Ninja; the exact versions are in `requirements.txt`. An explicit `$Py` prevents accidentally using another Python installation for packing, runtime, or the benchmark.
+The seven direct Python pins are NumPy, Jinja2, requests, psutil, CMake, Ninja, and regex; the exact versions are in `requirements.txt`. An explicit `$Py` prevents accidentally using another Python installation for packing, runtime, or the benchmark.
 
 Before downloading, allow **354,355,210,720 bytes** for originals and **33,443,020,800 bytes** for sidecars, plus temporary packing, source, build and log space. Check available physical RAM and Windows commit/limit before loading. A large page file can support commit but cannot substitute for physical RAM needed by retained page-locked weights. Do not automatically set a page file from this document.
 
@@ -33,9 +33,9 @@ Before downloading, allow **354,355,210,720 bytes** for originals and **33,443,0
 & $Py scripts\checkout_source.py --verify
 ```
 
-The first command prints a plan. Preparation fetches the exact Strata and llama.cpp commits in `pins/source-locks.json`, applies the declared LF overlays, and writes `.work/source/PREPARED-SOURCE.json`. Verification checks that identity. Optional local Git object sources must contain the same pinned public commits; they do not authorize a different branch.
+The first command prints a plan. Preparation fetches the exact Strata and llama.cpp commits in `pins/source-locks.json`, applies the exact raw-byte overlays, and writes `.work/source/PREPARED-SOURCE.json`. Verification requires the complete 5,185-file source digest to equal the actual fresh7994 development build, as well as the exact fifteen GGML overlays. Repository-local `core.autocrlf=true`/`core.eol=crlf` reproduces the tested upstream Windows checkout; upstream attributes retain their exceptions. Overlay files are copied without conversion. Optional local Git object sources must contain the same pinned public commits; they do not authorize a different branch.
 
-Preserve the repository's `.gitattributes` rule, `* -text`. Some tested benchmark Python/JSON files and routing-profile metadata use CRLF, while the 60 native overlays use LF. Raw SHA-256 pins depend on those exact bytes. Do not apply a repository-wide LF conversion, formatter, or Git `text`/`eol` override. The attribute disables automatic conversion; it does not convert CRLF files to LF. Publication verifies the actual index blobs and committed export, rather than assuming working-tree hashes describe what Git will publish. This packaging fix changes no tested benchmark/pin/native bytes and needs no native rebuild.
+Preserve the repository's `.gitattributes` rule, `* -text`. Some tested benchmark Python/JSON files and routing-profile metadata use CRLF, while the current native overlays preserve their tested raw newline forms. The older package used 60 LF native overlays. Raw SHA-256 pins depend on those exact bytes. Do not apply a repository-wide LF conversion, formatter, or Git `text`/`eol` override. The attribute disables automatic conversion; it does not convert CRLF files to LF. Publication verifies the actual index blobs and committed export, rather than assuming working-tree hashes describe what Git will publish. This packaging fix changes no tested benchmark/pin/native bytes and needs no native rebuild.
 
 Partial or incompatible existing checkouts are retained. Inspect the error and use a new `--work-dir` if necessary; pass the matching `-WorkDir` to the native builder. Do not substitute a current upstream release for the locked base.
 
@@ -46,7 +46,7 @@ Partial or incompatible existing checkouts are retained. Inspect the error and u
 .\scripts\build_native.ps1 -PythonExe $Py -CMakeExe $CMake -NinjaExe $Ninja -CudaRoot $Cuda
 
 # Fresh full native source/GGML build. No model inference.
-.\scripts\build_native.ps1 -Run -PythonExe $Py -CMakeExe $CMake -NinjaExe $Ninja -CudaRoot $Cuda -Parallel 3
+.\scripts\build_native.ps1 -Run -PythonExe $Py -CMakeExe $CMake -NinjaExe $Ninja -CudaRoot $Cuda -Parallel 6
 
 # This script builds immediately; it has no -Run switch.
 .\scripts\build_codec.ps1
@@ -106,7 +106,7 @@ The fixture's epoch/pool adapters are synthetic. A passing fixture does not atte
 & $Py .work\runtime\serve\server.py --help
 ```
 
-The runtime starts from a Git archive of the pinned upstream commit and receives four declared runtime overlays. It does not modify the native build source tree. Use a new `--output` for a new attempt. A successful `--help` validates import/argument startup only; it does not load the model or prove API inference.
+The API runtime starts from the complete v0.2.7 tag archive, replaces the new upstream web directory with the twelve retained UI assets, and applies the pinned server/header/60-second-grace changes. Two retained font assets are fetched from the exact older public commit and SHA-checked; binaries are not bundled in this package. It does not claim the new upstream UI feature set. Native benchmarks use a separate fixed frontend, prepared with `scripts/prepare_runtime.py --benchmark --prepare` into `.work/runtime-60`. This keeps the native comparison aligned with its control. It does not modify the native build source tree. Use a new `--output` for a new attempt. A successful `--help` validates import/argument startup only; it does not load the model or prove API inference.
 
 ## 8. Create a private 1M configuration
 
@@ -119,10 +119,10 @@ The first command prints a plan. `--write` creates `.work/local/server.json`, a 
 
 The selected template preserves:
 
-- total context 1,048,576; one GPU; CPU threads 16;
+- total context 1,048,576; one GPU; CPU threads 16; all six routed trunk experts explicitly selected;
 - DSpark on, block 3, confidence 0.65; expert mmap off, SSD cache 0;
 - prefill chunk 65,280 and repeat minimum 32,768;
-- `DS4_GPU_MISSES=1`, `DS4_GPU_MISS_DIRECT=1`;
+- `DS4_GPU_MISSES=1`, `DS4_GPU_MISS_DIRECT=1`; explicit `DS4_WARM=0` and `DS4_COPY_PIN=0`;
 - `DS4_PREFILL_REGISTER_RAM_MB=196608`, a 192 GiB host-registration cap;
 - original six-expert routing, exact weights, and the selected prefill/cache features.
 
@@ -141,12 +141,12 @@ Wait for actual readiness and check the engine log for copied-RAM and registrati
 
 ## 10. Loaded benchmark and cancellation gates
 
-The portable adapter under development uses `bench/prepare_inputs.py` and `bench/run_native.py`. Its source/input parity and actual public Q02 execution are now checked. The interface below runs a standalone measurement; it makes no paired speed-improvement claim without a compatible control report.
+The portable adapter uses `bench/prepare_inputs.py` and `bench/run_native.py`. Its canonical timing, oracle and complete two-wave loop are source-equivalent to the loaded custom v0.2.7 qualification; exact source reconstruction and build-option proofs connect that run to this recipe. The public CLI is not claimed as the command that produced the private reference image or receipt. The interface below runs a standalone measurement; it makes no paired speed-improvement claim without a compatible control report.
 
 ```powershell
 $Reference = '.work\data\models\Mix-256G\DeepSeek-V4.1-Flash-1017-abliterated-Mix-256G-00001-of-00007.gguf'
-& $Py bench\prepare_inputs.py --prepare --strata-source .work\runtime --tokenizer-dir .work\data\packs\strata-mix256g-1m\tokenizer --reference-gguf $Reference --output .work\bench-inputs
-& $Py bench\run_native.py --run --config .work\local\server.json --build-receipt .work\build-native\BUILD.json --inputs .work\bench-inputs --reference-gguf $Reference --strata-source .work\runtime --output .work\bench\run-01
+& $Py bench\prepare_inputs.py --prepare --strata-source .work\runtime-60 --tokenizer-dir .work\data\packs\strata-mix256g-1m\tokenizer --reference-gguf $Reference --output .work\bench-inputs
+& $Py bench\run_native.py --run --config .work\local\server.json --build-receipt .work\build-native\BUILD.json --inputs .work\bench-inputs --reference-gguf $Reference --strata-source .work\runtime-60 --output .work\bench\run-01
 ```
 
 Do not run the native benchmark concurrently with the server. The benchmark owns its child and cleanup and needs a private fresh profile. It prepares inputs from the licensed public-source snapshot, verifies tokenizer/reference rendering, and measures two fresh 999,764-token seeds in one process. It retains raw original-13 grades and the predeclared corrected primary set; report both honestly. The ID-interval decode rate is `sum(emitted IDs - 1) / sum(generation seconds)`. Report TTFT separately and use the same weights/inputs/settings for the control.
@@ -163,6 +163,11 @@ The package checker inspects the distributable source/data, excluding local work
 
 ## API and shutdown checks
 
+For a separate loopback qualification that also attests the original native
+creation handle and graceful owned-process cleanup, follow the
+[owned API instructions](owned-api.md). They use a new private configuration on
+port 18080 and explicit current build, source, runtime and image hashes.
+
 The portable API checker defaults to dry. CPU parser/redaction tests do not make network or model calls:
 
 ```powershell
@@ -177,11 +182,11 @@ It requires authenticated models/metrics, missing-key refusals, loaded native 1M
 For this recipe's prescribed near-1M API qualification, use the public synthetic archive/question and the explicit long-only thinking preset:
 
 ```powershell
-& $Py -c "from pathlib import Path; import runpy; m=runpy.run_path('bench/prepare_inputs.py'); Path('.work/api-1m-prompt.txt').write_text(m['long_prompt_text']('audit-sum'),encoding='utf-8',newline='')"
-& $Py scripts\check_api.py --run --config .work\local\server.json --long-prompt .work\api-1m-prompt.txt --expected-long-answer 828639 --long-thinking-preset high-budget256 --deadline 1800 --output .work\api-long-check-01.json
+& $Py scripts\prepare_api_prompt.py --prepare
+& $Py scripts\check_api.py --run --config .work\local\server.json --long-prompt .work\api-first-long.txt --expected-long-answer 828639 --long-thinking-preset high-budget256 --deadline 1800 --output .work\api-long-check-01.json
 ```
 
-The long request is FIRST inference after read-only readiness/authentication checks. It requires actual near-1M usage with zero cached tokens, exact integer content, natural stop and terminal SSE. The preset sends `reasoning_effort="high"` (DeepSeek effort level 75), `reasoning_budget_tokens=256` and `max_tokens=1024`. The effort level is distinct from the token budget. The prompt and expected answer are unchanged. This is a declared client request mode, not a configuration or model change; the installation's global 32,768-token reasoning budget stays intact. Natural arithmetic, small SSE and tool checks keep their original nonthinking settings, including the unchanged bounded disconnect request.
+The preparation writes exclusive binary UTF8, checking exactly 3,434,819 bytes and SHA-256 `6c4f575406cf9303355867354ced548d7c4789830ff6f817ae1f8de83fd17c2a`; Windows newline translation must not change the body. It does not tokenize or run a model. The long request is FIRST inference after read-only readiness/authentication checks. It requires actual near-1M usage with zero cached tokens, exact integer content, natural stop and terminal SSE. The preset sends `reasoning_effort="high"` (DeepSeek effort level 75), `reasoning_budget_tokens=256` and `max_tokens=1024`. The effort level is distinct from the token budget. The prompt and expected answer are unchanged. This is a declared client request mode, not a configuration or model change; the installation's global 32,768-token reasoning budget stays intact. Natural arithmetic, small SSE and tool checks keep their original nonthinking settings, including the unchanged bounded disconnect request.
 
 The checker's default long preset remains `none` with a 256-token total cap for compatibility. In attempt 04 that mode returned the correct arithmetic as an expression and failed the exact-integer contract. The failure is retained; it is not passed by accepting extra text. API05 with the declared preset passed: 999,797 uncached prompt tokens, 64 completion tokens, exact bare integer, natural stop and one `[DONE]`. `--expected-long-prompt-tokens N` can pin an exact API count; otherwise actual near-1M uncached usage is required. API rendering can differ from native frozen token IDs. Heartbeats and reasoning frames never count as emitted tokens. Use public synthetic text, not private conversations.
 

@@ -1,0 +1,22 @@
+{
+  "schema": "portable-owned-API-source-v2",
+  "parent_manifest_sha256": "8c59956ec50f97c7768493b9fc1f164d62bbb7ddcaa89d9f4b26e695ccabf112",
+  "files_sha256": {
+    "pins/owned-api-adapter.json": "8c59956ec50f97c7768493b9fc1f164d62bbb7ddcaa89d9f4b26e695ccabf112",
+    "scripts/check_owned_api_v2.py": "3a89a6b28209395fc907de5b4900b20e3bb86d6f03d8a564a9ebad7d6d5f698d",
+    "scripts/owned_api_admission_v2.py": "b95661a01f1b8181d52ba804b3f507f88e4eac868111ae32d4f899f7dde039e6",
+    "scripts/test_owned_api_v2.py": "66e927d317fe04453257f4af0b048c8cd8482e9db379d4cd2d8e7d6f11ab4f76",
+    "scripts/prepare_api_prompt.py": "73b2de8c9ec273ec259aa3aa0768fff87b656c512f30ad8396e539aad815e5b0",
+    "bench/prepare_inputs.py": "d6901b46d49dcff2ae78c9ad468b5ffa39a76376fa2091d2713f589f949c40d0"
+  },
+  "selected_profile": "repeat1/min32768/CPU16/noSMT/noOverlap",
+  "build_recipe_pin_keys": [
+    "scripts/build_native.ps1",
+    "scripts/checkout_source.py",
+    "pins/source-locks.json",
+    "pins/source-overlays.json"
+  ],
+  "prompt_UTF8_bytes": 3434819,
+  "prompt_sha256": "6c4f575406cf9303355867354ced548d7c4789830ff6f817ae1f8de83fd17c2a",
+  "no_model_API_process_qualification_inferred": true
+}

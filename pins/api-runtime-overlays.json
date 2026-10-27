@@ -1,0 +1,58 @@
+{
+  "schema": "API-v027-retained-web-runtime-overlay-v1",
+  "base_commit": "5e8a4cca7d690ac60ca37eb09e7d0e010099ad6d",
+  "native_benchmark_runtime_is_separately_pinned": true,
+  "composed_overlay_manifest_sha256": "3316b2c280e8b117927396d98298a19fb35396e2f856b5dd6563bb5e4b9eaabf",
+  "reference_composition_sha256": "49e8eb8270c16f7884095888eafd552f8f5da59d860cad515efbe0cba722ec7b",
+  "files": {
+    "serve/server.py": "59150689daf877a9e78eab3e3ae5e7490279c5e35d109296d82bca78516b459a",
+    "serve/test_server.py": "d2716d319df6f60c8afa3029be680c6b8511de3376ed388aec3f7517b2d6a89a",
+    "serve/test_web_api_key.py": "6237e0d3ae19b9cc9532aaed497eb9ba1e0f7542d7261c40557aaa3b6556490b",
+    "serve/test_web_storage.js": "32f034d5509207f2ecf83d68c3e11595d0f4f3bafdeb774320f702a4ae28e031",
+    "serve/test_web_storage.py": "5fcd3843b42ee0303f69ff17ed082748aec4e196ca1a994873f62597c3e8b320",
+    "serve/web/app.css": "1ca416f996e24fff8e2f36d4d3417678d2ba3cca308598b476d4a52744529d18",
+    "serve/web/app.js": "bfab7a4c34604ed6c7551ee53f82792813644b8c4c71094c067c318d1659f798",
+    "serve/web/components.css": "020aac155314aeb9d62e47c5ca22f999fdae21c5d96edadb812011aff91734af",
+    "serve/web/favicon.svg": "dce8c89cae16607fdae26d029872739063a4d8aaf3403b3f6236a28111f67097",
+    "serve/web/fonts/OFL.txt": "916fdcb34129e58b62d12a9d27ac746bb8742bc42409521c1438521cfcea7eb5",
+    "serve/web/index.html": "0bd140f967cc72ff2268804f19cf8e14be7d7dc29c16fa0ebd92d067b1989f27",
+    "serve/web/monitor.html": "2770ce8111b5029d391c3183918f470789ef0933b2452379be38280d6b01421f",
+    "serve/web/monitor.js": "9dc6af4a3b90ef6b0969575d5b1eaccbb5714276dbf76f900fd8368bbcf758dd",
+    "serve/web/sprite.svg": "15f12ca94cd23e64082d7acc8de7fe6b714e6704f9db445d679b871998eff82a",
+    "serve/web/tokens.css": "755664ff8240737b778e3340a8c9a1e8b6c1aac27938a59bba2d3208764f278e"
+  },
+  "upstream_assets": {
+    "serve/web/fonts/outfit-latin-ext-wght.woff2": {
+      "sha256": "0f53d1c03b3918d744a843b5039001ee31695ca1e255e3914188df81beb461e9",
+      "url": "https://raw.githubusercontent.com/Niko1221/Strata/dfa3f4025c9f1bc4af8cee201b20a2d223061813/serve/web/fonts/outfit-latin-ext-wght.woff2"
+    },
+    "serve/web/fonts/outfit-latin-wght.woff2": {
+      "sha256": "6c18d579fd87c3776be068b762cbc83fde3acb543d49eabd3ade842eb987e887",
+      "url": "https://raw.githubusercontent.com/Niko1221/Strata/dfa3f4025c9f1bc4af8cee201b20a2d223061813/serve/web/fonts/outfit-latin-wght.woff2"
+    }
+  },
+  "retained_web_files": {
+    "serve/web/app.css": "1ca416f996e24fff8e2f36d4d3417678d2ba3cca308598b476d4a52744529d18",
+    "serve/web/app.js": "bfab7a4c34604ed6c7551ee53f82792813644b8c4c71094c067c318d1659f798",
+    "serve/web/components.css": "020aac155314aeb9d62e47c5ca22f999fdae21c5d96edadb812011aff91734af",
+    "serve/web/favicon.svg": "dce8c89cae16607fdae26d029872739063a4d8aaf3403b3f6236a28111f67097",
+    "serve/web/fonts/OFL.txt": "916fdcb34129e58b62d12a9d27ac746bb8742bc42409521c1438521cfcea7eb5",
+    "serve/web/fonts/outfit-latin-ext-wght.woff2": "0f53d1c03b3918d744a843b5039001ee31695ca1e255e3914188df81beb461e9",
+    "serve/web/fonts/outfit-latin-wght.woff2": "6c18d579fd87c3776be068b762cbc83fde3acb543d49eabd3ade842eb987e887",
+    "serve/web/index.html": "0bd140f967cc72ff2268804f19cf8e14be7d7dc29c16fa0ebd92d067b1989f27",
+    "serve/web/monitor.html": "2770ce8111b5029d391c3183918f470789ef0933b2452379be38280d6b01421f",
+    "serve/web/monitor.js": "9dc6af4a3b90ef6b0969575d5b1eaccbb5714276dbf76f900fd8368bbcf758dd",
+    "serve/web/sprite.svg": "15f12ca94cd23e64082d7acc8de7fe6b714e6704f9db445d679b871998eff82a",
+    "serve/web/tokens.css": "755664ff8240737b778e3340a8c9a1e8b6c1aac27938a59bba2d3208764f278e"
+  },
+  "bounded_shutdown_grace": {
+    "quit_seconds": 60,
+    "terminate_seconds": 5,
+    "kill_seconds": 20
+  },
+  "new_upstream_web_features_claimed": false,
+  "candidate_loaded_API_qualification": "PENDING",
+  "expected_complete_runtime_files": 5111,
+  "expected_complete_runtime_tree_sha256": "97f70fd7e1af679006dec5eb8a14b59bd1aaa840b94b7c20dda6a7ae108411ac",
+  "complete_runtime_tree_pin_status": "Bound to exact5111-file composed runtime02 map; public preparation must reproduce allrawbytes"
+}

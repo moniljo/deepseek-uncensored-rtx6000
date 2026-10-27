@@ -1,0 +1,19 @@
+{
+  "schema": "portable-owned-API-source-v1",
+  "files_sha256": {
+    "scripts/check_owned_api.py": "732fcde29554a30f9840aa512f1c42c0365c1ca5cf28cfb32a1969816affcf51",
+    "scripts/owned_api_admission.py": "fb5755c6074cf668ac1843b3fbdeba583aef18e4a8a084a8e71c0fb7f6696632",
+    "scripts/owned_api_handoff.py": "2d3510e554c47c1a67976831fac1fdcc4e9bea96cb51d1402720b854f7e422d3",
+    "scripts/owned_api_frontend.py": "cf9a1293a91f8de5030f8ea8fc3b48826127fb140c6263689561a9d4d58986d2",
+    "scripts/test_owned_api_admission.py": "12ef546cdc72f12d132ecb0d789a5230eb647f6f19cadf0191c3cbeb3d6385ff",
+    "scripts/check_api.py": "077ad65bf9042d9f9054a0e678de43e08a49503cbe343c631059d4855d25f2f8",
+    "pins/model-downloads.json": "31ea374f2e6dd4b381cceca52e410c6ff9625986e28b05566ab447367ff85d7e",
+    "bench/job_support.py": "34bfcd4392bc49d0751609bbbea0943138d89dce80a026b88f5d2a55332438b0",
+    "bench/owned_windows.py": "19054ab469e23ea3c825b8c6228402c5674106c284e0175c647b5b3c9de1624f",
+    "bench/identity_support.py": "ae953f47f9159b6273a9419bdd572bb1545d1d98a8b6e95532e62dd6bf54f5f4",
+    "bench/native_support.py": "1e117c7e81f6af45b4b8bbdfd401876987b5de0a1c23eb7896451c56a7f04b8d"
+  },
+  "no_model_API_process_qualification_inferred": true,
+  "portable_native_schema": "fresh-portable-v027-V6b-native-build-v1",
+  "runtime_schema": "prepared-separate-recipe-runtime-v2"
+}

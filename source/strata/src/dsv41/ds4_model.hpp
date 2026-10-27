@@ -42,6 +42,9 @@ struct Options {
     // dspark_auto: the drafter is loaded only where the routed experts fit the GPUs (more than 1.5x what they have, the verify rounds
     // read 3.3x the bytes of a token and measured no faster than plain decoding, and the drafter's 7 GB of experts take the VRAM the
     // trunk's hottest would have had); --dspark on / off / none says it outright
+    // experts a word takes: -1 the rule (5 where the cards hold 16 GiB or less in all, else the model's 6), N the router's top N with
+    // their weights renormalised (--experts 6: full quality); ds4_experts_rule.hpp
+    int experts = -1;
     bool dspark_auto = true;
     bool dspark = true;              // load the DSpark drafter (the checkpoint's mtp.* blocks) for speculative decoding
     int dspark_block = 0;             // at most this many drafts a round (--dspark-block N; 0: the pack's block size)
@@ -132,6 +135,8 @@ public:
     /// DeepSeek's reference does.  verify() keeps a draft d with probability min(1, p(d) / q(d)) over the request's
     /// chain - the speculative-sampling rule, so every token is still distributed as the model's own draw.
     int draft_block() const;
+    /// every GPU the engine uses is a gfx1200 / gfx1201 (RDNA4: R9700, RX 9000) in a HIP build, false anywhere else (decided once)
+    bool gpus_are_gfx12() const;
     bool draft(int y, std::vector<int>& drafts, std::vector<float>& conf, std::string& err, float temperature = 0.0f,
                float top_p = 1.0f, int top_k = 0, float min_p = 0.0f, uint64_t seed = 0, uint64_t counter = 0);
     bool verify(int y, const std::vector<int>& drafts, float temperature, float top_p, int top_k, float min_p,

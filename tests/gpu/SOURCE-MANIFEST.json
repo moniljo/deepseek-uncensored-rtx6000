@@ -1,5 +1,5 @@
 {
-  "schema": "portable-synthetic-GPU-fixture-source-v1",
+  "schema": "portable027-synthetic-GPU-fixture-source-v1",
   "normalization": "CRLF to LF only; no source/math/control/oracle changes",
   "source_files_LF_sha256": {
     "actual_stager.generated.cuh": "64dcbc0c87ccfa2087a57a84b86c848c728d2c3da054e87ba022927b8ef340b4",
@@ -38,9 +38,9 @@
     "stage_test.cu": "0cc8bd324dd59c6275aa27eb2bd599184b225d00762485cd64d61a1616b288d8"
   },
   "frozen_fixture_manifest_sha256": "e5250738e693bbfc1494617da88986656c023acbe10089992ea338da62214185",
-  "bound_model_LF_sha256": "6f4ca4d6e055b61e13dc4bc097aa349ef04123aed97dea4b1aa9ba1b38322dbc",
-  "bound_model_raw_stage_sha256": "45f10affc58fceb98bf1287fbfc722b80478457fea14e4f0d17fc57412c126c6",
-  "bound_native_stage_manifest_sha256": "d44406c2cf81b57764fbc0c93e6d493954a9439a8708c7213f58d246efab518c",
+  "bound_model_LF_sha256": "04578ebf77bdbaf6c6c4417f040c007be3e743c4815c2b0827d6eb90e4b8fb95",
+  "bound_model_raw_stage_sha256": "f4f0648a5e0de1e26f19e26e3442b8fcc867b355479168d2043af8d09fce8a10",
+  "bound_native_stage_manifest_sha256": "799413c6b137a5457becf10c90ce471d57018cedbb467708066c041b7f7003d0",
   "actual_extracted_model_fragment_LF_sha256": {
     "gpu_misses_prepare.inc": "4b43d1079ab685007810bcca4a6f4bb1c2428c7259c91c3990837a501c0f7752",
     "gpu_misses_direct.inc": "f02025df7163e8f8de5fb118fddfa503745f57b68b93eca2e4a02241a23eb8ba",
@@ -78,8 +78,12 @@
   ],
   "model_payloads_required": false,
   "performance_claim": false,
-  "scope": "Actual staging, direct-source coverage, registration/core/coordinator and public GG math. Epoch, resource and47-buffer compaction adapters are synthetic; loaded Model gates are separate.",
+  "scope": "Actual helpers and GG math; synthetic epoch/worker/47-buffer adapters. Full Model lifecycle remains a separate loaded test.",
   "license": "../../source/LICENSE.Strata",
   "fixture_plan_source_sha256": "b4404b4ae4efa2efc5ebc61e7a5981c715590ad9cbad413114733a58fcb667d3",
-  "reserve_plan_source_sha256": "3ac010f7732c5090b9d87a72757a131701f0076c707129614166fa2fe51203ed"
+  "reserve_plan_source_sha256": "3ac010f7732c5090b9d87a72757a131701f0076c707129614166fa2fe51203ed",
+  "parent_public_manifest_sha256": "f2fccf707299982f495924ab9cce9610a028575da9e05189cf50a13a88cb18ef",
+  "old_numeric_bitidentity_not_assumed": true,
+  "warm_thread_ownership_guard_not_exercised_by_synthetic_adapters": true,
+  "bound_portable_BUILD_schema": "fresh-portable-v027-V6b-native-build-v1"
 }

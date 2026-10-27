@@ -1,0 +1,12 @@
+{
+  "schema": "portable-numeric-owned-canonical-runtime-source-v1",
+  "scope": "Exact canonical public owned Job/identity/runtime modules. The IQ compile PLAN separately pins its caller, owned wrapper, oracle and this manifest before and after each run.",
+  "files_sha256": {
+    "bench/owned_windows.py": "19054ab469e23ea3c825b8c6228402c5674106c284e0175c647b5b3c9de1624f",
+    "bench/identity_support.py": "ae953f47f9159b6273a9419bdd572bb1545d1d98a8b6e95532e62dd6bf54f5f4",
+    "bench/job_support.py": "34bfcd4392bc49d0751609bbbea0943138d89dce80a026b88f5d2a55332438b0",
+    "bench/native_support.py": "1e117c7e81f6af45b4b8bbdfd401876987b5de0a1c23eb7896451c56a7f04b8d"
+  },
+  "no_private_paths_or_model_payloads": true,
+  "portable_execution_NOT_claimed": true
+}

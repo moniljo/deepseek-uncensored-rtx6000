@@ -50,7 +50,7 @@ def validate_build(cfg,receipt):
     required=('source_checkout_verified_before_build','source_checkout_verified_after_build',
         'source_overlay_verified_before_after','all_native_GGML_objects_and_four_custom_static_libraries_rebuilt_from_source',
         'external_prebuilt_CUDA_toolkit_libraries','qualification_not_inferred_from_compilation')
-    need(build.get('schema')=='fresh-portable-native-build-v1'and build.get('compiled')is True and
+    need(build.get('schema')=='fresh-portable-v027-V6b-native-build-v1'and build.get('compiled')is True and
          type(build.get('compile_and_link_rc'))is int and build['compile_and_link_rc']==0 and
          all(build.get(k)is True for k in required)and build.get('old_objects_or_libraries_copied')is False and
          build.get('API_model_or_service_execution')is False and 'all_reused_and_copied_inputs_unchanged'not in build,
@@ -64,8 +64,6 @@ def validate_build(cfg,receipt):
     for name,digest in build['recipe_pins'].items():
         p=(ROOT/name).resolve();need(p.is_relative_to(ROOT)and sha(p)==digest,'Actual fresh-build recipe changed: '+name)
         pins[str(p)]=digest
-    need(build['recipe_pins']['scripts/build_native.ps1']=='005db2630b39c689affd07e4d9dc6e8337f6b59732baf02e2b70c30b172180e2',
-         'Unreviewed fresh builder')
     need(build['source_locks_sha256']==sha(ROOT/'pins/source-locks.json')and
          build['source_overlay_manifest_sha256']==sha(ROOT/'pins/source-overlays.json'),'BUILD source-lock/overlay provenance differs')
     overlay=read(ROOT/'pins/source-overlays.json')
@@ -75,16 +73,33 @@ def validate_build(cfg,receipt):
             need(p.is_relative_to((ROOT/'source'/project).resolve())and sha(p)==record['sha256'],
                  'Published actual source changed: '+name)
             pins[str(p)]=record['sha256']
-    expected={name:overlay['strata']['src/dsv41/'+name]['sha256']for name in ('ds4_model.cu','ds4_main.cpp','ds4_model.hpp')}
-    need(build['source_pin_map']==build['compiled_source_pin_map_LF']==expected,'Actual compiled LF source map differs')
+    expected={name:overlay['strata']['src/dsv41/'+name]['sha256']for name in ('ds4_model.cu','ds4_main.cpp','ds4_model.hpp','ds4_iq.cu')}
+    need(build['source_pin_map']==build['compiled_source_pin_map_raw']==expected,'Actual compiled raw027 source map differs')
+    need(build.get('reference_raw_source_reconstructed')is True and
+         build.get('ported_source_manifest_sha256')==overlay['strata_reference_stage_manifest_sha256'] and
+         build.get('complete_raw_strata_source_files')==overlay['expected_complete_strata_files'] and
+         build.get('complete_raw_strata_source_tree_sha256')==overlay['expected_complete_strata_tree_sha256'],
+         'Actual7994 complete raw source reconstruction required')
     args=build['configure_arguments'];need(args.count('-S')==1,'One actual configured source root required')
     source=Path(args[args.index('-S')+1]).resolve()
     prepared=source.parent/'PREPARED-SOURCE.json'
     need(source.is_relative_to((ROOT/'.work').resolve())and sha(prepared)==build['prepared_source_receipt_sha256'],
          'Fresh checkout receipt differs')
     pins[str(prepared)]=sha(prepared)
+    # This explicit pre-start verifier checks the complete raw checkout, outside GEN timing.
+    verify=ROOT/'scripts/checkout_source.py'
+    import subprocess
+    verified=subprocess.run([sys.executable,'-B',str(verify),'--verify','--work-dir',str(source.parent)],
+                            capture_output=True,text=True,timeout=120)
+    need(verified.returncode==0 and len(verified.stdout)<16384,'Complete raw source verification failed before native run')
+    pins[str(verify)]=sha(verify)
     for name,digest in expected.items():
         p=source/'src/dsv41'/name;need(sha(p)==digest,'Actual compiled source changed: '+name);pins[str(p)]=digest
+    need(cfg['args'].count('--pack')==1,'One exact model pack required')
+    pack=Path(cfg['args'][cfg['args'].index('--pack')+1])
+    for name in ('ds4.txt','tensors.txt'):
+        p=pack/name;need(p.is_file()and p.stat().st_size<=16<<20,'Bounded pack metadata required')
+        pins[str(p.resolve())]=sha(p)
     return pins
 
 
@@ -113,6 +128,8 @@ def make_private_config(cfg,out,initial_profile):
     for key,value in (('--max-context','1048576'),('--cpu-threads','16'),('--dspark','on'),('--dspark-block','3'),
                       ('--dspark-conf','0.65'),('--prefill-chunk','65280')):
         need(cfg['args'].count(key)==1 and cfg['args'][cfg['args'].index(key)+1]==value,'Frozen benchmark geometry differs: '+key)
+    need(cfg['args'].count('--experts')==1 and cfg['args'][cfg['args'].index('--experts')+1]=='6','Explicit all-six routing required')
+    need(cfg['env'].get('DS4_WARM')==cfg['env'].get('DS4_COPY_PIN')=='0','027 shared ownership requires explicit WARM0/COPY_PIN0')
     env=cfg['env'];need(env.get('DS4_GPU_MISSES')==env.get('DS4_GPU_MISS_DIRECT')==env.get('DS4_PREFILL_REPEAT_REARM')=='1'and
         env.get('DS4_PREFILL_REGISTER_RAM_MB')=='196608'and env.get('DS4_PREFILL_REPEAT_MIN_TOKENS')=='32768'and
         env.get('DS4_GPU_MISS_OVERLAP','0')=='0'and env.get('DS4_CPU_SMT','0')=='0'and

@@ -1,0 +1,34 @@
+{
+  "schema": "portable027-independent-IQ-oracle-source-v1",
+  "source_sha256": "452f66122e0cadccc4c26af21bc175ba86f70973356d0e02f239e1c7747cb808",
+  "expected_rows_sha256": "8c69403fe66f237ccf4c60cce832231d5a2382672ae7f9ae48495bea8cd588e1",
+  "source_byte_identical_to_executed_1248_row_fixture": true,
+  "self_types": [
+    14,
+    18,
+    21,
+    22
+  ],
+  "mixed_supported_role_pairs": 7,
+  "arms": [
+    "default",
+    "no-light",
+    "no-tc",
+    "no-light-no-tc"
+  ],
+  "rows_per_self": 102,
+  "rows_per_mixed": 210,
+  "total_expected_rows": 1248,
+  "Q6_K_F16_scale_offset": 208,
+  "CPU_GGML_and_double_reference_oracles": true,
+  "private_paths_or_model_payloads_required": false,
+  "actual_current_public_execution_NOT_claimed": true,
+  "adapter_source_files_sha256": {
+    "scripts/test_iq.py": "7a55133dbc8a09370a03dcf0a7adb81ed9ac5badb60525f3e352f1e219e5550c",
+    "scripts/run_numeric_owned.py": "60305e7702391b41d7a04cc67519760063764d0948cc84ce8b5d9b8c11257684",
+    "scripts/gpu_fixture_admission.py": "7d662d2356cab659475db109e174fed8650a229a321f22b6972be246cfad55fc",
+    "tests/numeric-owned-sources.json": "e4934a15b40d1a3b69f6c13ca6f205124438bbcd6e427810bcde6ad9c2375f25",
+    "tests/iq/test_parsers.py": "c1bf8f757615887c1a3579fc10d4841c00d3a250bd65d667ca811cf2e4eb6ea3"
+  },
+  "adapter_admission_pure_validation": "Source/AST/CPU checks only; portable fixture compilation and execution not claimed."
+}

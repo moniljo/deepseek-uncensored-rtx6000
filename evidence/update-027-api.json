@@ -1,0 +1,172 @@
+{
+  "schema": "v027-owned-API-qualification-summary-v1",
+  "passed": true,
+  "finished": true,
+  "source_receipts_sha256": {
+    "REPORT.json": "f6f194c9fd291f1a4e663be2c40979e67f45ad1ddd64fe96ba151066e255144c",
+    "API.json": "a57b0910f27676d760d216eafbf62deee023fe5d35a103e3d3b31ad56da11d1d",
+    "SHUTDOWN.json": "bc240d7b99f720f871abe6c7ed2c82c92953af771d5c9c677fd83a89304c072e"
+  },
+  "native_image_sha256": "4b3a7f1a29b1d860eb79363544acbe19d9b758345f4ec04dbad1a9db0609dd8b",
+  "source_manifest_sha256": "799413c6b137a5457becf10c90ce471d57018cedbb467708066c041b7f7003d0",
+  "checked": 16,
+  "inference_requests": 7,
+  "inference_order": [
+    "FIRST-long-uncached-near-1M",
+    "natural-arithmetic",
+    "complete-SSE",
+    "OpenAI-forced-synthetic-tool",
+    "Anthropic-forced-synthetic-tool",
+    "active-content-disconnect-to-idle",
+    "natural-after-disconnect"
+  ],
+  "checks": [
+    {
+      "name": "models-missing-auth",
+      "passed": true,
+      "HTTP_status": 401
+    },
+    {
+      "name": "models-auth",
+      "passed": true,
+      "HTTP_status": 200
+    },
+    {
+      "name": "metrics-missing-auth",
+      "passed": true,
+      "HTTP_status": 401
+    },
+    {
+      "name": "metrics-auth-ready-context",
+      "passed": true,
+      "HTTP_status": 200
+    },
+    {
+      "name": "health-loaded-context",
+      "passed": true,
+      "HTTP_status": 200
+    },
+    {
+      "name": "status-idle-before-FIRST",
+      "passed": true,
+      "HTTP_status": 200
+    },
+    {
+      "name": "FIRST-long-uncached-near-1M",
+      "passed": true,
+      "HTTP_status": 200
+    },
+    {
+      "name": "natural-arithmetic",
+      "passed": true,
+      "HTTP_status": 200
+    },
+    {
+      "name": "complete-SSE",
+      "passed": true,
+      "HTTP_status": 200
+    },
+    {
+      "name": "OpenAI-forced-synthetic-tool",
+      "passed": true,
+      "HTTP_status": 200
+    },
+    {
+      "name": "Anthropic-forced-synthetic-tool",
+      "passed": true,
+      "HTTP_status": 200
+    },
+    {
+      "name": "active-content-disconnect-to-idle",
+      "passed": true,
+      "HTTP_status": 200
+    },
+    {
+      "name": "status-busy-before-client-close",
+      "passed": true,
+      "HTTP_status": 200
+    },
+    {
+      "name": "status-after-disconnect",
+      "passed": true,
+      "HTTP_status": 200
+    },
+    {
+      "name": "status-after-disconnect",
+      "passed": true,
+      "HTTP_status": 200
+    },
+    {
+      "name": "natural-after-disconnect",
+      "passed": true,
+      "HTTP_status": 200
+    }
+  ],
+  "FIRST_long": {
+    "public_synthetic_text_bytes": 3434819,
+    "public_synthetic_text_sha256": "6c4f575406cf9303355867354ced548d7c4789830ff6f817ae1f8de83fd17c2a",
+    "settings": {
+      "preset": "high-budget256",
+      "reasoning_effort": "high",
+      "reasoning_budget_tokens": 256,
+      "max_tokens": 1024,
+      "scope": "FIRST long request only; configuration unchanged"
+    },
+    "usage": {
+      "prompt_tokens": 999797,
+      "completion_tokens": 97,
+      "cached_tokens": 0,
+      "total_tokens": 999894
+    },
+    "natural_stop": true,
+    "DONE_count": 1,
+    "answer_sha256": "93280b15904343560264c3cc4b564ccab82097833751482d454e11af71e16050",
+    "first_visible_content_seconds": 357.0443077000009,
+    "complete_seconds": 357.1739116000008,
+    "visible_content_latency_is_not_native_first_token_metric": true,
+    "data_frames_not_token_count": 98,
+    "heartbeat_comments_not_token_count": 4925
+  },
+  "readiness": {
+    "loaded": true,
+    "native_context": 1048576,
+    "launch_attestation_matched": true,
+    "native_held_BEFORE_inference": true,
+    "creator_read_capability_acquired_BEFORE_native_resume": true
+  },
+  "original_native_still_sole_live_after_API": true,
+  "native_constructor_retries": 0,
+  "native_PID_reopens_by_controller": 0,
+  "CUDA_module_names": [
+    "cublas64_13.dll",
+    "cublaslt64_13.dll"
+  ],
+  "pinned_sources_config_exe_DLLs_unchanged": true,
+  "payload_stats_unchanged": true,
+  "profile_learning_not_overwritten": true,
+  "shutdown": {
+    "frontend_stdin_EOF_requested": true,
+    "timeout_seconds": 120,
+    "live_owned_job_forced_termination": false,
+    "natural_native0": true,
+    "frontend_returncode": 0,
+    "held_handle_signaled": true,
+    "wait_result": 0,
+    "native_returncode": 0,
+    "owned_job_active_BEFORE_finish": 0,
+    "elapsed_seconds": 19.463589299999512,
+    "canonical_finish_called_after_proven_empty": true
+  },
+  "cleanup": {
+    "proof_version": 3,
+    "passed": true,
+    "owned_job_empty_proven": true,
+    "pid_absence_claimed": false
+  },
+  "API_elapsed_seconds": 372.0599677,
+  "integration_elapsed_seconds": 538.5897800000002,
+  "synthetic_tools_executed": false,
+  "production_or_tunnel_changes_by_test": false,
+  "managed_default_selected_or_verified": false,
+  "scope": "Fresh private composed-runtime API qualification; managed/default local/public deployment verification is separate and pending. No prompt, response, key, private pathname, process identifier or service hostname is exported."
+}

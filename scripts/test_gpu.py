@@ -54,24 +54,10 @@ def prepare(build_receipt,out,vcvars):
         need(path.is_relative_to(FIXTURE.resolve()),'Fixture manifest traversal')
         need(sha(path)==digest,'Fixture source changed: '+name)
         source_pins[str(path)]=digest
-    build=read(build_receipt)
-    need(build['schema']=='fresh-portable-native-build-v1' and build['compiled'] is True and
-         build['compile_and_link_rc']==0,'A successful fresh source build is required')
-    for key in ('source_checkout_verified_before_build','source_checkout_verified_after_build',
-                'source_overlay_verified_before_after',
-                'all_native_GGML_objects_and_four_custom_static_libraries_rebuilt_from_source'):
-        need(build[key] is True,'Fresh-build source check failed: '+key)
-    need(build['old_objects_or_libraries_copied'] is False,'Old object reuse is forbidden')
-    need(build['compiled_source_pin_map_LF']['ds4_model.cu']==manifest['bound_model_LF_sha256'],
-         'Fixture helper and fresh native model source differ')
-    args=build['configure_arguments']
-    source=Path(args[args.index('-S')+1]).resolve()
-    native=Path(args[args.index('-B')+1]).resolve()
-    ggml=Path(option(args,'-DSTRATA_GGML_DIR')).resolve()
-    cuda=Path(option(args,'-DCUDAToolkit_ROOT')).resolve()
-    need(source.is_dir() and native.is_dir() and ggml.is_dir(),'Fresh checkout/build missing')
-    need(sha(source/'src/dsv41/ds4_model.cu')==manifest['bound_model_LF_sha256'],
-         'Compiled source checkout changed')
+    from gpu_fixture_admission import admit
+    build,source,native,ggml,cuda=admit(build_receipt,manifest)
+    for relative in ('scripts/test_gpu.py','scripts/gpu_fixture_admission.py','tests/gpu/SOURCE-MANIFEST.json'):
+        source_pins[str(ROOT/relative)]=sha(ROOT/relative)
     if vcvars is None:
         # .../VC/Tools/MSVC/<version>/bin/Hostx64/x64/cl.exe -> VC
         compiler=Path(build['host_compiler']).resolve()
@@ -91,7 +77,7 @@ def prepare(build_receipt,out,vcvars):
         '-I'+str(source/'src/dsv41'),'-I'+str(source/'src/dsv41/epoch-support'),
         '-I'+str(source/'include'),'-I'+str(ggml/'ggml/include'),
         str(FIXTURE/'stage_test.cu'),*[str(p) for p in inputs],'advapi32.lib','-o',str(exe)]
-    plan={'schema':'fresh-source-synthetic-GPU-fixture-plan-v1',
+    plan={'schema':'fresh-portable027-synthetic-GPU-fixture-plan-v1',
         'native_build_receipt':str(build_receipt),'native_build_receipt_sha256':sha(build_receipt),
         'fixture_manifest_sha256':sha(FIXTURE/'SOURCE-MANIFEST.json'),
         'fixture_source_pins':source_pins,'fresh_build_input_pins':{str(p):sha(p) for p in inputs},
@@ -100,7 +86,7 @@ def prepare(build_receipt,out,vcvars):
         'command':command,'exe':str(exe),'expected_counts':manifest['expected_counts'],
         'CUDA_toolkit':str(cuda),'actual_Model_worker_or_47_transaction_proof':False,
         'model_or_API_calls':0}
-    batch='\r\n'.join(['@echo off','setlocal','call '+safe_arg(vcvars),
+    batch='\r\n'.join(['@echo off','setlocal','call '+safe_arg(vcvars)+' -vcvars_ver=14.44',
         'if errorlevel 1 exit /b %errorlevel%','set "_CL_=/Z7"',
         ' '.join(safe_arg(arg) for arg in command),'exit /b %errorlevel%',''])
     (out/'compile.bat').write_bytes(batch.encode('utf-8'))
@@ -159,7 +145,7 @@ def main():
             completed=subprocess.run(['cmd.exe','/d','/c',str(out/'compile.bat')],cwd=out,
                                      stdout=log,stderr=subprocess.STDOUT,timeout=a.timeout)
         verify_plan(plan)
-        receipt={'schema':'fresh-source-synthetic-GPU-fixture-build-v1',
+        receipt={'schema':'fresh-portable027-synthetic-GPU-fixture-build-v1',
             'compile_rc':completed.returncode,'plan_sha256':sha(out/'PLAN.json'),
             'source_and_inputs_unchanged':True,'fresh_main_and_fourteen_custom_inputs':True,
             'exe':plan['exe'],'exe_sha256':sha(plan['exe']) if completed.returncode==0 else None,

@@ -21,7 +21,7 @@ any model process can start.
 ## Prepare inputs
 
 First follow the main recipe to check out the pinned source, prepare the Python
-runtime, and construct the exact model pack. Pass the already-downloaded
+runtime, and construct the exact model pack. Also prepare the separate fixed native frontend with `python scripts/prepare_runtime.py --benchmark --prepare`; this remains distinct from the updated API runtime. Pass the already-downloaded
 **OrcaRouter Mix shard 1** as `--reference-gguf`. Only its GGUF vocabulary and
 merge metadata are read. No XQ model or second set of weights is needed.
 The optional original reference tokenizer JSON remains supported when already
@@ -30,7 +30,7 @@ available (SHA-256 `c90dfa01249db1be4245780a052ede752e1361c612ac6d08e2bdada7d599
 ```powershell
 python bench/prepare_inputs.py
 python bench/prepare_inputs.py --prepare `
-  --strata-source .work/runtime `
+  --strata-source .work/runtime-60 `
   --tokenizer-dir .work/data/packs/strata-mix256g-1m/tokenizer `
   --reference-gguf $MixShard1 `
   --output .work/bench-inputs
@@ -58,7 +58,7 @@ python bench/run_native.py --run `
   --config .work/local/server.json `
   --build-receipt .work/build-native/BUILD.json `
   --reference-gguf $MixShard1 `
-  --strata-source .work/runtime `
+  --strata-source .work/runtime-60 `
   --inputs .work/bench-inputs `
   --output .work/bench/run-01
 ```
@@ -98,3 +98,9 @@ For a separate normal API probe, `prepare_inputs.long_prompt_text('audit-sum')`
 returns the checked public archive plus that unchanged question as user-message
 text. It neither tokenizes nor sends a request. The API renders its own chat
 wrapper; this is distinct from submitting the native bare-prefix seed IDs.
+
+## v0.2.7 update comparison
+
+The candidate native admission uses `fresh-portable-v027-V6b-native-build-v1`, four exact raw compiled source hashes, the complete7994 source-tree digest and a fresh15-file GGML build. An older build receipt is refused; changing environment flags in an official binary does not add this port. New results remain pending.
+
+The update policy was declared before candidate inference: both waves must retain at least95% of the same-day same-weight control decode rate, with fresh TTFT at most105%, corrected-primary24, and every applicable native/cancellation/API gate. The older discovery policy of5% speedup and historical XQ TTFT target are retained as historical fields, not rewritten into this update criterion. A speedup claim requires an observed improvement. Raw26 grades and original12 rate remain literal, including any legacy failure. Use an explicitly paired closed-report assessment; an unpaired run makes no upgrade or speedup claim.

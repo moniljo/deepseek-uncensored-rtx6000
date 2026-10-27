@@ -1,0 +1,7 @@
+{
+  "schema": "pre027-recipe-parent-v1",
+  "commit": "29506b51122ff32ad01102e0749038a094a1195f",
+  "source_locks_sha256": "04ceafe5297fa2115950e6cd46f1af0430882e4dad20ae25418d35ccea8489a2",
+  "source_overlays_sha256": "9e949460c896c350945c381d161ad7adf7c0e44f1ad293db95da3df14ca028d2",
+  "old_result_scope": "Qualified V6b results remain historical; no new027 result inferred"
+}

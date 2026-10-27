@@ -1,0 +1,6355 @@
+{
+  "schema": "same-fixture-numeric-row-structure-only-v1",
+  "same_fixture_source_sha256": "452f66122e0cadccc4c26af21bc175ba86f70973356d0e02f239e1c7747cb808",
+  "historical_numeric_values_NOT_reused": true,
+  "runs": {
+    "default-self": {
+      "rows": [
+        [
+          "Q6_K",
+          "decode F16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode BF16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode F16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode BF16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode F16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode BF16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "token down",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "cpu down vs ref",
+          1e-05
+        ]
+      ],
+      "role_headers": [
+        "---- role types gate/up=14 (Q6_K), down=14 (Q6_K)",
+        "---- role types gate/up=18 (IQ3_XXS), down=18 (IQ3_XXS)",
+        "---- role types gate/up=21 (IQ3_S), down=21 (IQ3_S)",
+        "---- role types gate/up=22 (IQ2_S), down=22 (IQ2_S)"
+      ],
+      "row_count": 102,
+      "historical_structure_only_source_sha256": "4100e3b899ea5433b2c2bfbea2a79d9902f93bede2b95c028c1ec958cbfbb558"
+    },
+    "default-mixed": {
+      "rows": [
+        [
+          "IQ2_S",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "token down",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "cpu down vs ref",
+          1e-05
+        ]
+      ],
+      "role_headers": [
+        "---- role types gate/up=22 (IQ2_S), down=18 (IQ3_XXS)",
+        "---- role types gate/up=18 (IQ3_XXS), down=22 (IQ2_S)",
+        "---- role types gate/up=18 (IQ3_XXS), down=18 (IQ3_XXS)",
+        "---- role types gate/up=18 (IQ3_XXS), down=21 (IQ3_S)",
+        "---- role types gate/up=18 (IQ3_XXS), down=14 (Q6_K)",
+        "---- role types gate/up=21 (IQ3_S), down=14 (Q6_K)",
+        "---- role types gate/up=14 (Q6_K), down=21 (IQ3_S)"
+      ],
+      "row_count": 210,
+      "historical_structure_only_source_sha256": "682b329d60c33596d731fb0c661b43851ac269840734978f1fc044b2a49468c1"
+    },
+    "no-light-self": {
+      "rows": [
+        [
+          "Q6_K",
+          "decode F16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode BF16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode F16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode BF16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode F16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode BF16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "token down",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "cpu down vs ref",
+          1e-05
+        ]
+      ],
+      "role_headers": [
+        "---- role types gate/up=14 (Q6_K), down=14 (Q6_K)",
+        "---- role types gate/up=18 (IQ3_XXS), down=18 (IQ3_XXS)",
+        "---- role types gate/up=21 (IQ3_S), down=21 (IQ3_S)",
+        "---- role types gate/up=22 (IQ2_S), down=22 (IQ2_S)"
+      ],
+      "row_count": 102,
+      "historical_structure_only_source_sha256": "b723d742bf466684b6ef0bcb359bdf312e2568f06d82a74c8caa34ee5bf07182"
+    },
+    "no-light-mixed": {
+      "rows": [
+        [
+          "IQ2_S",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "token down",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "cpu down vs ref",
+          1e-05
+        ]
+      ],
+      "role_headers": [
+        "---- role types gate/up=22 (IQ2_S), down=18 (IQ3_XXS)",
+        "---- role types gate/up=18 (IQ3_XXS), down=22 (IQ2_S)",
+        "---- role types gate/up=18 (IQ3_XXS), down=18 (IQ3_XXS)",
+        "---- role types gate/up=18 (IQ3_XXS), down=21 (IQ3_S)",
+        "---- role types gate/up=18 (IQ3_XXS), down=14 (Q6_K)",
+        "---- role types gate/up=21 (IQ3_S), down=14 (Q6_K)",
+        "---- role types gate/up=14 (Q6_K), down=21 (IQ3_S)"
+      ],
+      "row_count": 210,
+      "historical_structure_only_source_sha256": "ceb583ac3c77646efb08a283260115a2b8e8c0160a34602fcd4aa80f9f9cc38c"
+    },
+    "no-tc-self": {
+      "rows": [
+        [
+          "Q6_K",
+          "decode F16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode BF16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode F16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode BF16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode F16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode BF16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "token down",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "cpu down vs ref",
+          1e-05
+        ]
+      ],
+      "role_headers": [
+        "---- role types gate/up=14 (Q6_K), down=14 (Q6_K)",
+        "---- role types gate/up=18 (IQ3_XXS), down=18 (IQ3_XXS)",
+        "---- role types gate/up=21 (IQ3_S), down=21 (IQ3_S)",
+        "---- role types gate/up=22 (IQ2_S), down=22 (IQ2_S)"
+      ],
+      "row_count": 102,
+      "historical_structure_only_source_sha256": "7eaa2371fbf4066db9bde05f98fb3b750478590edc697f86f1f50fa67ad0ef45"
+    },
+    "no-tc-mixed": {
+      "rows": [
+        [
+          "IQ2_S",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "token down",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "cpu down vs ref",
+          1e-05
+        ]
+      ],
+      "role_headers": [
+        "---- role types gate/up=22 (IQ2_S), down=18 (IQ3_XXS)",
+        "---- role types gate/up=18 (IQ3_XXS), down=22 (IQ2_S)",
+        "---- role types gate/up=18 (IQ3_XXS), down=18 (IQ3_XXS)",
+        "---- role types gate/up=18 (IQ3_XXS), down=21 (IQ3_S)",
+        "---- role types gate/up=18 (IQ3_XXS), down=14 (Q6_K)",
+        "---- role types gate/up=21 (IQ3_S), down=14 (Q6_K)",
+        "---- role types gate/up=14 (Q6_K), down=21 (IQ3_S)"
+      ],
+      "row_count": 210,
+      "historical_structure_only_source_sha256": "72ee8821d9c800de0ce88d84cd630def8042cf87376d3deed2d537aab132d9ba"
+    },
+    "no-light-no-tc-self": {
+      "rows": [
+        [
+          "Q6_K",
+          "decode F16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode BF16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode F16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode BF16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode F16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "decode BF16 bits",
+          0.0
+        ],
+        [
+          "Q6_K",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "token down",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "cpu down vs ref",
+          1e-05
+        ]
+      ],
+      "role_headers": [
+        "---- role types gate/up=14 (Q6_K), down=14 (Q6_K)",
+        "---- role types gate/up=18 (IQ3_XXS), down=18 (IQ3_XXS)",
+        "---- role types gate/up=21 (IQ3_S), down=21 (IQ3_S)",
+        "---- role types gate/up=22 (IQ2_S), down=22 (IQ2_S)"
+      ],
+      "row_count": 102,
+      "historical_structure_only_source_sha256": "7624a7f28f85810e2f11f4ca0567173ff422c6a0f757ff11f921ddad26dead85"
+    },
+    "no-light-no-tc-mixed": {
+      "rows": [
+        [
+          "IQ2_S",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ2_S",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ2_S",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ2_S",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_XXS",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_XXS",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_XXS",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "token down",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "IQ3_S",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "IQ3_S",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "IQ3_S",
+          "cpu down vs ref",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "token gate_up",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "token down",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 2 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 2 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 4 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 4 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 5 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 5 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "group gu 9 entries",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "group dn 9 entries",
+          1e-06
+        ],
+        [
+          "Q6_K",
+          "set gu 37/1 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/1 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/2 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/2 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/4 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/4 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/5 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/5 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/8 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/8 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/9 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/9 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/16 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/16 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/17 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/17 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "set gu 37/37 rows",
+          0.01
+        ],
+        [
+          "Q6_K",
+          "set dn 37/37 rows",
+          0.003
+        ],
+        [
+          "Q6_K",
+          "cpu gate_up vs ref",
+          1e-05
+        ],
+        [
+          "Q6_K",
+          "cpu down vs ref",
+          1e-05
+        ]
+      ],
+      "role_headers": [
+        "---- role types gate/up=22 (IQ2_S), down=18 (IQ3_XXS)",
+        "---- role types gate/up=18 (IQ3_XXS), down=22 (IQ2_S)",
+        "---- role types gate/up=18 (IQ3_XXS), down=18 (IQ3_XXS)",
+        "---- role types gate/up=18 (IQ3_XXS), down=21 (IQ3_S)",
+        "---- role types gate/up=18 (IQ3_XXS), down=14 (Q6_K)",
+        "---- role types gate/up=21 (IQ3_S), down=14 (Q6_K)",
+        "---- role types gate/up=14 (Q6_K), down=21 (IQ3_S)"
+      ],
+      "row_count": 210,
+      "historical_structure_only_source_sha256": "cb2569d10d608fb0e8ec1b3d218b3ae72d85596cdaa6a0ac496e6d681d295952"
+    }
+  }
+}

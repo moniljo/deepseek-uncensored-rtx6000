@@ -210,7 +210,7 @@ def prepare(a):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--prepare',action='store_true')
-    p.add_argument('--strata-source',type=Path,default=ROOT/'.work/runtime')
+    p.add_argument('--strata-source',type=Path,default=ROOT/'.work/runtime-60')
     p.add_argument('--tokenizer-dir',type=Path,default=ROOT/'.work/data/packs/strata-mix256g-1m/tokenizer')
     p.add_argument('--reference-tokenizer',type=Path)
     p.add_argument('--reference-gguf',type=Path)

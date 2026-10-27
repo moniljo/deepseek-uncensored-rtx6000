@@ -22,6 +22,7 @@
 #include "epoch-support/probe_protocol.hpp"
 #include "epoch-support/pool_probe_protocol.hpp"
 #include "epoch-support/workspace_probe_protocol.hpp"
+#include "ds4_experts_rule.hpp"
 #include "ds4_os.hpp"
 #include "ds4_packinfo.hpp"
 #include "ds4_slotmeta.hpp"
@@ -89,7 +90,7 @@ void usage() {
     std::fprintf(stderr,
                  "maya-ds4 --pack <model>/maya-ds4 [--gpus 0,1,...] [--max-context N] [--reserve-mib N]\n"
                  "           [--vram-experts F] [--cpu-threads N] [--expert-profile FILE|none] [--ssd-cache GB] [--ssd-policy lru|lfu|lfulru] [--no-expert-cache] [--verbose]\n"
-                 "           [--tp N] [--threads on|off] [--prefill-chunk N] [--dspark on|off|none|auto] [--dspark-block N] [--dspark-conf F]\n"
+                 "           [--tp N] [--threads on|off] [--prefill-chunk N] [--dspark on|off|none|auto] [--dspark-block N] [--dspark-conf F] [--experts N|auto]\n"
                  "           [--vision on|off] [--mmap-experts on|off|auto]\n"
                  "           (--ids I,J,... [--images FILE] [--n N] [--dump-logits FILE] | --serve\n"
                  "           | --encode-image FILE.rgb --size WxH --dump-image OUT\n"
@@ -155,13 +156,14 @@ static int g_round_nd = 0;
 // The drafts' cut on the product of their confidences (DeepInfer's cumulative rule): a draft is verified while the chance
 // that it and every draft before it are kept stays at least this - a long window whose later drafts are likely lost is
 // not verified whole.  STRATA_DS4_DSPARK_CUM=F, a request's dspark_cum key; 0: off, only the floor on each draft's own
-// confidence (dspark_conf).  Off by default (not measured faster on code: H100 / owner PC); Project Maya runs 0.5 (a Radeon 8065S: decode +6.5%, the same tokens)
-float dspark_cum_default() {
-    static const float v = [] {
-        const char* e = std::getenv("STRATA_DS4_DSPARK_CUM");
-        return e != nullptr ? (float) std::atof(e) : 0.0f;
-    }();
-    return v;
+// confidence (dspark_conf).  0.5 is the default on gfx1200 / gfx1201 (RDNA4: R9700, RX 9000) only: measured on 4x R9700, DeepSeek 2.25 bpw,
+// six 128-token decodes an arm in one load - 71.7 -> 76.9 tok/s (medians), the same ids.  Project Maya ran 0.5 on a Radeon 8065S (Strix Halo,
+// gfx1151: +6.5% decode, the same tokens), but that is a single datapoint on a box the 0.2.7 defaults have not been tested on, so
+// Strix keeps 0 until it is; the CUDA measurements in 0.2.7 had it flat, so CUDA keeps 0.  STRATA_DS4_DSPARK_CUM overrides everywhere.
+float dspark_cum_default(const strata::ds4::Model& m) {
+    static const char* const e = std::getenv("STRATA_DS4_DSPARK_CUM");
+    return strata::ds4::dspark_cum_value(e != nullptr, e != nullptr ? (float) std::atof(e) : 0.0f, m.gpus_are_gfx12(),
+                                         strata::ds4::defaults_026());
 }
 
 // One round of decoding after `tok` (the token at pos(), not fed yet): with the drafter, its drafts while their
@@ -179,7 +181,7 @@ bool round(strata::ds4::Model& m, int tok, int room, bool spec, float conf_min, 
         g_round_conf = conf;
         g_round_nd = (int) drafts.size();
         int keep = 0;
-        if (cum_min < 0) cum_min = dspark_cum_default();
+        if (cum_min < 0) cum_min = dspark_cum_default(m);
         float cum = 1.0f;
         while (keep < (int) drafts.size() && keep < room - 1 && conf[(size_t) keep] >= conf_min &&
                (cum *= conf[(size_t) keep]) >= cum_min)
@@ -1390,6 +1392,10 @@ int main(int argc, char** argv) {
             o.dspark = v != "none";   // none: not even loaded
             o.dspark_auto = v == "auto";
         } else if (a == "--dspark-conf") o.dspark_conf = (float) std::atof(val("--dspark-conf").c_str());
+        else if (a == "--experts") {
+            const std::string v = val("--experts");
+            o.experts = v == "auto" ? -1 : std::max(1, std::atoi(v.c_str()));
+        }
         else if (a == "--dspark-block") o.dspark_block = std::max(0, std::atoi(val("--dspark-block").c_str()));
         else if (a == "--tp") o.tp = std::max(1, std::atoi(val("--tp").c_str()));
         else if (a == "--prefill-chunk") o.prefill_chunk = std::max(0, std::atoi(val("--prefill-chunk").c_str()));
@@ -1456,6 +1462,7 @@ int main(int argc, char** argv) {
         return 1;
     }
     if (!o.vision_only) std::fprintf(stderr, "%s", m.describe().c_str());
+    if (const char* idle = std::getenv("DS4_TEST_IDLE_MS")) std::this_thread::sleep_for(std::chrono::milliseconds(std::atoi(idle)));   // (tests: a person typing)
     if (serve_mode) return serve(m, eos, spec, o.dspark_conf, o.pack);
     const int window_given = window;
     if (window == 0) window = 16;   // (the scoring / profiling runs; the plain run below takes the model's feed unit)
@@ -1523,10 +1530,13 @@ int main(int argc, char** argv) {
     for (size_t a = 0; a < ids.size();) {
         const int T = (int) std::min<size_t>((size_t) window, ids.size() - a);
         const bool last = a + (size_t) T == ids.size();
+        const double tf0 = now_ms();
         if (!m.feed(ids.data() + a, T, df != nullptr ? T : (last ? 1 : 0), err)) {
             std::fprintf(stderr, "maya-ds4: %s\n", err.c_str());
             return 1;
         }
+        if (std::getenv("DS4_FEEDLOG") != nullptr)   // each feed's time: the incremental turn (--window W: a long prefix, then a short one)
+            std::fprintf(stderr, "feed at %zu: %d tokens in %.0f ms (%.1f tok/s)\n", a, T, now_ms() - tf0, 1000.0 * T / (now_ms() - tf0));
         if (df != nullptr && m.logits(lg)) std::fwrite(lg.data(), 4, lg.size(), df);
         a += (size_t) T;
     }

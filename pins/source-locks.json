@@ -2,7 +2,7 @@
   "schema": "portable-native-source-locks-v1",
   "strata": {
     "url": "https://github.com/Niko1221/Strata.git",
-    "commit": "dfa3f4025c9f1bc4af8cee201b20a2d223061813",
+    "commit": "5e8a4cca7d690ac60ca37eb09e7d0e010099ad6d",
     "destination": "strata"
   },
   "llama_cpp": {
@@ -11,9 +11,9 @@
     "destination": "llama.cpp"
   },
   "overlay_manifest": "source-overlays.json",
-  "overlay_manifest_sha256": "9e949460c896c350945c381d161ad7adf7c0e44f1ad293db95da3df14ca028d2",
+  "overlay_manifest_sha256": "2caeb8222ce585767149baf8adfa861ee2526e32ea7dc7cfa0b2a8de7c9ba536",
   "native_target": "strata-dsv41",
-  "build_id": "dfa3f4025-orca-gpu-miss-recovery6b-portable1",
+  "build_id": "5e8a4cca-strata027-custom-v6b-port2-sm120a",
   "toolchain": {
     "OS": "Windows x64",
     "MSVC_toolset": "14.44 / compiler19.44",
@@ -22,7 +22,8 @@
     "CMake_generator": "Ninja",
     "build_type": "Release",
     "portable_CPU": "AVX2/FMA/F16C, BMI2 disabled by DSV41 CMake",
-    "debug_info_env": "_CL_=/Z7"
+    "debug_info_env": "_CL_=/Z7",
+    "parallel": 6
   },
   "required_CMake_flags": {
     "STRATA_ENABLE_CUDA": "ON",
@@ -30,7 +31,7 @@
     "STRATA_NATIVE_EXPERTS": "ON",
     "STRATA_Q6K_EXPERTS": "ON",
     "STRATA_PORTABLE": "ON",
-    "STRATA_BUILD_TESTS": "OFF",
+    "STRATA_BUILD_TESTS": "ON",
     "STRATA_MMQ_KQUANTS": "OFF",
     "STRATA_MMQ_TQ_OVERLAY": "OFF"
   },
@@ -38,6 +39,15 @@
   "old_objects_libraries_not_accepted": true,
   "default_source_copy_work_directory": ".work/source",
   "no_model_download_or_inference": true,
-  "closure_revision": 4,
-  "native_change": "Recovery-only headroom correction; all native/GGML source freshly rebuilt"
+  "closure_revision": 5,
+  "native_change": "Exact raw 0.2.7 tag source plus7994 custom port and unchanged15 GGML overlays; not stock upstream",
+  "checkout_policy": {
+    "core.autocrlf": "true",
+    "core.eol": "crlf",
+    "core.longpaths": "true",
+    "scope": "Repository-local Windows settings reproduce actual unoverlaid upstream checkout; Git attributes retain upstream exceptions; overlays copied raw",
+    "core.symlinks": "false",
+    "core.filemode": "false",
+    "core.ignorecase": "true"
+  }
 }

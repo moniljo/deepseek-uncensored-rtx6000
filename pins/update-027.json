@@ -1,0 +1,22 @@
+{
+  "schema": "v027-raw-source-reconstruction-reference-v1",
+  "package_parent_commit": "29506b51122ff32ad01102e0749038a094a1195f",
+  "native_stage_manifest_sha256": "799413c6b137a5457becf10c90ce471d57018cedbb467708066c041b7f7003d0",
+  "reference_private_BUILD_sha256": "4f6cbcfe639b3a4ad3c0f77923af527380b2e3b018d8c275cfeedd03517b6ac3",
+  "reference_private_build_schema": "fresh-custom-v027-V6b-port-native-build-v1",
+  "reference_image_sha256": "4b3a7f1a29b1d860eb79363544acbe19d9b758345f4ec04dbad1a9db0609dd8b",
+  "expected_complete_source_files": 5185,
+  "expected_complete_source_tree_sha256": "fda1cc136f00fe3ebe5cc17bcdaa27f19d5f6390bf7df78ba62dca8c71aaa4f6",
+  "actual_four_raw_source_pin_map": {
+    "ds4_model.cu": "f4f0648a5e0de1e26f19e26e3442b8fcc867b355479168d2043af8d09fce8a10",
+    "ds4_main.cpp": "601646fbdb9c31620077dc80634697d47fb2fd6560e18e0e476594f8c2438d92",
+    "ds4_model.hpp": "19fda3c0990c02adfc50a86244dfc2ffca847e4de0adb3b0afcddca26cf3012f",
+    "ds4_iq.cu": "db68938a4cf8ec2c475aed103dc4bee152aebfb5d0372bd6e8120e5d6c166de4"
+  },
+  "source_port_revision": "v2-duplicate-legacy-HC-definition-removal-only",
+  "private_recipe_sha256": "978cbf29786273917950ed9b4b807a6bba9ae6152c592d0e9c00fdcc52571dac",
+  "public_recipe_claim": "Reconstruct identical raw source/15 GGML bytes and equivalent build options; public CLI did not produce reference private image",
+  "candidate_qualification_status": "PENDING",
+  "new_default_claimed": false,
+  "release_stock_qualified": false
+}

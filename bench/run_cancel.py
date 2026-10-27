@@ -285,7 +285,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--run',action='store_true');p.add_argument('--mode',choices=MODES)
     p.add_argument('--config',type=Path);p.add_argument('--build-receipt',type=Path)
-    p.add_argument('--strata-source',type=Path,default=ROOT/'.work/runtime')
+    p.add_argument('--strata-source',type=Path,default=ROOT/'.work/runtime-60')
     p.add_argument('--inputs',type=Path,default=ROOT/'.work/bench-inputs');p.add_argument('--initial-profile',type=Path)
     p.add_argument('--reference-gguf',type=Path);p.add_argument('--reference-tokenizer',type=Path)
     p.add_argument('--reference-control-report',type=Path);p.add_argument('--expected-reference-control-report-sha256')

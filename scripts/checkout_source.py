@@ -25,6 +25,11 @@ def git(directory,*arguments):
     result=subprocess.run(['git','-C',str(directory),*arguments],check=True,
                           text=True,encoding='utf-8',stdout=subprocess.PIPE)
     return result.stdout.strip()
+
+def complete_source_tree(target):
+    pins={p.relative_to(target).as_posix():sha(p) for p in target.rglob('*')
+          if p.is_file() and '.git' not in p.relative_to(target).parts}
+    return len(pins),hashlib.sha256(json.dumps(pins,sort_keys=True).encode()).hexdigest()
 def metadata():
     locks=read(REPO/'pins/source-locks.json')
     manifest=safe(REPO/'pins',locks['overlay_manifest'])
@@ -50,6 +55,14 @@ def verify(work,locks,overlays):
         extra=set(git(target,'ls-files','--others','--exclude-standard').splitlines())
         need((changed|extra)<=set(overlays[group]),'Undeclared checkout changes')
         need(not git(target,'diff','--name-only','--diff-filter=D','HEAD'),'A source file was removed')
+        if group=='strata':
+            count,digest=complete_source_tree(target)
+            need(count==overlays['expected_complete_strata_files'] and
+                 digest==overlays['expected_complete_strata_tree_sha256'],
+                 'Complete raw Strata source differs from the actual tested7994 build')
+    need(receipt['complete_raw_strata_source_files']==overlays['expected_complete_strata_files'] and
+         receipt['complete_raw_strata_source_tree_sha256']==overlays['expected_complete_strata_tree_sha256'],
+         'Prepared raw source closure binding differs')
     return receipt
 def prepare(work,locks,overlays,caches):
     targets=[safe(work,locks[k]['destination'])for k in ('strata','llama_cpp')]
@@ -60,8 +73,9 @@ def prepare(work,locks,overlays,caches):
         spec=locks[key];target=safe(work,spec['destination'])
         target.mkdir(exist_ok=False)
         git(target,'init','--quiet')
-        git(target,'config','core.autocrlf','false')
-        git(target,'config','core.longpaths','true') # repository-local; no OS/global policy change
+        for name,value in locks['checkout_policy'].items():
+            if name.startswith('core.'):
+                git(target,'config',name,value) # repository-local, never a global/OS change
         git(target,'remote','add','origin',spec['url'])
         fetch=str(caches[key].resolve())if caches[key]else'origin'
         git(target,'fetch','--quiet','--depth','1',fetch,spec['commit'])
@@ -71,11 +85,17 @@ def prepare(work,locks,overlays,caches):
             source=safe(REPO/'source'/group,name);destination=safe(target,name)
             destination.parent.mkdir(parents=True,exist_ok=True)
             shutil.copyfile(source,destination)
+    count,digest=complete_source_tree(targets[0])
+    need(count==overlays['expected_complete_strata_files'] and
+         digest==overlays['expected_complete_strata_tree_sha256'],
+         'Reconstruction is not byte-identical to the tested raw7994 source; partial output retained')
     record={'schema':'prepared-pinned-native-source-v1','source_locks_sha256':sha(REPO/'pins/source-locks.json'),
             'overlay_manifest_sha256':locks['overlay_manifest_sha256'],
             'upstream_commits':{k:locks[k]['commit']for k in ('strata','llama_cpp')},
             'strata_source':str(targets[0]),'llama_source':str(targets[1]),
             'source_overlay_counts':{g:len(overlays[g])for g in ('strata','ggml')},
+            'complete_raw_strata_source_files':count,'complete_raw_strata_source_tree_sha256':digest,
+            'checkout_policy':locks['checkout_policy'],
             'old_objects_libraries_copied':False,'model_or_GPU_calls':0}
     with(work/'PREPARED-SOURCE.json').open('x',encoding='utf-8')as stream:
         json.dump(record,stream,indent=2);stream.write('\n')

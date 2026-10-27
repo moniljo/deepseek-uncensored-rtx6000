@@ -201,7 +201,9 @@ void q8_quant(const float* x, size_t ldx, int rows, int k, int8_t* q, float* d, 
     q8_quant_kernel<<<grid, kThreads, 0, s>>>(x, ldx, k, q, d);
 }
 
-// Opt-in fusion copied from Strata commit60d856a (MIT; see stage licenses).
+// Several activations' rounding in one launch (a GEMV call's jobs: wo_a's eight groups, the shared expert's two, ...): item z is
+// q8_quant's (x, ldx, rows, k, q, d), the same per-element arithmetic, so the bytes are the single launches'.  Identical items
+// (the same x, stride, rows and k: two matrices reading one input) are rounded once and share the result.
 constexpr int kQuantItems = x3::kMaxMvJobs;
 struct QuantItems {
     const float* x[kQuantItems];
@@ -1199,12 +1201,8 @@ bool mv(const x3::MvJob* jobs, int n, cudaStream_t s) {
     bool vec[3] = {true, true, true};
     iq::MvJob IJ[x3::kMaxMvJobs];   // the low-bit ones (ds4_iq: a launch a type)
     int nij = 0;
-    static const bool decode_fusion_enabled = [] {
-        const char* v = std::getenv("DS4_DECODE_FUSION");
-        return v != nullptr && std::strcmp(v, "1") == 0;
-    }();
-    const bool decode_fusion = decode_fusion_enabled && fusion_independent(jobs, n, fusion_scratch_ready(s));
-    QuantItems QI; QI.n = 0; // host metadata only; no extra device work when off
+    QuantItems QI;   // the int8 roundings of this call's jobs, one launch (identical inputs once)
+    QI.n = 0;
     for (int i = 0; i < n; ++i) {
         const x3::MvJob& q = jobs[i];
         const x3::Mat& m = *q.m;
@@ -1217,11 +1215,7 @@ bool mv(const x3::MvJob* jobs, int n, cudaStream_t s) {
                 return false;
             }
             const size_t at = (size_t) i * x3::kMaxMvCols * kMaxQK;
-            int qi = -1;
-            if (decode_fusion)
-                qi = quant_add(QI, q.xf, q.ncol > 1 ? q.xf_cs : (size_t) m.k, q.ncol, m.k, sc->mq + at, sc->md + at / 32);
-            else
-            q8_quant(q.xf, q.ncol > 1 ? q.xf_cs : (size_t) m.k, q.ncol, m.k, sc->mq + at, sc->md + at / 32, s);
+            const int qi = quant_add(QI, q.xf, q.ncol > 1 ? q.xf_cs : (size_t) m.k, q.ncol, m.k, sc->mq + at, sc->md + at / 32);
             iq::MvJob& b = IJ[nij++];
             b.w = (const uint8_t*) m.raw;
             b.ld = row_stride(m);
@@ -1229,8 +1223,8 @@ bool mv(const x3::MvJob* jobs, int n, cudaStream_t s) {
             b.k = m.k;
             b.n = m.n;
             b.ncol = q.ncol;
-            b.xq = decode_fusion ? QI.q[qi] : sc->mq + at;
-            b.xd = decode_fusion ? QI.d[qi] : sc->md + at / 32;
+            b.xq = QI.q[qi];
+            b.xd = QI.d[qi];
             b.y = q.y;
             b.ycs = q.y_cs;
             b.bias = q.bias;
@@ -1268,20 +1262,15 @@ bool mv(const x3::MvJob* jobs, int n, cudaStream_t s) {
                 return false;
             }
             const size_t at = (size_t) i * x3::kMaxMvCols * kMaxQK;
-            if (decode_fusion) {
-                const int qi = quant_add(QI, q.xf, q.ncol > 1 ? q.xf_cs : (size_t) m.k, q.ncol, m.k, sc->mq + at, sc->md + at / 32);
-                b.xq = QI.q[qi]; b.xd = QI.d[qi];
-            } else {
-                b.xq = sc->mq + at;
-                b.xd = sc->md + at / 32;
-                q8_quant(q.xf, q.ncol > 1 ? q.xf_cs : (size_t) m.k, q.ncol, m.k, sc->mq + at, sc->md + at / 32, s);
-            }
+            const int qi = quant_add(QI, q.xf, q.ncol > 1 ? q.xf_cs : (size_t) m.k, q.ncol, m.k, sc->mq + at, sc->md + at / 32);
+            b.xq = QI.q[qi];
+            b.xd = QI.d[qi];
             vec[f] = vec[f] && b.ld % 4 == 0 && ((uintptr_t) b.w & 3u) == 0 && (m.k / 32) % 2 == 0;
         } else {
             vec[f] = vec[f] && xa && (f != 0 || (m.k % 8 == 0 && b.ld % 8 == 0 && ((uintptr_t) b.w & 15u) == 0));
         }
     }
-    if (decode_fusion) quant_flush(QI, s);
+    quant_flush(QI, s);
     for (int f = 0; f < 3; ++f) mv_set(f, J[f], nj[f], max_n[f], max_c[f], vec[f], s);
     if (nij > 0 && !iq::mv(IJ, nij, s)) {
         fail("mv: a low-bit job not covered");
@@ -1481,6 +1470,7 @@ iq::SetArgs iq_set(const x3::SetArgs& sa) {   // a set as ds4_iq's arguments (th
     q.n_embd = sa.n_embd;
     q.n_ff = sa.n_ff;
     q.limit = sa.limit;
+    q.xf16 = sa.x16;
     return q;
 }
 }  // namespace

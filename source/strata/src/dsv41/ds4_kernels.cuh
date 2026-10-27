@@ -61,7 +61,8 @@ void finish(float* x, int n_vec, int len, long long stride, const Finish& f, cud
 /// pre / post / comb as hc_split_sinkhorn (comb[t][j * hc + k], j the source stream, k the destination).  Strides: mixes
 /// 32, pre / post 8, comb 64 floats a row.
 void hc_mix(const float* h, const float* fn, int hcdim, int n_mix, int T, float eps, float* mixes, cudaStream_t s);
-/// Opt-in decode fusion; cnt holds T zero-initialized counters, left zero.
+/// hc_mix then hc_split in one launch (cnt: T zeroed unsigned counters, left zero; n_mix <= 32, T <= kWin): the last block of a token
+/// runs the split - the same arithmetic as the two launches
 void hc_mix_split(const float* h, const float* fn, int hcdim, int n_mix, int T, float eps, float* mixes, unsigned* cnt,
                   const float* scale, const float* base, int hc, int iters, float hc_eps, float* pre, float* post,
                   float* comb, cudaStream_t s);
@@ -283,6 +284,8 @@ void hc_mean(const float* h, int T, int hc, int dim, float* out, long long out_s
 void iota_rows(int* out, int T, int n, int stride, cudaStream_t s);
 /// The DSpark markov head: logits[v] += E[*tok] . H[v] for v < V (E BF16 [V][R], H F16 [V][R]).
 void markov_add(float* logits, const uint16_t* E, const uint16_t* H, const int* tok, int V, int R, cudaStream_t s);
+/// The same bias with the head quantised to Q8_0 blocks of 32 (34 B a block: F16 d and 32 int8, R a multiple of 32).
+void markov_add_q8(float* logits, const uint16_t* E, const uint8_t* Hq, const int* tok, int V, int R, cudaStream_t s);
 /// The markov bias over a head group: a member's rows [v0, v0 + vn) of it added to its share of a logits row (erow:
 /// the previous token's E row, BF16, on the device) - markov_add's sums; the share's argmax (the greedy sampler's rule)
 /// into a host-mapped slot {value, index, seq}; every member's slot of the step -> the global argmax into *tok and its

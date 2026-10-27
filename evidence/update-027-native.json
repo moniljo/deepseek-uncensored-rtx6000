@@ -1,0 +1,49 @@
+{
+  "schema": "v027-two-fresh-native-summary-v1",
+  "REPORT_sha256": "4e7821a6a73b4f01ba2f665500cd04e070aee299258b55504598c3610d6b56f0",
+  "incumbent_REPORT_sha256": "f31a65c463135fd027deaf017c91934fdf6b110f72c75a308274dfb623f1cc29",
+  "policy_sha256": "2fb510c960ec618f4afd555919ebb7a83806f4a7400ca812db4606f917c25740",
+  "image_sha256": "4b3a7f1a29b1d860eb79363544acbe19d9b758345f4ec04dbad1a9db0609dd8b",
+  "source_manifest_sha256": "799413c6b137a5457becf10c90ce471d57018cedbb467708066c041b7f7003d0",
+  "status": "measurement-complete-quality-failed",
+  "raw_passed": false,
+  "raw26_passed": 25,
+  "primary_corrected24_passed": true,
+  "original13_first_grades_not_repaired": true,
+  "legacy_failure_wave": 2,
+  "legacy_failure_case": "code-account-balance",
+  "wave_results": [
+    {
+      "wave": 1,
+      "incumbent_original12_ID_intervals_s": 37.15612501562473,
+      "candidate_original12_ID_intervals_s": 36.65469188806926,
+      "decode_ratio": 0.9865046980183049,
+      "incumbent_fresh_TTFT_seconds": 347.3207404000002,
+      "candidate_fresh_TTFT_seconds": 351.1623495999993,
+      "TTFT_ratio": 1.0110606962186446,
+      "raw13_passed": 13,
+      "primary12_passed": true,
+      "update_nonregression_passed": true
+    },
+    {
+      "wave": 2,
+      "incumbent_original12_ID_intervals_s": 38.76420281409709,
+      "candidate_original12_ID_intervals_s": 38.130486563525714,
+      "decode_ratio": 0.9836520241726494,
+      "incumbent_fresh_TTFT_seconds": 346.1279301999999,
+      "candidate_fresh_TTFT_seconds": 352.90003479999996,
+      "TTFT_ratio": 1.0195653225559895,
+      "raw13_passed": 12,
+      "primary12_passed": true,
+      "update_nonregression_passed": true
+    }
+  ],
+  "one_process_29GEN_two_fresh999764_zero_reuse_seeds": true,
+  "all26_followups_natural_EOS_full999764_reuse": true,
+  "full40_actual_ledger_retire_rearm_exit_admitted": true,
+  "native0_V3_no_escalation_and_source_protection": true,
+  "all_code_primary_actual11_vectors": true,
+  "speedup_claimed": false,
+  "interpretation": "The custom027 update was1.35/1.63percent slower in decode and1.11/1.96percent higher in TTFT than the same-day7bc control, within the predeclared95/105 nonregression policy. This is not a pure version-causal attribution or an all-raw-quality pass. API/default admission pending.",
+  "default_selected": false
+}

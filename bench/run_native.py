@@ -17,6 +17,7 @@ import native_support as B
 import prepare_inputs as I
 import runtime as RT
 import qualification_support as Q
+import full_arena_validation as L
 import qualification_contract as C
 import baseline_validation as BASE
 fresh_seed,wave_metrics,grade_row,validate_cleanup=C.fresh_seed,C.wave_metrics,C.grade_row,C.validate_cleanup
@@ -25,18 +26,44 @@ ROOT=HERE.parent
 need=B.need
 
 
+def bind_normal_ledger(observer,seed,index):
+    active=observer.history.active
+    need(active is not None and type(active['ranges'])is int and active['ranges']==40 and
+         type(active['bytes'])is int and 0<active['bytes']<=196608<<20 and
+         re.fullmatch('[0-9a-f]{16}',active['fingerprint']),
+         'Actual first-normal full40 bounded retained ledger required')
+    anchor={k:active[k]for k in ('ranges','bytes','fingerprint')}
+    d=seed['native_GPU_miss_direct_answer']
+    need(d['retained_ranges']==anchor['ranges']and d['retained_bytes']==anchor['bytes'],
+         'Actual seed answer and retained ledger differ')
+    L.bind_exact(observer.startup_full_arena_inventory,anchor)
+    previous=getattr(observer,'selected_full_arena_ledger',None)
+    if previous is None:
+        need(index==1 and active['epoch']==0,'Anchor only the first normal seed completion before any graded GEN')
+        observer.selected_full_arena_ledger=anchor
+    else:
+        need(index==2 and previous==anchor,'Rearm changed the immutable full-arena bytes/fingerprint')
+    return dict(anchor,bound_after_first_seed_before_any_graded_GEN=True,
+                exact_preGEN_allocation_or_sum_not_claimed=True)
+
+
 def selected_generate(observer,*args):
+    anchor=getattr(observer,'selected_full_arena_ledger',None)
+    need(anchor is not None,'Normal seed ledger must be bound before graded GEN')
     row=observer.generate(*args)
     g=row['native_GPU_miss_answer'];d=row['native_GPU_miss_direct_answer']
-    need(d['retained_ranges']==40 and d['retained_bytes']==184926136320 and
+    active=observer.history.active
+    need(active is not None and all(active[k]==anchor[k]for k in ('ranges','bytes','fingerprint'))and
+         d['retained_ranges']==anchor['ranges']==40 and d['retained_bytes']==anchor['bytes']and
          d['direct_unique']>0 and d['direct_bytes']>0 and d['bounce_unique']==d['bounce_bytes']==0 and
-         g['fallbacks']==0,'Selected exactMix direct192 graded answer requires40ranges/directpositive/zeroBounce/zeroCPUfallback')
+         g['fallbacks']==0,'Selected exactMix full40 anchored direct192 graded answer requires directpositive/zeroBounce/zeroCPUfallback')
     return row
 
 
 def run(a):
     need(sys.platform=='win32'and a.config and a.build_receipt,'Explicit native config/BUILD required')
     paired=bool(a.baseline_report is not None or a.expected_baseline_report_sha256 is not None)
+    need(not paired,'Use compare_update.py on closed same-weight reports; historical stock81 admission is not this update policy')
     need(not a.require_paired or paired,'Explicit paired qualification requires the closed stock REPORT/SHA')
     stock=None;stock_metrics=None
     if paired:
@@ -67,7 +94,7 @@ def run(a):
     out.mkdir(parents=True,exist_ok=False);cfg,profile=RT.make_private_config(cfg,out,a.initial_profile)
     source_files=[HERE/name for name in ('run_native.py','runtime.py','prepare_inputs.py','native_support.py','job_support.py','identity_support.py','owned_windows.py',
         'gpu_miss_validation.py','direct_pin_validation.py','native_stat_tap.py','phase_support.py','initial_phase.py','qualification_support.py','qualification_contract.py',
-        'shutdown_trace.py','grade_first_support.py','strict_json_support.py','baseline_validation.py','frozen-inputs.json','ORACLE-PROVENANCE.json','SOURCE-PROVENANCE.json')]
+        'shutdown_trace.py','full_arena_validation.py','grade_first_support.py','strict_json_support.py','baseline_validation.py','frozen-inputs.json','ORACLE-PROVENANCE.json','SOURCE-PROVENANCE.json')]
     source_files +=list((HERE/'oracles').glob('*.py'))+list((HERE/'vendor').glob('*'))
     source_files +=[a.config,a.initial_profile,a.inputs/'INPUTS.json',a.inputs/'prefix.u32le',ROOT/'pins/runtime-overlays.json']
     if paired:source_files.append(a.baseline_report)
@@ -77,7 +104,7 @@ def run(a):
     source_files +=[token_dir/name for name in ('vocab.json','merges.txt','token_type.json','tokenizer.json')]
     protected.update({str(p):B.sha(p)for p in source_files})
     report={'schema':'retained-direct-two-fresh-frozen-waves-v1','passed':False,'status':'preparing','waves':[],'interlude':None,
-        'configured_context':1048576,'wave_count':2,'same_owned_process_required':True,'no_retries':True,'no_RESET_or_maintenance_wire':True,'frozen_grading_changed':False,
+        'controller_python_version':sys.version.split()[0],'configured_context':1048576,'wave_count':2,'same_owned_process_required':True,'no_retries':True,'no_RESET_or_maintenance_wire':True,'frozen_grading_changed':False,
         'registered_ram_cap_MiB':196608,'overlap_mode':False,'expert_profile':profile,'baseline':baseline,'tokenizer_parity':parity,
         'reference_tokenizer':kind,'exact_seed_tokens':999764,'exact_seed_ids_sha256':B.idsha(prefix),'protected_files_before':protected,
         'interlude_input':{'case':'filtered-decimal-revenue','tokens':164,'input_ids_sha256':B.idsha(interlude_ids),'tokenizer_equal':True,'prefix_pin':0},
@@ -101,6 +128,11 @@ def run(a):
         with mock.patch.object(server,'StrataEngine',RT.Tap.capture_class(server.StrataEngine)):
             owner=B.OwnedNative(owned_args,cfg,out,server,job_support.OwnedJob,identity_support)
         observer=Q.Observer(owner,out,196608,None)
+        startup_log=out/'ENGINE.log';need(startup_log.stat().st_size<=8<<20,'Bounded preGEN startup log required')
+        startup_raw=startup_log.read_bytes();startup_file=out/'STARTUP-ENGINE-window.log';startup_file.write_bytes(startup_raw)
+        observer.startup_full_arena_inventory=L.startup_inventory(startup_raw.decode('utf-8','replace'))
+        report['startup_full_arena_inventory']=dict(observer.startup_full_arena_inventory,
+            captured_before_first_GEN=True,window_sha256=B.sha(startup_file),window_bytes=len(startup_raw));save()
         need(len(owner.processes)==len(owner.identities)==1,'One fresh owned process required')
         proc,identity=owner.processes[0],owner.identities[0]
         def same():need(owner.engine.proc is proc and proc.pid==identity['pid']and proc.poll()is None,'Owned engine changed/exited; no retry')
@@ -126,6 +158,7 @@ def run(a):
             wave["native_phase_evidence"]=Q.seed_telemetry(window.decode("utf-8","replace"),index,previous);save()
             fresh_seed(seed,report["exact_seed_ids_sha256"])
             need(seed["prompt_read"]==B.PREFIX_N and seed["emitted_token_ids"]==seed["native_generated_tokens"]==1 and seed["requested_prefix_tokens"]==B.PREFIX_N,"Exactfreshseed/read/actualIDaccounting differs")
+            report["normal_retained_ledger_anchor"]=bind_normal_ledger(observer,seed,index);save()
             wave["fresh_seed_zero_reuse_proven"]=True;wave["status"]="followups";save()
             for case,ids,is_v2 in tests:
                 same();name=case["id"]+("-v2"if is_v2 else "")
@@ -173,7 +206,8 @@ def run(a):
                 report["native_retained_direct_qualification"]=observer.finish()
                 evidence=report["native_retained_direct_qualification"];setup=evidence["initial_setup"]
                 need(setup["device_bytes"]==24*setup["stride"]and setup["host_bounce_bytes"]==2*setup["stride"]and
-                     evidence["exit"]["fallbacks"]==0 and all(e["ranges"]==40 and e["bytes"]==184926136320 for e in evidence["physical_pin_history"]),
+                     evidence["exit"]["fallbacks"]==0 and hasattr(observer,"selected_full_arena_ledger")and
+                     all(all(e[k]==observer.selected_full_arena_ledger[k]for k in ("ranges","bytes","fingerprint"))for e in evidence["physical_pin_history"]),
                      "Selected staging allocation/40arena ownership/CPUfallback0 final evidence differs")
                 report["selected_native_final_passed"]=True
             except BaseException as error:
@@ -221,7 +255,7 @@ def main():
     p.add_argument('--run',action='store_true');p.add_argument('--config',type=Path);p.add_argument('--build-receipt',type=Path)
     p.add_argument('--baseline-report',type=Path);p.add_argument('--expected-baseline-report-sha256')
     p.add_argument('--require-paired',action='store_true')
-    p.add_argument('--strata-source',type=Path,default=ROOT/'.work/runtime')
+    p.add_argument('--strata-source',type=Path,default=ROOT/'.work/runtime-60')
     p.add_argument('--reference-gguf',type=Path);p.add_argument('--reference-tokenizer',type=Path)
     p.add_argument('--inputs',type=Path,default=ROOT/'.work/bench-inputs');p.add_argument('--initial-profile',type=Path)
     p.add_argument('--output',type=Path,default=ROOT/'.work/bench/qualification-01')
@@ -232,7 +266,7 @@ def main():
          'All explicit deadlines must be finite and within 0..3600 seconds')
     if not a.run:
         print(json.dumps({'plan_only':True,'model_processes':0,'API_calls':0,'writes':0,'waves':2,'fresh_seed_tokens_each':999764,
-            'raw_original13_grades_each':13,'primary_corrected_grades_total':24,'primary_rate':'ORIGINAL12 paired>=stock*1.05 EACHwave',
+            'raw_original13_grades_each':13,'primary_corrected_grades_total':24,'primary_rate':'ORIGINAL12 observed; update95percent decode/105percentTTFT paired assessment separate',
             'exact29GEN_native_observer_phase_handoff_exit0_V3_no_escalation_required':True,'Stop5_and_API_separate':True}))
         return 0
     need(a.reference_gguf is not None or a.reference_tokenizer is not None,'Use already-downloaded Mixshard1 as --reference-gguf')

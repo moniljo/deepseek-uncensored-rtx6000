@@ -1,0 +1,41 @@
+{
+  "schema": "v027-managed-default-deployment-summary-v1",
+  "passed": true,
+  "finished": true,
+  "selected": true,
+  "source_REPORT_sha256": "6a72e362f1504f00ef28dd664b431d400d6c81f4d8895fa74a00f34342bb21ad",
+  "promotion_receipt_sha256": "96f99ab2ff2c1c6b7913db8bce71d366a95acd78697d8cdb25f096f04d123657",
+  "configuration_sha256": "001033051a9d5927ef76f11d1fc2a6ba1418b11a00be26825781aa162ed445e4",
+  "selected_exe_sha256": "4b3a7f1a29b1d860eb79363544acbe19d9b758345f4ec04dbad1a9db0609dd8b",
+  "frontend_sha256": "59150689daf877a9e78eab3e3ae5e7490279c5e35d109296d82bca78516b459a",
+  "protocol_checker_sha256": "077ad65bf9042d9f9054a0e678de43e08a49503cbe343c631059d4855d25f2f8",
+  "separate_qualified_owned_API_report_sha256": "f6f194c9fd291f1a4e663be2c40979e67f45ad1ddd64fe96ba151066e255144c",
+  "context_tokens": 1048576,
+  "local_protocol": {
+    "receipt_sha256": "0542a3e681e10e4508dc36dfa128706183e6c29f6daa340418ca9b382dd2c445",
+    "checks_passed": 15,
+    "inference_requests": 6,
+    "near1M_request_performed": false
+  },
+  "public_protocol": {
+    "receipt_sha256": "97201e0b02aab74b3180565dec14629fb19c0b96dc9d6f84535e9ce1f4d765e9",
+    "checks_passed": 14,
+    "inference_requests": 6,
+    "near1M_request_performed": false
+  },
+  "fresh_public_samples": 3,
+  "all_public_samples_match_local_boot_model_and_context": true,
+  "configuration_key_model_weights_CPU_DSpark_settings_learned_profile_bind_and_tunnels_preserved": true,
+  "managed_frontend_creation_time_image_state_and_start_marker_matched": true,
+  "configuration_and_manager_record_unchanged_during_verification": true,
+  "no_native_PID_reopen": true,
+  "kernel_native_identity_proven_by_this_managed_check": false,
+  "near1M_request_repeated_on_managed_process": false,
+  "individual_Cloudflare_connectors_proven": false,
+  "separate_owned_API_supplies_native_identity_and_near1M_inference": true,
+  "raw25of26_failure_not_regraded": true,
+  "corrected_primary24of24_retained": true,
+  "measured_speedup_claimed": false,
+  "credentials_hostnames_private_paths_and_payloads_exported": false,
+  "scope": "Actual selected managed deployment; authenticated local/public short protocol checks plus three observed matching service samples. Does not establish each individual connector, repeat the managed near1M request, or infer kernel native identity from configuration."
+}

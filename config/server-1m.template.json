@@ -27,7 +27,9 @@
     "--dspark",
     "on",
     "--prefill-chunk",
-    "65280"
+    "65280",
+    "--experts",
+    "6"
   ],
   "lib_dirs": [
     "{{CUDA_BIN}}"
@@ -74,7 +76,8 @@
     "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
     "DS4_PREFILL_REPEAT_MIN_TOKENS": "32768",
     "DS4_GPU_MISSES": "1",
-    "DS4_GPU_MISS_DIRECT": "1"
+    "DS4_GPU_MISS_DIRECT": "1",
+    "DS4_COPY_PIN": "0"
   },
   "engine_ready_s": 900,
   "host": "127.0.0.1",

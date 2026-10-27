@@ -4,3 +4,4 @@ requests==2.34.2
 psutil==7.2.2
 cmake==4.4.3
 ninja==1.13.2
+regex==2026.9.10

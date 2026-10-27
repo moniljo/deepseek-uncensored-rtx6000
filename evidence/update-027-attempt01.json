@@ -1,0 +1,18 @@
+{
+  "schema": "v027-first-Q-observer-failure-v1",
+  "REPORT_sha256": "e5a8d589db524990f37702c9250bf140c7eafe8864ad66ccb00112323d32619c",
+  "status": "failed",
+  "passed": false,
+  "finished": true,
+  "actual_seed_tokens": 999764,
+  "actual_seed_reuse": 0,
+  "seed_TTFT_seconds": 350.59482800000023,
+  "stored_wave_rows": 1,
+  "additional_observer_FIRST_rows": 1,
+  "first_followup_actual_IDs": 96,
+  "first_followup_natural_EOS": true,
+  "quality_grades_executed": 0,
+  "native0_V3_source_protection": true,
+  "no_regrade": true,
+  "diagnosis": "Redundant wrapper compared the old run physical registration byte total; canonical dynamic ledger accepted the current allocation. Source-only observer correction binds full40 startup inventory and exact postseed ledger, without changing native code, inputs or grader."
+}

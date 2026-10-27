@@ -1,0 +1,240 @@
+{
+  "schema": "v027-five-loaded-cancellation-summary-v1",
+  "passed": true,
+  "source_manifest_sha256": "799413c6b137a5457becf10c90ce471d57018cedbb467708066c041b7f7003d0",
+  "image_sha256": "4b3a7f1a29b1d860eb79363544acbe19d9b758345f4ec04dbad1a9db0609dd8b",
+  "campaign_sha256": "6d22fcbafb3a36d51dd499c813f2de453d42c3fff27dc55aea3e886908d97bd8",
+  "modes": [
+    {
+      "mode": "setup-stop-twice",
+      "REPORT_sha256": "d84474d7f058f887d0f15d710cde546ee2b3904a0f7937ab9715fe2e789dbe1c",
+      "actual_exit": 0,
+      "passed": true,
+      "uncancelled_rows": 10,
+      "FIRST_grades": 9,
+      "speeds": [
+        {
+          "before_actual_ID_intervals_s": 39.680493267164906,
+          "FIRST_after_actual_ID_intervals_s": 47.63901141560199,
+          "actual_ratio": 1.2005650004109867,
+          "before_IDs": 531,
+          "FIRST_after_IDs": 291,
+          "before_TTFT_seconds": 6.12113060000047,
+          "FIRST_after_TTFT_seconds": 15.462843199999952,
+          "output_IDs_identical": false,
+          "recovery_cost_not_removed_from_TTFT": true
+        },
+        {
+          "before_actual_ID_intervals_s": 39.680493267164906,
+          "FIRST_after_actual_ID_intervals_s": 44.19165385094035,
+          "actual_ratio": 1.1136871095175718,
+          "before_IDs": 531,
+          "FIRST_after_IDs": 508,
+          "before_TTFT_seconds": 6.12113060000047,
+          "FIRST_after_TTFT_seconds": 15.252154399999199,
+          "output_IDs_identical": false,
+          "recovery_cost_not_removed_from_TTFT": true
+        }
+      ],
+      "recoveries": [
+        {
+          "attempt": 1,
+          "epoch": 2,
+          "normal_anchor_known": true,
+          "pool_restore_ratio": 0.9933628368208908,
+          "native_recovery_elapsed_ms": 8157.617,
+          "geometry_after": {
+            "C": 1024,
+            "A": 1024,
+            "AI": 128
+          },
+          "unknown_initial_targets_source_checked_before_READY": false
+        },
+        {
+          "attempt": 2,
+          "epoch": 4,
+          "normal_anchor_known": true,
+          "pool_restore_ratio": 0.9933628368208908,
+          "native_recovery_elapsed_ms": 7177.486,
+          "geometry_after": {
+            "C": 1024,
+            "A": 1024,
+            "AI": 128
+          },
+          "unknown_initial_targets_source_checked_before_READY": false
+        }
+      ],
+      "direct_zero_bounce_zero_CPUfallback_admitted": true,
+      "physical_exit_zero": true,
+      "native0_V3_no_escalation": true,
+      "native_close_seconds": 17.799621499999375,
+      "source_and_config_protection_passed": true,
+      "initial_speed_reference_is_separate_process": false
+    },
+    {
+      "mode": "decode-stop",
+      "REPORT_sha256": "976c2e5759d79d34e1198dad423958221f22ff1f0845d0ff9c0a04238796b479",
+      "actual_exit": 0,
+      "passed": true,
+      "uncancelled_rows": 8,
+      "FIRST_grades": 7,
+      "speeds": [
+        {
+          "before_actual_ID_intervals_s": 38.42656330974261,
+          "FIRST_after_actual_ID_intervals_s": 45.32075348370077,
+          "actual_ratio": 1.1794120936183283,
+          "before_IDs": 361,
+          "FIRST_after_IDs": 356,
+          "before_TTFT_seconds": 5.352077800000188,
+          "FIRST_after_TTFT_seconds": 2.6944458000007216,
+          "output_IDs_identical": false,
+          "recovery_cost_not_removed_from_TTFT": true
+        }
+      ],
+      "recoveries": [
+        {
+          "required": false,
+          "healthy_context_preserved": true
+        }
+      ],
+      "direct_zero_bounce_zero_CPUfallback_admitted": true,
+      "physical_exit_zero": true,
+      "native0_V3_no_escalation": true,
+      "native_close_seconds": 20.846964899999875,
+      "source_and_config_protection_passed": true,
+      "initial_speed_reference_is_separate_process": false
+    },
+    {
+      "mode": "active-prefill-stop",
+      "REPORT_sha256": "b3d8cc2046aa9c5e57ca01557cbbb104a6b1322e42999db7ee5bce3ed640059d",
+      "actual_exit": 0,
+      "passed": true,
+      "uncancelled_rows": 8,
+      "FIRST_grades": 7,
+      "speeds": [
+        {
+          "before_actual_ID_intervals_s": 39.917544963833286,
+          "FIRST_after_actual_ID_intervals_s": 38.86467943232543,
+          "actual_ratio": 0.9736239908425784,
+          "before_IDs": 755,
+          "FIRST_after_IDs": 393,
+          "before_TTFT_seconds": 6.196278200000052,
+          "FIRST_after_TTFT_seconds": 15.847957799999676,
+          "output_IDs_identical": false,
+          "recovery_cost_not_removed_from_TTFT": true
+        }
+      ],
+      "recoveries": [
+        {
+          "attempt": 1,
+          "epoch": 2,
+          "normal_anchor_known": true,
+          "pool_restore_ratio": 0.9934459055087281,
+          "native_recovery_elapsed_ms": 7391.122,
+          "geometry_after": {
+            "C": 1024,
+            "A": 1024,
+            "AI": 128
+          },
+          "unknown_initial_targets_source_checked_before_READY": false
+        }
+      ],
+      "direct_zero_bounce_zero_CPUfallback_admitted": true,
+      "physical_exit_zero": true,
+      "native0_V3_no_escalation": true,
+      "native_close_seconds": 18.24768849999964,
+      "source_and_config_protection_passed": true,
+      "initial_speed_reference_is_separate_process": false
+    },
+    {
+      "mode": "early-rearm-stop",
+      "REPORT_sha256": "0da471c7fa42193b0a2f3bebfad90850ca65c6922f8ea78c9aeece77ccc076e3",
+      "actual_exit": 0,
+      "passed": true,
+      "uncancelled_rows": 8,
+      "FIRST_grades": 7,
+      "speeds": [
+        {
+          "before_actual_ID_intervals_s": 37.90241972306052,
+          "FIRST_after_actual_ID_intervals_s": 44.44016022637443,
+          "actual_ratio": 1.172488736895503,
+          "before_IDs": 443,
+          "FIRST_after_IDs": 509,
+          "before_TTFT_seconds": 6.070278500000313,
+          "FIRST_after_TTFT_seconds": 17.651340900000832,
+          "output_IDs_identical": false,
+          "recovery_cost_not_removed_from_TTFT": true
+        }
+      ],
+      "recoveries": [
+        {
+          "attempt": 1,
+          "epoch": 2,
+          "normal_anchor_known": true,
+          "pool_restore_ratio": 0.9934333958724203,
+          "native_recovery_elapsed_ms": 8659.633,
+          "geometry_after": {
+            "C": 1024,
+            "A": 1024,
+            "AI": 128
+          },
+          "unknown_initial_targets_source_checked_before_READY": false
+        }
+      ],
+      "direct_zero_bounce_zero_CPUfallback_admitted": true,
+      "physical_exit_zero": true,
+      "native0_V3_no_escalation": true,
+      "native_close_seconds": 18.5854274000003,
+      "source_and_config_protection_passed": true,
+      "initial_speed_reference_is_separate_process": false
+    },
+    {
+      "mode": "initial-prefill-stop",
+      "REPORT_sha256": "af74a3fe04691e52ae47d1edbbafa4f15eec10cf78c9581998170a4a5602fe91",
+      "actual_exit": 0,
+      "passed": true,
+      "uncancelled_rows": 5,
+      "FIRST_grades": 4,
+      "speeds": [
+        {
+          "before_actual_ID_intervals_s": 39.680493267164906,
+          "FIRST_after_actual_ID_intervals_s": 38.82898650725068,
+          "actual_ratio": 0.9785409230126977,
+          "before_IDs": 531,
+          "FIRST_after_IDs": 419,
+          "before_TTFT_seconds": 6.12113060000047,
+          "FIRST_after_TTFT_seconds": 16.16464939999969,
+          "output_IDs_identical": false,
+          "recovery_cost_not_removed_from_TTFT": true
+        }
+      ],
+      "recoveries": [
+        {
+          "attempt": 1,
+          "epoch": 1,
+          "normal_anchor_known": false,
+          "pool_restore_ratio": null,
+          "native_recovery_elapsed_ms": 7498.711,
+          "geometry_after": {
+            "C": 1024,
+            "A": 1024,
+            "AI": 128
+          },
+          "unknown_initial_targets_source_checked_before_READY": true
+        }
+      ],
+      "direct_zero_bounce_zero_CPUfallback_admitted": true,
+      "physical_exit_zero": true,
+      "native0_V3_no_escalation": true,
+      "native_close_seconds": 17.81758869999976,
+      "source_and_config_protection_passed": true,
+      "initial_speed_reference_is_separate_process": true
+    }
+  ],
+  "uncancelled_rows_total": 39,
+  "FIRST_grades_total": 34,
+  "actual_cancellations": 6,
+  "all_mode_first_results_retained_no_retries": true,
+  "scope": "Five bounded loaded modes, not arbitrary repeated workloads or a universal postcancel speedup. Recovery remains inside FIRST TTFT; reasoning/output lengths differ. API and deployment are separate.",
+  "API_or_default_admission_inferred": false
+}

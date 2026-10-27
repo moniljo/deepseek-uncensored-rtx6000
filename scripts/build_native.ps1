@@ -9,7 +9,7 @@ param(
     [string]$WorkDir = '',
     [string]$BuildDir = '',
     [string]$NativeSourceManifest = '',
-    [ValidateRange(1,16)][int]$Parallel = 3
+    [ValidateRange(1,16)][int]$Parallel = 6
 )
 $ErrorActionPreference = 'Stop'
 $RecipeRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
@@ -22,18 +22,20 @@ if (-not $NativeSourceManifest) { $NativeSourceManifest = Join-Path $RecipeRoot 
 $NativeSourceManifest = [IO.Path]::GetFullPath($NativeSourceManifest)
 $StrataSource = Join-Path $WorkDir $Locks.strata.destination
 $LlamaSource = Join-Path $WorkDir $Locks.llama_cpp.destination
-$Configure = @('-S', $StrataSource, '-B', $BuildDir, '-G', 'Ninja',
-    '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_CUDA_ARCHITECTURES=120a',
-    "-DSTRATA_GGML_DIR=$LlamaSource", "-DSTRATA_BUILD_ID=$($Locks.build_id)")
+$Configure = @('-S', $StrataSource, '-B', $BuildDir, '-G', 'Ninja', '-DCMAKE_BUILD_TYPE=Release')
 foreach ($Property in $Locks.required_CMake_flags.PSObject.Properties) {
     $Configure += "-D$($Property.Name)=$($Property.Value)"
 }
+$Configure += '-DCMAKE_CUDA_ARCHITECTURES=120a'
 if ($CudaRoot) {
     $CudaRoot = [IO.Path]::GetFullPath($CudaRoot)
     $Configure += "-DCMAKE_CUDA_COMPILER=$(Join-Path $CudaRoot 'bin/nvcc.exe')"
     $Configure += "-DCUDAToolkit_ROOT=$CudaRoot"
 }
 $Configure += "-DCMAKE_MAKE_PROGRAM=$NinjaExe"
+$NinjaArgumentIndex = $Configure.Length - 1
+$Configure += "-DSTRATA_GGML_DIR=$LlamaSource"
+$Configure += "-DSTRATA_BUILD_ID=$($Locks.build_id)"
 $Build = @('--build', $BuildDir, '--target', 'strata-dsv41', '--parallel', [string]$Parallel)
 if (-not $Run) {
     @{ dry = $true; source = $StrataSource; build = $BuildDir; target = 'strata-dsv41';
@@ -54,15 +56,22 @@ if (-not $CudaRoot -or -not (Test-Path -LiteralPath (Join-Path $CudaRoot 'bin/nv
 $Compiler = Get-Command cl.exe -ErrorAction Stop
 $NinjaCommand = Get-Command $NinjaExe -ErrorAction Stop
 $CMakeCommand = Get-Command $CMakeExe -ErrorAction Stop
-$Configure[$Configure.Length - 1] = "-DCMAKE_MAKE_PROGRAM=$($NinjaCommand.Source)"
+$Configure[$NinjaArgumentIndex] = "-DCMAKE_MAKE_PROGRAM=$($NinjaCommand.Source)"
 & $PythonExe -B (Join-Path $PSScriptRoot 'checkout_source.py') --verify --work-dir $WorkDir
 if ($LASTEXITCODE -ne 0) { throw 'Pinned source verification failed.' }
 $SourceCheckoutSHA = (Get-FileHash -LiteralPath (Join-Path $WorkDir 'PREPARED-SOURCE.json') -Algorithm SHA256).Hash.ToLowerInvariant()
 $VerifiedBefore = $true
-$NvccVersion = (& (Join-Path $CudaRoot 'bin/nvcc.exe') --version 2>&1 | Out-String)
-if ($LASTEXITCODE -ne 0 -or $NvccVersion -notmatch 'release 13\.2') { throw 'The measured recipe requires CUDA13.2.' }
-$ClVersion = (& $Compiler.Source /? 2>&1 | Out-String)
-if ($LASTEXITCODE -ne 0 -or $ClVersion -notmatch '19\.44\.') { throw 'Select the VS2022 MSVC14.44 toolset for the measured recipe.' }
+# Match the actual tested PS5-safe version probes. Never treat native stderr as an exception.
+$SavedVersionPreference = $ErrorActionPreference
+try {
+    $ErrorActionPreference = 'Continue'
+    $ClVersion = (& $Compiler.Source /? 2>&1 | ForEach-Object { $_.ToString() } | Out-String)
+    $ClVersionExitCode = $LASTEXITCODE
+    $NvccVersion = (& (Join-Path $CudaRoot 'bin/nvcc.exe') --version 2>&1 | ForEach-Object { $_.ToString() } | Out-String)
+    $NvccVersionExitCode = $LASTEXITCODE
+} finally { $ErrorActionPreference = $SavedVersionPreference }
+if ($NvccVersionExitCode -ne 0 -or $NvccVersion -notmatch 'release 13\.2') { throw 'The measured recipe requires CUDA13.2.' }
+if ($ClVersionExitCode -ne 0 -or $ClVersion -notmatch '19\.44\.') { throw 'Select the VS2022 MSVC14.44 toolset.' }
 $PreviousCL = $env:_CL_
 try {
     $env:_CL_ = '/Z7'
@@ -86,20 +95,23 @@ try {
     $Exe = Join-Path $BuildDir 'strata-dsv41.exe'
     if (-not (Test-Path -LiteralPath $Exe)) { throw 'Native executable missing.' }
     $SourcePins = @{}
-    foreach ($Name in @('ds4_model.cu','ds4_main.cpp','ds4_model.hpp')) {
+    foreach ($Name in @('ds4_model.cu','ds4_main.cpp','ds4_model.hpp','ds4_iq.cu')) {
         $SourcePins[$Name] = (Get-FileHash -LiteralPath (Join-Path $StrataSource "src/dsv41/$Name") -Algorithm SHA256).Hash.ToLowerInvariant()
     }
     $DeclaredManifest = Get-Content -LiteralPath $NativeSourceManifest -Raw | ConvertFrom-Json
-    if ($DeclaredManifest.frozen_files_sha256) {
-        foreach ($Name in $SourcePins.Keys) {
-            if ($DeclaredManifest.frozen_files_sha256.$Name -ne $SourcePins[$Name]) { throw 'Compiled LF source differs from declared manifest.' }
-        }
+    foreach ($Name in $SourcePins.Keys) {
+        if ($DeclaredManifest.strata."src/dsv41/$Name".sha256 -ne $SourcePins[$Name]) { throw 'Compiled raw source differs from declared manifest.' }
     }
-    $Receipt = @{ schema = 'fresh-portable-native-build-v1'; compiled = $true; compile_and_link_rc = 0;
+    $Prepared = Get-Content -LiteralPath (Join-Path $WorkDir 'PREPARED-SOURCE.json') -Raw | ConvertFrom-Json
+    $Receipt = @{ schema = 'fresh-portable-v027-V6b-native-build-v1'; compiled = $true; compile_and_link_rc = 0;
         exe = $Exe; exe_sha256 = (Get-FileHash -LiteralPath $Exe -Algorithm SHA256).Hash.ToLowerInvariant();
-        compiled_source_pin_map_LF = $SourcePins; source_pin_map = $SourcePins;
+        compiled_source_pin_map_raw = $SourcePins; source_pin_map = $SourcePins;
         source_overlay_manifest_sha256 = $Locks.overlay_manifest_sha256;
         native_source_manifest = $NativeSourceManifest; source_manifest_sha256 = $NativeManifestSHA;
+        ported_source_manifest_sha256 = $DeclaredManifest.strata_reference_stage_manifest_sha256;
+        complete_raw_strata_source_files = $Prepared.complete_raw_strata_source_files;
+        complete_raw_strata_source_tree_sha256 = $Prepared.complete_raw_strata_source_tree_sha256;
+        reference_raw_source_reconstructed = $true;
         source_checkout_verified_before_build = $VerifiedBefore; source_checkout_verified_after_build = $VerifiedAfter;
         source_overlay_verified_before_after = ($VerifiedBefore -and $VerifiedAfter);
         prepared_source_receipt_sha256 = $SourceCheckoutSHA;
